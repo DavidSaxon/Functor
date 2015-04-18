@@ -1,0 +1,18 @@
+/++++++\
+| TODO |
+\++++++/
+
+- set window title
+
+
+//-------------------------------------POST-------------------------------------
+
+- set window icon
+
+- bake resources
+
+- turn off console
+
+- delete dlls
+
+- move window back to zero - zero
