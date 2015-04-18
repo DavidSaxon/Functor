@@ -8,6 +8,12 @@ class World : public omi::Entity
 public:
 
     //--------------------------------------------------------------------------
+    //                                CONSTRUCTOR
+    //--------------------------------------------------------------------------
+
+    World();
+
+    //--------------------------------------------------------------------------
     //                          PUBLIC MEMBER FUNCTIONS
     //--------------------------------------------------------------------------
 
@@ -27,8 +33,13 @@ private:
     omi::Geometry* m_worldGeo;
     // a copy of the geo's originals vertices
     std::vector<glm::vec3> m_orgVert;
+    // the geo's direction vectors
+    std::vector<glm::vec3> m_dirVects;
     // indices of vertices which are technically the same vertex
     std::map<std::string, std::vector<unsigned>> m_vertHash;
+
+    // time variable used for functions
+    float m_time;
 
     //--------------------------------------------------------------------------
     //                          PRIVATE MEMBER FUNCTIONS
