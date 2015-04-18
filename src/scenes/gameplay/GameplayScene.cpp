@@ -5,6 +5,7 @@
 #include "src/entities/debug/FPSCounter.hpp"
 
 #include "src/entities/gameplay/Player.hpp"
+#include "src/entities/gameplay/environment/Sun.hpp"
 #include "src/entities/gameplay/environment/World.hpp"
 #include "src/entities/menu/PauseMenu.hpp"
 
@@ -32,9 +33,19 @@ void GameplayScene::init()
 
     // add the initial entities
     addEntity( new PauseMenu() );
-    addEntity( new World() );
 
-    addEntity( new Player() );
+    addEntity( new Sun() );
+
+    std::vector<World*> worlds;
+    worlds.push_back( new World( 0.25f,  20.0f, 0.02f, "orbit_20" ) );
+    worlds.push_back( new World( 0.4f,  30.0f, -0.02f, "orbit_30" ) );
+    worlds.push_back( new World( -0.3f, 40.0f, 0.01f, "orbit_40" ) );
+
+    addEntity( worlds[ 0 ] );
+    addEntity( worlds[ 1 ] );
+    addEntity( worlds[ 2 ] );
+
+    addEntity( new Player( worlds ) );
 }
 
 bool GameplayScene::update()

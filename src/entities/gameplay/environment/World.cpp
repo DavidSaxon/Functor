@@ -10,9 +10,17 @@
 //                                  CONSTRUCTOR
 //------------------------------------------------------------------------------
 
-World::World()
+World::World(
+        float rotationSpeed,
+        float sunDistance,
+        float orbitSpeed,
+        const std::string& orbitMeshId )
     :
-    m_time( 0.0f )
+    m_rotationSpeed( rotationSpeed ),
+    m_sunDistance  ( sunDistance ),
+    m_orbitSpeed   ( orbitSpeed ),
+    m_orbitMeshId  ( orbitMeshId ),
+    m_time         ( 0.0f )
 {
 }
 
@@ -22,10 +30,30 @@ World::World()
 
 void World::init()
 {
+    // the position of the world
+    m_rotPoint = new omi::Transform(
+        "",
+        glm::vec3(),
+        glm::vec3(),
+        glm::vec3( 1.0f, 1.0f, 1.0f )
+    );
+    m_position = new omi::Transform(
+            "",
+            m_rotPoint,
+            glm::vec3( -m_sunDistance, 0.0f, 0.0f ),
+            glm::vec3(),
+            glm::vec3( 1.0f, 1.0f, 1.0f )
+    );
+
     // add the mesh
     omi::Mesh* worldMesh =
-            omi::ResourceManager::getMesh( "world_std", "", NULL );
+            omi::ResourceManager::getMesh( "world_std", "", m_position );
     m_components.add( worldMesh );
+
+    // add the orbit mesh
+    omi::Mesh* orbitMesh =
+            omi::ResourceManager::getMesh( m_orbitMeshId, "", NULL );
+    m_components.add( orbitMesh );
 
     // store the geo list pointer
     m_worldGeo = worldMesh->getGeometry();
@@ -44,6 +72,17 @@ void World::update()
 
     // increase time
     m_time += 0.005f * omi::fpsManager.getTimeScale();
+
+    // rotate
+    m_position->rotation.y += m_rotationSpeed * omi::fpsManager.getTimeScale();
+
+    // orbit
+    m_rotPoint->rotation.y += m_orbitSpeed * omi::fpsManager.getTimeScale();
+
+
+
+    //---------------------------------FUNCTION---------------------------------
+
 
     // random jitter test
     // std::map<std::string, std::vector<unsigned>>::iterator it;

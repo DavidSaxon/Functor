@@ -471,6 +471,9 @@
     <ClInclude Include="src\entities\gameplay\environment\World.hpp">
       <Filter>src\entities\gameplay\environment</Filter>
     </ClInclude>
+    <ClInclude Include="src\entities\gameplay\environment\Sun.hpp">
+      <Filter>src\entities\gameplay\environment</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\data\Globals.cpp">
@@ -741,6 +744,9 @@
       <Filter>src\resource_pack</Filter>
     </ClCompile>
     <ClCompile Include="src\entities\gameplay\environment\World.cpp">
+      <Filter>src\entities\gameplay\environment</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\gameplay\environment\Sun.cpp">
       <Filter>src\entities\gameplay\environment</Filter>
     </ClCompile>
   </ItemGroup>

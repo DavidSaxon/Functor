@@ -1,6 +1,7 @@
 #include "Player.hpp"
 
 #include "src/data/Globals.hpp"
+#include "src/entities/gameplay/environment/World.hpp"
 #include "src/omicron/input/Input.hpp"
 
 //------------------------------------------------------------------------------
@@ -22,7 +23,9 @@ static const float LOOK_BASE_SPEED = 0.035f;
 //                                  CONSTRUCTOR
 //------------------------------------------------------------------------------
 
-Player::Player()
+Player::Player( const std::vector<World*>& worlds )
+    :
+    m_worlds( worlds )
 {
 }
 
@@ -32,20 +35,6 @@ Player::Player()
 
 void Player::init()
 {
-    // TODO: REMOVE ME
-    omi::Transform* dir = new omi::Transform(
-                "",
-                glm::vec3( -1.0f, 0.5f, 0.0f ),
-                glm::vec3(),
-                glm::vec3( 1.0f, 1.0f, 1.0f )
-    );
-    m_components.add( dir );
-    omi::DirectionalLight* light = new omi::DirectionalLight(
-            "", dir, 1.0f, glm::vec3( 1.0f, 1.0f, 1.0f )
-    );
-    m_components.add( light );
-
-
     initComponents();
 }
 
@@ -103,7 +92,7 @@ void Player::initComponents()
     m_camPos = new omi::Transform(
             "",
             m_camFocus,
-            glm::vec3( 0.0f, 0.0f, 3.0f ),
+            glm::vec3( 0.0f, 0.0f, 30.0f ),
             glm::vec3(),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );

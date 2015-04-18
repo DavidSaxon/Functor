@@ -3,8 +3,20 @@
 
 #include "src/omicron/entity/Entity.hpp"
 
-class World : public omi::Entity
+class Sun : public omi::Entity
 {
 public:
+
+    //--------------------------------------------------------------------------
+    //                          PUBLIC MEMBER FUNCTIONS
+    //--------------------------------------------------------------------------
+
+    /** #Override */
+    void init();
+
+    /** #Override */
+    void update();
+
+};
 
 #endif

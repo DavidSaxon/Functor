@@ -11,7 +11,11 @@ public:
     //                                CONSTRUCTOR
     //--------------------------------------------------------------------------
 
-    World();
+    World(
+            float rotationSpeed,
+            float sunDistance,
+            float orbitSpeed,
+            const std::string& orbitMeshId );
 
     //--------------------------------------------------------------------------
     //                          PUBLIC MEMBER FUNCTIONS
@@ -28,6 +32,23 @@ private:
     //--------------------------------------------------------------------------
     //                                 VARIABLES
     //--------------------------------------------------------------------------
+
+    // the speed at which the planet rotates
+    float m_rotationSpeed;
+    // the distance of the world from the sun
+    float m_sunDistance;
+    // the speed of the planet's orbit
+    float m_orbitSpeed;
+    // the resource name of the mesh to use for showing orbit
+    std::string m_orbitMeshId;
+
+    // the rotation point of the world ( 0, 0, 0 )
+    omi::Transform* m_rotPoint;
+    // the position of the planet
+    omi::Transform* m_position;
+
+    // the mesh of the planet's orbit
+    omi::Mesh* m_orbitMesh;
 
     // the geometry of the world
     omi::Geometry* m_worldGeo;
