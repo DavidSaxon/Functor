@@ -27,8 +27,14 @@ public:
     /** #Override */
     void update();
 
+    /** get rotation position */
+    omi::Transform* getRotPoint();
+
     /** returns the position of the planet */
     omi::Transform* getPosition();
+
+    /** returns the distance of the planet from the star */
+    float getDistance() const;
 
 private:
 

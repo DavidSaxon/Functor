@@ -18,7 +18,8 @@ namespace gameplay
 // the gameplay state
     enum State
     {
-        PLANET_SELECT,
+        PLANET_SELECT = 0,
+        TRANS_TO_PLANET,
         PLANET_ORBIT
     };
 } // namespace gameplay
@@ -57,6 +58,10 @@ private:
     // the currently selected world
     World* m_world;
 
+    // the central player point
+    omi::Transform* m_centrePos;
+    // the distance from the centre point
+    omi::Transform* m_distT;
     // the focus point of the camera
     omi::Transform* m_camFocus;
     // the position of the camera
@@ -70,6 +75,9 @@ private:
 
     // do planet selection
     void planetSelect();
+
+    // do transition to planet
+    void transToPlanet();
 
     void initComponents();
 };

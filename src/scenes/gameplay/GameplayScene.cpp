@@ -29,7 +29,7 @@ void GameplayScene::init()
     omi::renderSettings.setFilmGrain( 0.04f );
 
     // TODO: REMOVE ME
-    addEntity( new FPSCounter() );
+    // addEntity( new FPSCounter() );
 
     // add the initial entities
     addEntity( new PauseMenu() );

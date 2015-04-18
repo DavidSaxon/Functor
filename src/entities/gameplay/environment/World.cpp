@@ -43,7 +43,7 @@ void World::init()
     m_position = new omi::Transform(
             "",
             m_rotPoint,
-            glm::vec3( -m_sunDistance, 0.0f, 0.0f ),
+            glm::vec3( 0.0f, 0.0f, m_sunDistance ),
             glm::vec3(),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );
@@ -183,9 +183,19 @@ void World::update()
     }
 }
 
+omi::Transform* World::getRotPoint()
+{
+    return m_rotPoint;
+}
+
 omi::Transform* World::getPosition()
 {
     return m_position;
+}
+
+float World::getDistance() const
+{
+    return m_sunDistance;
 }
 
 //------------------------------------------------------------------------------

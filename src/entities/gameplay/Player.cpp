@@ -19,8 +19,18 @@ static const float ZOOM_CLAMP_FAR_PS  = 160.0f;
 // the zoom clamp when in planet orbit
 static const float ZOOM_CLAMP_NEAR_PO = 2.0f;
 static const float ZOOM_CLAMP_FAR_PO  = 7.0f;
+// default zoom level for planet orbit
+static const float ZOOM_DEFAULT_PO    = 4.0f;
+
+
 // the base speed which the camera rotates at
 static const float LOOK_BASE_SPEED = 0.035f;
+
+// transition speeds
+static const float TRANS_ZOOM_SPEED = 2.0f;
+static const float TRANS_MOVE_SPEED = 2.0f;
+static const float TRANS_TILT_SPEED = 2.0f;
+
 
 } // namespace anonymous
 
@@ -56,7 +66,9 @@ void Player::update()
     }
 
     // don't use input if omicron doesn't have focus
-    if ( omi::omi_hasFocus )
+    if ( omi::omi_hasFocus &&
+         m_state == gameplay::PLANET_SELECT ||
+         m_state == gameplay::PLANET_ORBIT )
     {
         look();
     }
@@ -67,6 +79,11 @@ void Player::update()
         case gameplay::PLANET_SELECT:
         {
             planetSelect();
+            break;
+        }
+        case gameplay::TRANS_TO_PLANET:
+        {
+            transToPlanet();
             break;
         }
         case gameplay::PLANET_ORBIT:
@@ -175,22 +192,102 @@ void Player::planetSelect()
     if ( index >= 0 && static_cast<unsigned>( index ) < m_worlds.size() )
     {
         // select the world
-        m_state = gameplay::PLANET_ORBIT; // TODO: transition state
+        m_state = gameplay::TRANS_TO_PLANET;
         m_world = m_worlds[ index ];
 
         // parent to planet position
-        m_camFocus->parent = m_world->getPosition();
+        m_distT->parent = m_world->getRotPoint();
 
         // we're in orbit
         global::m_inOrbit = true;
     }
 }
 
+void Player::transToPlanet()
+{
+    bool distDone = false;
+    bool zoomDone = false;
+    bool tiltDone = false;
+
+    // counter-act planet rotation
+    // TODO: stop and re correct? or not.... probably apply to final player trans
+    m_distT->rotation.y = -m_world->getPosition()->rotation.y;
+
+    // move out to planet
+    // TODO: stop
+    m_distT->translation.z +=
+            TRANS_MOVE_SPEED * omi::fpsManager.getTimeScale();
+    if ( m_distT->translation.z >= m_world->getDistance() )
+    {
+        m_distT->translation.z = m_world->getDistance();
+        distDone = true;
+    }
+
+    // zoom in
+    m_camPos->translation.z -=
+        TRANS_ZOOM_SPEED * omi::fpsManager.getTimeScale();
+    if ( m_camPos->translation.z <= ZOOM_DEFAULT_PO )
+    {
+        m_camPos->translation.z = ZOOM_DEFAULT_PO;
+        zoomDone = true;
+    }
+
+    // tilt
+    if ( m_camFocus->rotation.x <= 0.0f )
+    {
+        std::cout << "tilt down!" << std::endl;
+        m_camFocus->rotation.x +=
+            TRANS_TILT_SPEED * omi::fpsManager.getTimeScale();
+        if ( m_camFocus->rotation.x >= 0.0f )
+        {
+            std::cout << "down done!" << std::endl;
+            m_camFocus->rotation.x = 0.0f;
+            tiltDone = true;
+        }
+    }
+    else if ( m_camFocus->rotation.x > 0.0f )
+    {
+        std::cout << "tilt up!" << std::endl;
+        m_camFocus->rotation.x -=
+            TRANS_TILT_SPEED * omi::fpsManager.getTimeScale();
+        if ( m_camFocus->rotation.x <= 0.0f )
+        {
+            std::cout << "up done!" << std::endl;
+            m_camFocus->rotation.x = 0.0f;
+            tiltDone = true;
+        }
+    }
+
+
+    // check if the transition has eneded
+    if ( distDone && zoomDone && tiltDone )
+    {
+        m_camFocus->parent = m_world->getPosition();
+        m_state = gameplay::PLANET_ORBIT;
+    }
+}
+
 void Player::initComponents()
 {
     // transformations
+    m_centrePos = new omi::Transform(
+            "",
+            glm::vec3( 0.0f, 0.0f, 0.0f ),
+            glm::vec3(),
+            glm::vec3( 1.0f, 1.0f, 1.0f )
+    );
+    m_components.add( m_centrePos );
+    m_distT = new omi::Transform(
+            "",
+            m_centrePos,
+            glm::vec3( 0.0f, 0.0f, 0.0f ),
+            glm::vec3(),
+            glm::vec3( 1.0f, 1.0f, 1.0f )
+    );
+    m_components.add( m_distT );
     m_camFocus = new omi::Transform(
             "",
+            m_distT,
             glm::vec3( 0.0f, 0.0f, 0.0f ),
             glm::vec3( -90.0f, 0.0f, 0.0f ),
             glm::vec3( 1.0f, 1.0f, 1.0f )
