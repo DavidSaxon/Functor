@@ -9,6 +9,20 @@
 
 class World;
 
+//------------------------------------------------------------------------------
+//                                  ENUMERATORS
+//------------------------------------------------------------------------------
+
+namespace gameplay
+{
+// the gameplay state
+    enum State
+    {
+        PLANET_SELECT,
+        PLANET_ORBIT
+    };
+} // namespace gameplay
+
 class Player : public omi::Entity
 {
 public:
@@ -35,8 +49,13 @@ private:
     //                                 VARIABLES
     //--------------------------------------------------------------------------
 
+    // the current gameplay state
+    gameplay::State m_state;
+
     // the worlds in the current stage
     std::vector<World*> m_worlds;
+    // the currently selected world
+    World* m_world;
 
     // the focus point of the camera
     omi::Transform* m_camFocus;
@@ -48,6 +67,9 @@ private:
     //--------------------------------------------------------------------------
 
     void look();
+
+    // do planet selection
+    void planetSelect();
 
     void initComponents();
 };

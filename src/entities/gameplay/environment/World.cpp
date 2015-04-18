@@ -30,11 +30,14 @@ World::World(
 
 void World::init()
 {
+    // randomly generate rotation
+    float rot = static_cast<float>( ( rand() % 1000 ) / 1000.0f ) * 360.0f;
+
     // the position of the world
     m_rotPoint = new omi::Transform(
         "",
         glm::vec3(),
-        glm::vec3(),
+        glm::vec3(0.0f, rot, 0.0f ),
         glm::vec3( 1.0f, 1.0f, 1.0f )
     );
     m_position = new omi::Transform(
@@ -51,9 +54,9 @@ void World::init()
     m_components.add( worldMesh );
 
     // add the orbit mesh
-    omi::Mesh* orbitMesh =
+    m_orbitMesh =
             omi::ResourceManager::getMesh( m_orbitMeshId, "", NULL );
-    m_components.add( orbitMesh );
+    m_components.add( m_orbitMesh );
 
     // store the geo list pointer
     m_worldGeo = worldMesh->getGeometry();
@@ -79,7 +82,15 @@ void World::update()
     // orbit
     m_rotPoint->rotation.y += m_orbitSpeed * omi::fpsManager.getTimeScale();
 
-
+    // show orbit?
+    if ( global::m_inOrbit )
+    {
+        m_orbitMesh->visible = false;
+    }
+    else
+    {
+        m_orbitMesh->visible = true;
+    }
 
     //---------------------------------FUNCTION---------------------------------
 
@@ -170,6 +181,11 @@ void World::update()
         m_worldGeo->normals[ i + 1 ] = normal;
         m_worldGeo->normals[ i + 2 ] = normal;
     }
+}
+
+omi::Transform* World::getPosition()
+{
+    return m_position;
 }
 
 //------------------------------------------------------------------------------

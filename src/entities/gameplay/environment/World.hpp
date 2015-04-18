@@ -27,6 +27,9 @@ public:
     /** #Override */
     void update();
 
+    /** returns the position of the planet */
+    omi::Transform* getPosition();
+
 private:
 
     //--------------------------------------------------------------------------
