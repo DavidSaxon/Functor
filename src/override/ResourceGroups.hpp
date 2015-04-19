@@ -10,6 +10,7 @@ enum ResourceGroup {
     START_UP,
     LOADING,
     MENU,
+    GUI,
     PLAYER,
     ENVIRONMENT
 };

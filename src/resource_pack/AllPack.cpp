@@ -16,11 +16,17 @@ void buildAllPack()
 
     //-----------------------------------FONT-----------------------------------
 
-    // the title font of the reverie
+    // the title font
     omi::ResourceManager::addFont(
         "title_font",
         resource_group::ALL,
         "res/gfx/fonts/semarang.otf"
+    );
+
+    omi::ResourceManager::addFont(
+        "math_font",
+        resource_group::ALL,
+        "res/gfx/fonts/courier_new.ttf"
     );
 }
 

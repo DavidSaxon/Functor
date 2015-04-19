@@ -7,6 +7,7 @@
 //                              FORWARD DECLARATIONS
 //------------------------------------------------------------------------------
 
+class Gui;
 class World;
 
 //------------------------------------------------------------------------------
@@ -32,7 +33,7 @@ public:
     //                                CONSTRUCTOR
     //--------------------------------------------------------------------------
 
-    Player( const std::vector<World*>& worlds );
+    Player( Gui* gui, const std::vector<World*>& worlds );
 
     //--------------------------------------------------------------------------
     //                          PUBLIC MEMBER FUNCTIONS
@@ -53,6 +54,9 @@ private:
     // the current gameplay state
     gameplay::State m_state;
 
+    // the gui entity;
+    Gui* m_gui;
+
     // the worlds in the current stage
     std::vector<World*> m_worlds;
     // the currently selected world
@@ -67,6 +71,8 @@ private:
     // the position of the camera
     omi::Transform* m_camPos;
 
+    float m_generatingFuncs;
+
     //--------------------------------------------------------------------------
     //                          PRIVATE MEMBER FUNCTIONS
     //--------------------------------------------------------------------------
@@ -78,6 +84,11 @@ private:
 
     // do transition to planet
     void transToPlanet();
+
+    // do planet orbit
+    void planetOrbit();
+
+    void attack();
 
     void initComponents();
 };

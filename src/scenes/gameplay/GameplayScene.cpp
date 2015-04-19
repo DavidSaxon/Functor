@@ -4,7 +4,9 @@
 
 #include "src/entities/debug/FPSCounter.hpp"
 
+#include "src/entities/gameplay/Gui.hpp"
 #include "src/entities/gameplay/Player.hpp"
+#include "src/entities/gameplay/environment/Environment.hpp"
 #include "src/entities/gameplay/environment/Sun.hpp"
 #include "src/entities/gameplay/environment/World.hpp"
 #include "src/entities/menu/PauseMenu.hpp"
@@ -24,7 +26,7 @@ void GameplayScene::init()
     omi::renderSettings.setClearColour( glm::vec4( 0.9f, 0.9f, 0.9f, 1.0f ) );
 
     // ambient lighting
-    omi::renderSettings.setAmbientStrength( 0.5f );
+    omi::renderSettings.setAmbientStrength( 0.2f );
     omi::renderSettings.setAmbientColour( glm::vec3( 1.0f, 1.0f, 1.0f ) );
     omi::renderSettings.setFilmGrain( 0.04f );
 
@@ -33,7 +35,9 @@ void GameplayScene::init()
 
     // add the initial entities
     addEntity( new PauseMenu() );
-
+    Gui* gui = new Gui();
+    addEntity( gui );
+    addEntity( new Environment() );
     addEntity( new Sun() );
 
     std::vector<World*> worlds;
@@ -45,7 +49,7 @@ void GameplayScene::init()
     addEntity( worlds[ 1 ] );
     addEntity( worlds[ 2 ] );
 
-    addEntity( new Player( worlds ) );
+    addEntity( new Player( gui, worlds ) );
 }
 
 bool GameplayScene::update()

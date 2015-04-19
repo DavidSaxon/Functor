@@ -120,36 +120,45 @@ void World::update()
 
 
     // central point of the ripple
-    glm::vec3 focalPoint( 0.0f, 0.5, 1.0f );
-    focalPoint = glm::normalize( focalPoint );
+    // glm::vec3 focalPoint( 0.0f, 0.5, 1.0f );
+    // focalPoint = glm::normalize( focalPoint );
 
-    // the power of the function
-    float power = 0.05f;
-    // the distance the the ripple can travel
-    float maxDis = 1.0f;
+    // // the power of the function
+    // float power = 0.05f;
+    // // the distance the the ripple can travel
+    // float maxDis = 1.0f;
 
-    // sin test
+    // iterate over the geometry to apply functions
     std::map<std::string, std::vector<unsigned>>::iterator it;
     for ( it = m_vertHash.begin(); it != m_vertHash.end(); ++it )
     {
         std::vector<unsigned>::iterator itv;
         for ( itv = it->second.begin(); itv != it->second.end(); ++itv )
         {
-            // calculate the distance from the focal point
-            float distance =
-                    fabs( glm::distance( m_dirVects[ *itv ], focalPoint ) );
+            // // calculate the distance from the focal point
+            // float distance =
+            //         fabs( glm::distance( m_dirVects[ *itv ], focalPoint ) );
+
+            // glm::vec3 effect;
+            // if ( abs( distance ) < maxDis )
+            // {
+            //     float funcResolve = static_cast<float>(
+            //         sin( ( distance - m_time ) * 20.0f ) *
+            //         ( ( maxDis - distance ) / maxDis )
+            //     );
+
+            //     effect.x = (  m_dirVects[ *itv ].x * funcResolve ) * power;
+            //     effect.y = (  m_dirVects[ *itv ].y * funcResolve ) * power;
+            //     effect.z = (  m_dirVects[ *itv ].z * funcResolve ) * power;
+            // }
 
             glm::vec3 effect;
-            if ( abs( distance ) < maxDis )
+            std::vector<Function*>::iterator itf;
+            for ( itf = m_functions.begin(); itf != m_functions.end(); ++itf )
             {
-                float funcResolve = static_cast<float>(
-                    sin( ( distance - m_time ) * 20.0f ) *
-                    ( ( maxDis - distance ) / maxDis )
-                );
-
-                effect.x = (  m_dirVects[ *itv ].x * funcResolve ) * power;
-                effect.y = (  m_dirVects[ *itv ].y * funcResolve ) * power;
-                effect.z = (  m_dirVects[ *itv ].z * funcResolve ) * power;
+                glm::vec3 funcEffect;
+                ( *itf )->apply( m_dirVects[ *itv ], funcEffect );
+                effect += funcEffect;
             }
 
             // apply
@@ -196,6 +205,11 @@ omi::Transform* World::getPosition()
 float World::getDistance() const
 {
     return m_sunDistance;
+}
+
+void World::addFunction( Function* func )
+{
+    m_functions.push_back( func );
 }
 
 //------------------------------------------------------------------------------

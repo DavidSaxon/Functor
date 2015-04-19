@@ -25,6 +25,7 @@ bool LoadingScene::update()
     if ( !m_firstUpdate && !m_loadingDone )
     {
         omi::ResourceManager::load( resource_group::MENU );
+        omi::ResourceManager::load( resource_group::GUI );
         omi::ResourceManager::load( resource_group::PLAYER );
         omi::ResourceManager::load( resource_group::ENVIRONMENT );
 
