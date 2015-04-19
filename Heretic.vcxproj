@@ -84,8 +84,13 @@
     <ClInclude Include="src\data\layers\GUILayers.hpp" />
     <ClInclude Include="src\data\layers\StartUpLayers.hpp" />
     <ClInclude Include="src\entities\debug\FPSCounter.hpp" />
+    <ClInclude Include="src\entities\gameplay\environment\Environment.hpp" />
     <ClInclude Include="src\entities\gameplay\environment\Sun.hpp" />
     <ClInclude Include="src\entities\gameplay\environment\World.hpp" />
+    <ClInclude Include="src\entities\gameplay\function\Function.hpp" />
+    <ClInclude Include="src\entities\gameplay\function\RaiseFunc.hpp" />
+    <ClInclude Include="src\entities\gameplay\function\SineFunc.hpp" />
+    <ClInclude Include="src\entities\gameplay\Gui.hpp" />
     <ClInclude Include="src\entities\gameplay\Player.hpp" />
     <ClInclude Include="src\entities\loading\LoadingSplash.hpp" />
     <ClInclude Include="src\entities\menu\PauseMenu.hpp" />
@@ -182,8 +187,13 @@
   <ItemGroup>
     <ClCompile Include="src\data\Globals.cpp" />
     <ClCompile Include="src\entities\debug\FPSCounter.cpp" />
+    <ClCompile Include="src\entities\gameplay\environment\Environment.cpp" />
     <ClCompile Include="src\entities\gameplay\environment\Sun.cpp" />
     <ClCompile Include="src\entities\gameplay\environment\World.cpp" />
+    <ClCompile Include="src\entities\gameplay\function\Function.cpp" />
+    <ClCompile Include="src\entities\gameplay\function\RaiseFunc.cpp" />
+    <ClCompile Include="src\entities\gameplay\function\SineFunc.cpp" />
+    <ClCompile Include="src\entities\gameplay\Gui.cpp" />
     <ClCompile Include="src\entities\gameplay\Player.cpp" />
     <ClCompile Include="src\entities\loading\LoadingSplash.cpp" />
     <ClCompile Include="src\entities\menu\PauseMenu.cpp" />
@@ -264,6 +274,7 @@
     <ClCompile Include="src\resource_pack\AllPack.cpp" />
     <ClCompile Include="src\resource_pack\DebugPack.cpp" />
     <ClCompile Include="src\resource_pack\EnvironmentPack.cpp" />
+    <ClCompile Include="src\resource_pack\GUIPack.cpp" />
     <ClCompile Include="src\resource_pack\LoadingPack.cpp" />
     <ClCompile Include="src\resource_pack\MenuPack.cpp" />
     <ClCompile Include="src\resource_pack\PlayerPack.cpp" />

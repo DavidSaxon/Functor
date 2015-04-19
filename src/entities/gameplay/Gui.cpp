@@ -34,6 +34,8 @@ void Gui::setVisible( bool state )
     m_funcText2->visible = state;
     m_powerText->visible = state;
     m_distanceText->visible = state;
+    m_reloadBackSprite->visible = state;
+    m_reloadFrontSprite->visible = state;
 }
 
 void Gui::setFunc1( const std::string& func1 )
@@ -58,6 +60,12 @@ void Gui::setDistance( float distance )
     std::stringstream ss;
     ss << distance;
     m_distanceText->setString( ss.str() );
+}
+
+void Gui::setReload( float reload )
+{
+    reload = util::math::clamp( reload, 0.0f, 1.0f );
+    m_reloadScale->scale.x = reload;
 }
 
 //------------------------------------------------------------------------------
@@ -145,4 +153,34 @@ void Gui::initComponents()
     m_distanceText->setVertCentred( true );
     m_components.add( m_distanceText );
 
+
+    //--------------------------------RELOAD BAR--------------------------------
+
+    omi::Transform* reloadPos = new omi::Transform(
+            "",
+            m_funcPos,
+            glm::vec3( global::FUNC_BOX_SIZE / 2.0f, 0.18f, 0.0f ),
+            glm::vec3(),
+            glm::vec3( 1.0f, 1.0f, 1.0f )
+    );
+    reloadPos->translation.x += 0.005f;
+    m_components.add( reloadPos );
+    m_reloadBackSprite = omi::ResourceManager::getSprite(
+            "gui_reload_back", "", reloadPos );
+    m_reloadBackSprite->gui = true;
+    m_components.add( m_reloadBackSprite );
+
+
+    m_reloadScale = new omi::Transform(
+            "",
+            reloadPos,
+            glm::vec3(),
+            glm::vec3(),
+            glm::vec3( 1.0f, 1.0f, 1.0f )
+    );
+    m_components.add( m_reloadScale );
+    m_reloadFrontSprite = omi::ResourceManager::getSprite(
+            "gui_reload_front", "", m_reloadScale );
+    m_reloadFrontSprite->gui = true;
+    m_components.add( m_reloadFrontSprite );
 }

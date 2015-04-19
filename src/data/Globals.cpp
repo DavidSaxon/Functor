@@ -22,6 +22,10 @@ omi::input::key::Type keyRight     = omi::input::key::D;
 const glm::vec4 MENU_ITEM_SELECTED_COLOUR( 1.0f, 1.0f, 1.0f, 1.0f );
 const glm::vec4 MENU_ITEM_NON_SELECTED_COLOUR( 0.0f, 0.0f, 0.0f, 1.0f );
 
+//-------------------------------------GUI--------------------------------------
+
+const float FUNC_BOX_SIZE = 0.35f;
+
 //-----------------------------------GAMEPLAY-----------------------------------
 
 bool m_inOrbit = false;

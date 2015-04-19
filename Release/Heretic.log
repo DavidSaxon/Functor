@@ -1,4 +1,4 @@
-﻿Build started 19/04/2015 6:31:07 a.m..
+﻿Build started 19/04/2015 5:30:39 p.m..
      1>Project "D:\Dropbox\Development\Heretic\Heretic\Heretic.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Release\Heretic.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -8,8 +8,13 @@
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Dropbox\Development\Heretic\\Heretic\Heretic.exe" /NOLOGO /LIBPATH:D:\Dropbox\Development\Heretic\Heretic\lib\freetype\lib /LIBPATH:"D:\Dropbox\Development\Heretic\Heretic\lib\SFML-2.2\lib" /LIBPATH:"D:\Dropbox\Development\Heretic\Heretic\lib\glew-1.11.0\lib" /LIBPATH:D:\Dropbox\Development\Heretic\Heretic\lib\DevIL\lib /LIBPATH:C:\boost_1_57_0\stage\lib opengl32.lib glu32.lib glew32.lib DevIL.lib "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" "sfml-audio.lib" freetype.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\Heretic.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Dropbox\Development\Heretic\Heretic\Heretic.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Dropbox\Development\Heretic\\Heretic\Heretic.lib" /MACHINE:X86 Release\Globals.obj
          Release\FPSCounter.obj
+         Release\Environment.obj
          Release\Sun.obj
          Release\World.obj
+         Release\Function.obj
+         Release\RaiseFunc.obj
+         Release\SineFunc.obj
+         Release\Gui.obj
          Release\Player.obj
          Release\LoadingSplash.obj
          Release\PauseMenu.obj
@@ -90,6 +95,7 @@
          Release\AllPack.obj
          Release\DebugPack.obj
          Release\EnvironmentPack.obj
+         Release\GUIPack.obj
          Release\LoadingPack.obj
          Release\MenuPack.obj
          Release\PlayerPack.obj
@@ -109,4 +115,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:36.90
+Time Elapsed 00:00:41.87

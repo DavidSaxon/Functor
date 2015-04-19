@@ -1,7 +1,10 @@
 #include "Player.hpp"
 
 #include "src/data/Globals.hpp"
+#include "src/entities/gameplay/Gui.hpp"
 #include "src/entities/gameplay/environment/World.hpp"
+#include "src/entities/gameplay/function/RaiseFunc.hpp"
+#include "src/entities/gameplay/function/SineFunc.hpp"
 #include "src/omicron/input/Input.hpp"
 
 //------------------------------------------------------------------------------
@@ -31,6 +34,8 @@ static const float TRANS_ZOOM_SPEED = 2.0f;
 static const float TRANS_MOVE_SPEED = 2.0f;
 static const float TRANS_TILT_SPEED = 2.0f;
 
+// regeneration time
+static const float REGEN_SPEED = 0.01f;
 
 } // namespace anonymous
 
@@ -39,11 +44,13 @@ static const float TRANS_TILT_SPEED = 2.0f;
 //                                  CONSTRUCTOR
 //------------------------------------------------------------------------------
 
-Player::Player( const std::vector<World*>& worlds )
+Player::Player( Gui* gui, const std::vector<World*>& worlds )
     :
-    m_state ( gameplay::PLANET_SELECT ),
-    m_worlds( worlds ),
-    m_world ( NULL )
+    m_state          ( gameplay::PLANET_SELECT ),
+    m_gui            ( gui ),
+    m_worlds         ( worlds ),
+    m_world          ( NULL ),
+    m_generatingFuncs( 2.0f )
 {
     global::m_inOrbit = false;
 }
@@ -62,7 +69,14 @@ void Player::update()
     // skip if omicron is paused
     if ( global::pause )
     {
+        // hide the gui
+        m_gui->setVisible( false );
         return;
+    }
+    else if ( m_state == gameplay::PLANET_ORBIT )
+    {
+        // show gui
+        m_gui->setVisible( true );
     }
 
     // don't use input if omicron doesn't have focus
@@ -88,7 +102,7 @@ void Player::update()
         }
         case gameplay::PLANET_ORBIT:
         {
-            // TODO:
+            planetOrbit();
             break;
         }
     }
@@ -122,11 +136,6 @@ void Player::look()
                 ZOOM_CLAMP_NEAR_PO,
                 ZOOM_CLAMP_FAR_PO
         );
-    }
-
-    if ( !omi::input::mousePressed( omi::input::mouse_button::LEFT ) )
-    {
-        return;
     }
 
     // rotate the camera based on how far the mouse has moved
@@ -235,24 +244,20 @@ void Player::transToPlanet()
     // tilt
     if ( m_camFocus->rotation.x <= 0.0f )
     {
-        std::cout << "tilt down!" << std::endl;
         m_camFocus->rotation.x +=
             TRANS_TILT_SPEED * omi::fpsManager.getTimeScale();
         if ( m_camFocus->rotation.x >= 0.0f )
         {
-            std::cout << "down done!" << std::endl;
             m_camFocus->rotation.x = 0.0f;
             tiltDone = true;
         }
     }
     else if ( m_camFocus->rotation.x > 0.0f )
     {
-        std::cout << "tilt up!" << std::endl;
         m_camFocus->rotation.x -=
             TRANS_TILT_SPEED * omi::fpsManager.getTimeScale();
         if ( m_camFocus->rotation.x <= 0.0f )
         {
-            std::cout << "up done!" << std::endl;
             m_camFocus->rotation.x = 0.0f;
             tiltDone = true;
         }
@@ -264,6 +269,61 @@ void Player::transToPlanet()
     {
         m_camFocus->parent = m_world->getPosition();
         m_state = gameplay::PLANET_ORBIT;
+    }
+}
+
+void Player::planetOrbit()
+{
+    // regen time
+    if ( m_generatingFuncs <= 1.0f )
+    {
+        m_generatingFuncs += REGEN_SPEED * omi::fpsManager.getTimeScale();
+        m_gui->setReload( m_generatingFuncs );
+    }
+
+    attack();
+}
+
+void Player::attack()
+{
+    // calculate the focal point
+    glm::mat4 rotMatrix( 1.0f );
+    rotMatrix *= glm::rotate(
+            m_camFocus->rotation.y * util::math::DEGREES_TO_RADIANS,
+            glm::vec3( 0.0f, 1.0f, 0.0f )
+    );
+    rotMatrix *= glm::rotate(
+            m_camFocus->rotation.x * util::math::DEGREES_TO_RADIANS,
+            glm::vec3( 1.0f, 0.0f, 0.0f )
+    );
+    rotMatrix *= glm::translate( glm::vec3( 0.0f, 0.0f, 1.0f ) );
+    glm::vec4 focalPoint4( 0.0f, 0.0f, 0.0f, 1.0f );
+
+    focalPoint4 = rotMatrix * focalPoint4;
+    glm::vec3 focalPoint = glm::normalize( focalPoint4.xyz() );
+
+    // TODO: store
+    float power = 0.1f;
+    float distance = 0.5f;
+
+    // fire left function
+    if ( omi::input::mousePressed( omi::input::mouse_button::LEFT ) &&
+         m_generatingFuncs >= 1.0f )
+    {
+        m_world->addFunction( new RaiseFunc( focalPoint, power, distance ) );
+
+        m_generatingFuncs = 0.0f;
+        return;
+    }
+
+    // fire right function
+    if ( omi::input::mousePressed( omi::input::mouse_button::RIGHT ) &&
+         m_generatingFuncs >= 1.0f )
+    {
+        m_world->addFunction( new SineFunc( focalPoint, power, distance ) );
+
+        m_generatingFuncs = 0.0f;
+        return;
     }
 }
 

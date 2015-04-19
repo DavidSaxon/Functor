@@ -13,7 +13,7 @@ void buildGUIPack()
             "gui_function_box",
             resource_group::GUI,
             "default_shader",
-            glm::vec4( 0.0f, 0.0f, 0.0f, 0.75f ),
+            glm::vec4( 0.0f, 0.0f, 0.0f, 0.5f ),
             layer::gui::FUNCTION_BACK,
             glm::vec2( global::FUNC_BOX_SIZE, global::FUNC_BOX_SIZE / 2.0f ),
             glm::vec2( 1.0f, 1.0f ),
@@ -46,6 +46,31 @@ void buildGUIPack()
         0.08f,
         omi::material::SHADELESS
     );
+
+    // reload bar
+    omi::ResourceManager::addMaterialSprite(
+            "gui_reload_back",
+            resource_group::GUI,
+            "default_shader",
+            glm::vec4( 0.0f, 0.0f, 0.0f, 0.5f ),
+            layer::gui::FUNCTION_BACK,
+            glm::vec2( global::FUNC_BOX_SIZE * 2.0f, 0.05f ),
+            glm::vec2( 1.0f, 1.0f ),
+            glm::vec2( 0.0f, 0.0f ),
+            omi::material::SHADELESS
+    );
+    omi::ResourceManager::addMaterialSprite(
+            "gui_reload_front",
+            resource_group::GUI,
+            "default_shader",
+            glm::vec4( 1.0f, 1.0f, 1.0f, 1.0f ),
+            layer::gui::FUNCTION_TEXT,
+            glm::vec2( global::FUNC_BOX_SIZE * 2.0f, 0.05f ),
+            glm::vec2( 1.0f, 1.0f ),
+            glm::vec2( 0.0f, 0.0f ),
+            omi::material::SHADELESS
+    );
+
 }
 
 } // namespace pack

@@ -36,6 +36,8 @@ public:
 
     Geometry* getGeometry();
 
+    void giveUniqueGeo();
+
 protected:
 
     //--------------------------------------------------------------------------

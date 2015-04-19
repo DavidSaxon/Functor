@@ -28,6 +28,8 @@ public:
 
     void setDistance( float distance );
 
+    void setReload( float reload );
+
 private:
 
     //--------------------------------------------------------------------------
@@ -49,6 +51,11 @@ private:
     omi::Text* m_powerText;
     // the distance text
     omi::Text* m_distanceText;
+
+    // reload bar
+    omi::Transform* m_reloadScale;
+    omi::Sprite* m_reloadBackSprite;
+    omi::Sprite* m_reloadFrontSprite;
 
     //--------------------------------------------------------------------------
     //                          PRIVATE MEMBER FUNCTIONS

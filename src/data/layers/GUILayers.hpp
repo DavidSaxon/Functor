@@ -7,7 +7,9 @@ namespace gui {
 
 enum Layer
 {
-    PAUSE_OVERLAY = 0,
+    FUNCTION_BACK = 0,
+    FUNCTION_TEXT,
+    PAUSE_OVERLAY,
     WIDGET_PRIMARY,
     WIDGET_SECONDARY,
     MAIN_MENU_ITEM

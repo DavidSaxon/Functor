@@ -51,6 +51,7 @@ void World::init()
     // add the mesh
     omi::Mesh* worldMesh =
             omi::ResourceManager::getMesh( "world_std", "", m_position );
+    worldMesh->giveUniqueGeo();
     m_components.add( worldMesh );
 
     // add the orbit mesh

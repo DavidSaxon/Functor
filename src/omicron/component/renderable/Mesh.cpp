@@ -26,6 +26,15 @@ Geometry* Mesh::getGeometry()
     return m_geometry;
 }
 
+void Mesh::giveUniqueGeo()
+{
+    m_geometry = new omi::Geometry(
+            m_geometry->vertices,
+            m_geometry->uv,
+            m_geometry->normals
+    );
+}
+
 //------------------------------------------------------------------------------
 //                           PROTECTED MEMBER FUNCTIONS
 //------------------------------------------------------------------------------

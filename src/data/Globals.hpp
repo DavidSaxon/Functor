@@ -36,6 +36,10 @@ extern const glm::vec4 MENU_ITEM_SELECTED_COLOUR;
 // the colour of a non-selected menu item
 extern const glm::vec4 MENU_ITEM_NON_SELECTED_COLOUR;
 
+//-------------------------------------GUI--------------------------------------
+
+extern const float FUNC_BOX_SIZE;
+
 //-----------------------------------GAMEPLAY-----------------------------------
 
 extern bool m_inOrbit;
