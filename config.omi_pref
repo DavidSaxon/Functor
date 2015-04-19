@@ -5,6 +5,6 @@ gamma: 0.6
 shadows: medium
 master: 1
 sound: 1
-music: 0.8
+music: 1
 look: 1
 move: wasd

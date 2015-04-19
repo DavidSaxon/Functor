@@ -8,7 +8,7 @@ Function::Function( const glm::vec3& focalPoint, float power, float distance )
     :
     m_focalPoint     ( focalPoint ),
     m_power          ( power ),
-    m_currentDistance( distance ),
+    m_currentDistance( 0.0f ),
     m_maxDistance    ( distance )
 {
 }
@@ -23,5 +23,12 @@ void Function::init()
 
 void Function::update()
 {
-    // TODO: increase distance
+    if ( m_currentDistance < m_maxDistance )
+    {
+        m_currentDistance += 0.02f * omi::fpsManager.getTimeScale();
+    }
+    else
+    {
+        m_currentDistance = m_maxDistance;
+    }
 }

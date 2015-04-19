@@ -3,6 +3,7 @@
 #include "src/data/Globals.hpp"
 #include "src/entities/gameplay/Gui.hpp"
 #include "src/entities/gameplay/environment/World.hpp"
+#include "src/entities/gameplay/function/FunctionAttack.hpp"
 #include "src/entities/gameplay/function/RaiseFunc.hpp"
 #include "src/entities/gameplay/function/SineFunc.hpp"
 #include "src/omicron/input/Input.hpp"
@@ -145,6 +146,9 @@ void Player::look()
     m_camFocus->rotation.y +=
         ( omi::displaySettings.getCentre().x - omi::input::getMousePos().x ) *
         LOOK_BASE_SPEED * global::lookSensitivity;
+
+    m_camFocus->rotation.x = util::math::clamp(
+            m_camFocus->rotation.x, -90.0f, 90.0f );
 }
 
 void Player::planetSelect()
@@ -304,26 +308,34 @@ void Player::attack()
 
     // TODO: store
     float power = 0.1f;
-    float distance = 0.5f;
+    float distance = 0.75f;
 
+    Function* func = NULL;
     // fire left function
     if ( omi::input::mousePressed( omi::input::mouse_button::LEFT ) &&
          m_generatingFuncs >= 1.0f )
     {
-        m_world->addFunction( new RaiseFunc( focalPoint, power, distance ) );
-
-        m_generatingFuncs = 0.0f;
-        return;
+        func = new RaiseFunc( focalPoint, power, distance );
     }
-
     // fire right function
-    if ( omi::input::mousePressed( omi::input::mouse_button::RIGHT ) &&
+    else if ( omi::input::mousePressed( omi::input::mouse_button::RIGHT ) &&
          m_generatingFuncs >= 1.0f )
     {
-        m_world->addFunction( new SineFunc( focalPoint, power, distance ) );
+        func = new SineFunc( focalPoint, power, distance );
+    }
 
+    if ( func != NULL )
+    {
+        addEntity( new FunctionAttack(
+                glm::vec3( 0.2, 0.6f, 1.0f ),
+                m_world,
+                focalPoint,
+                m_camFocus->rotation,
+                func
+        ) );
+
+        m_world->addFunction( func );
         m_generatingFuncs = 0.0f;
-        return;
     }
 }
 
@@ -367,4 +379,11 @@ void Player::initComponents()
             new omi::Camera( "", omi::cam::PERSPECTIVE, m_camPos, 50.0f );
     camera->setExposure( 1.2f );
     m_components.add( camera );
+
+    // music
+    omi::Music* music = new omi::Music(
+            "", "res/sound/music/to_the_void.ogg", 1.0f, true
+    );
+    m_components.add( music );
+    music->play();
 }

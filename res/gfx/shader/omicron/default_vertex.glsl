@@ -29,6 +29,8 @@ varying vec3 v_normal;
 varying vec3 v_eyePos;
 // the shadow co-ordinates
 varying vec4 v_shadowCoord;
+// colour multiplier
+varying vec4 v_colourMul;
 
 
 //------------------------------------------------------------------------------
@@ -46,6 +48,9 @@ void main()
     v_eyePos = -vec3( u_modelViewMatrix * gl_Vertex );
     // calculate shadow co-ordinates
     v_shadowCoord = u_shadowMatrix * vec4( gl_Vertex.xyz, 1.0 );
+
+    // constant real colour
+    v_colourMul = vec4( 1.0, 1.0, 1.0, 1.0 );
 
     //set the position
     gl_Position = u_modelViewProjectionMatrix * gl_Vertex;

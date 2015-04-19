@@ -32,6 +32,8 @@ void buildPlayerPack();
 
 void buildEnvironmentPack();
 
+void buildEffectsPack();
+
 //------------------------------------------------------------------------------
 //                                   FUNCTIONS
 //------------------------------------------------------------------------------
@@ -47,6 +49,7 @@ inline void build()
     buildGUIPack();
     buildPlayerPack();
     buildEnvironmentPack();
+    buildEffectsPack();
 }
 
 } // namespace pack

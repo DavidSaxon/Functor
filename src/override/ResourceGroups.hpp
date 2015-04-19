@@ -12,7 +12,8 @@ enum ResourceGroup {
     MENU,
     GUI,
     PLAYER,
-    ENVIRONMENT
+    ENVIRONMENT,
+    EFFECTS
 };
 
 } // namespace resource_group

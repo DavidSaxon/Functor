@@ -57,6 +57,8 @@ public:
     /** Sets the animation speed */
     void setSpeed( float speed );
 
+    float getFrame() const;
+
 protected:
 
     //--------------------------------------------------------------------------

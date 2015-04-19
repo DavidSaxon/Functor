@@ -88,6 +88,7 @@
     <ClInclude Include="src\entities\gameplay\environment\Sun.hpp" />
     <ClInclude Include="src\entities\gameplay\environment\World.hpp" />
     <ClInclude Include="src\entities\gameplay\function\Function.hpp" />
+    <ClInclude Include="src\entities\gameplay\function\FunctionAttack.hpp" />
     <ClInclude Include="src\entities\gameplay\function\RaiseFunc.hpp" />
     <ClInclude Include="src\entities\gameplay\function\SineFunc.hpp" />
     <ClInclude Include="src\entities\gameplay\Gui.hpp" />
@@ -191,6 +192,7 @@
     <ClCompile Include="src\entities\gameplay\environment\Sun.cpp" />
     <ClCompile Include="src\entities\gameplay\environment\World.cpp" />
     <ClCompile Include="src\entities\gameplay\function\Function.cpp" />
+    <ClCompile Include="src\entities\gameplay\function\FunctionAttack.cpp" />
     <ClCompile Include="src\entities\gameplay\function\RaiseFunc.cpp" />
     <ClCompile Include="src\entities\gameplay\function\SineFunc.cpp" />
     <ClCompile Include="src\entities\gameplay\Gui.cpp" />
@@ -273,6 +275,7 @@
     <ClCompile Include="src\override\StartUp.cpp" />
     <ClCompile Include="src\resource_pack\AllPack.cpp" />
     <ClCompile Include="src\resource_pack\DebugPack.cpp" />
+    <ClCompile Include="src\resource_pack\EffectsPack.cpp" />
     <ClCompile Include="src\resource_pack\EnvironmentPack.cpp" />
     <ClCompile Include="src\resource_pack\GUIPack.cpp" />
     <ClCompile Include="src\resource_pack\LoadingPack.cpp" />

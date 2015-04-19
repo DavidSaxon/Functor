@@ -83,7 +83,8 @@ set(SRCS
     src/resource_pack/LoadingPack.cpp
     src/resource_pack/MenuPack.cpp
     src/resource_pack/PlayerPack.cpp
-    src/resource_pack/FacilityPack.cpp
+    src/resource_pack/EnvironmentPack.cpp
+    src/resource_pack/GUIPack.cpp
 
     src/scenes/start_up/StartUpScene.cpp
     src/scenes/loading/LoadingScene.cpp
@@ -96,8 +97,13 @@ set(SRCS
     src/entities/loading/LoadingSplash.cpp
 
     src/entities/gameplay/Player.cpp
-    src/entities/gameplay/TestEntity.cpp
-    src/entities/gameplay/TestWorld.cpp
+    src/entities/gameplay/Gui.cpp
+    src/entities/gameplay/environment/Environment.cpp
+    src/entities/gameplay/environment/Sun.cpp
+    src/entities/gameplay/environment/World.cpp
+    src/entities/gameplay/function/Function.cpp
+    src/entities/gameplay/function/RaiseFunc.cpp
+    src/entities/gameplay/function/SineFunc.cpp
 
     src/entities/menu/PauseMenu.cpp
     src/entities/menu/setting_widget/EnumWidget.cpp

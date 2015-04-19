@@ -28,6 +28,7 @@ void Gui::update()
 
 void Gui::setVisible( bool state )
 {
+    m_targetSprite->visible = state;
     m_funcBoxSprite1->visible = state;
     m_funcBoxSprite2->visible = state;
     m_funcText1->visible = state;
@@ -64,6 +65,8 @@ void Gui::setDistance( float distance )
 
 void Gui::setReload( float reload )
 {
+    m_targetSprite->visible = reload >= 1.0f ;
+
     reload = util::math::clamp( reload, 0.0f, 1.0f );
     m_reloadScale->scale.x = reload;
 }
@@ -74,6 +77,12 @@ void Gui::setReload( float reload )
 
 void Gui::initComponents()
 {
+    //----------------------------------TARGET----------------------------------
+
+    m_targetSprite = omi::ResourceManager::getSprite( "gui_target", "", NULL );
+    m_targetSprite->gui = true;
+    m_components.add( m_targetSprite );
+
     //--------------------------------FUNCTIONS---------------------------------
 
     // boxes

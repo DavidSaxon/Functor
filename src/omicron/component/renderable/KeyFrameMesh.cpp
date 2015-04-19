@@ -91,6 +91,11 @@ void KeyFrameMesh::setSpeed( float speed )
     m_speed = speed;
 }
 
+float KeyFrameMesh::getFrame() const
+{
+    return ( m_key * 9.0f ) + m_frame;
+}
+
 //------------------------------------------------------------------------------
 //                           PROTECTED MEMBER FUNCTIONS
 //------------------------------------------------------------------------------

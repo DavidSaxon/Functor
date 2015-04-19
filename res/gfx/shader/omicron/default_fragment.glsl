@@ -67,6 +67,10 @@ varying vec3 v_eyePos;
 // the shadow co-ordinates
 varying vec4 v_shadowCoord;
 
+// colour multiplier
+varying vec4 v_colourMul;
+
+
 vec2 poissonDisk[4] = vec2[](
     vec2( -0.94201624, -0.39906216 ),
     vec2( 0.94558609, -0.76890725 ),
@@ -83,7 +87,7 @@ void main() {
     //---------------------------------MATERIAL---------------------------------
 
     // the colour of the material
-    vec4 material = u_colour;
+    vec4 material = u_colour * v_colourMul;
 
     //apply texturing
     vec4 textureColour = texture2D( u_texture, v_texCoord );

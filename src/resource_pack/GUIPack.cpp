@@ -8,6 +8,20 @@ namespace pack
 
 void buildGUIPack()
 {
+    // target
+    omi::ResourceManager::addTextureMaterialSprite(
+        "gui_target",
+        resource_group::GUI,
+        "default_shader",
+        "res/gfx/texture/gui/target.png",
+        layer::gui::FUNCTION_BACK,
+        glm::vec2( 0.1f, 0.1f ),
+        glm::vec2( 1, 1 ),
+        glm::vec2( 0, 0 ),
+        0, omi::material::SHADELESS
+    );
+
+
     // function box
     omi::ResourceManager::addMaterialSprite(
             "gui_function_box",

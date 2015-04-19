@@ -492,6 +492,9 @@
     <ClInclude Include="src\entities\gameplay\function\SineFunc.hpp">
       <Filter>src\entities\gameplay\function</Filter>
     </ClInclude>
+    <ClInclude Include="src\entities\gameplay\function\FunctionAttack.hpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\data\Globals.cpp">
@@ -783,6 +786,12 @@
       <Filter>src\entities\gameplay\function</Filter>
     </ClCompile>
     <ClCompile Include="src\entities\gameplay\function\SineFunc.cpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClCompile>
+    <ClCompile Include="src\resource_pack\EffectsPack.cpp">
+      <Filter>src\resource_pack</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\gameplay\function\FunctionAttack.cpp">
       <Filter>src\entities\gameplay\function</Filter>
     </ClCompile>
   </ItemGroup>

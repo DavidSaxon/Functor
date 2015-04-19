@@ -21,7 +21,7 @@ void SineFunc::apply( const glm::vec3& dirVect, glm::vec3& effect )
     if ( d <= m_currentDistance )
     {
         effect = dirVect *
-                 sin( d * 30.0f ) *
+                 static_cast<float>( sin( d * 30.0f ) ) *
                  m_power * 0.5f *
                  ( ( m_currentDistance - d ) / m_currentDistance );
     }

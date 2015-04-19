@@ -16,7 +16,7 @@ void LoadingScene::init()
     m_firstUpdate = true;
     m_loadingDone = false;
 
-    addEntity( new LoadingSplash() );
+    // addEntity( new LoadingSplash() );
 }
 
 bool LoadingScene::update()
@@ -28,6 +28,7 @@ bool LoadingScene::update()
         omi::ResourceManager::load( resource_group::GUI );
         omi::ResourceManager::load( resource_group::PLAYER );
         omi::ResourceManager::load( resource_group::ENVIRONMENT );
+        omi::ResourceManager::load( resource_group::EFFECTS );
 
         m_loadingDone = true;
 

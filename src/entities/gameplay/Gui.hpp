@@ -36,6 +36,8 @@ private:
     //                                 VARIABLES
     //--------------------------------------------------------------------------
 
+    omi::Sprite* m_targetSprite;
+
     // the transform of the function boxes
     omi::Transform* m_funcPos;
     // the function box sprites

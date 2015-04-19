@@ -5,6 +5,14 @@ namespace pack
 
 void buildEnvironmentPack()
 {
+    // world shader
+    omi::ResourceManager::addShader(
+        "world_shader",
+        resource_group::ENVIRONMENT,
+        "res/gfx/shader/gameplay/world_vertex.glsl",
+        "res/gfx/shader/omicron/default_fragment.glsl"
+    );
+
     // sun
     omi::ResourceManager::addMaterialGeometryMesh(
         "sun_std",
@@ -20,7 +28,7 @@ void buildEnvironmentPack()
     omi::ResourceManager::addTextureMaterialGeometryMesh(
         "world_std",
         resource_group::ENVIRONMENT,
-        "default_shader",
+        "world_shader",
         "res/gfx/texture/environment/world_std.png",
         "res/gfx/geometry/environment/world_std.obj",
         0
