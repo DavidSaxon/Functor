@@ -6,6 +6,8 @@
 
 #include "src/data/Globals.hpp"
 
+#include "src/entities/gameplay/environment/TowerBase.hpp"
+
 //------------------------------------------------------------------------------
 //                                  CONSTRUCTOR
 //------------------------------------------------------------------------------
@@ -19,8 +21,7 @@ World::World(
     m_rotationSpeed( rotationSpeed ),
     m_sunDistance  ( sunDistance ),
     m_orbitSpeed   ( orbitSpeed ),
-    m_orbitMeshId  ( orbitMeshId ),
-    m_time         ( 0.0f )
+    m_orbitMeshId  ( orbitMeshId )
 {
 }
 
@@ -64,6 +65,9 @@ void World::init()
 
     // read the geo
     initRead();
+
+    addEntity( new TowerBase(
+            this, glm::normalize( glm::vec3( 1.0f, 0.5f, 0.5f ) ) ) );
 }
 
 void World::update()
@@ -73,9 +77,6 @@ void World::update()
     {
         return;
     }
-
-    // increase time
-    m_time += 0.005f * omi::fpsManager.getTimeScale();
 
     // rotate
     m_position->rotation.y += m_rotationSpeed * omi::fpsManager.getTimeScale();
@@ -93,42 +94,6 @@ void World::update()
         m_orbitMesh->visible = true;
     }
 
-    //---------------------------------FUNCTION---------------------------------
-
-
-    // random jitter test
-    // std::map<std::string, std::vector<unsigned>>::iterator it;
-    // for ( it = m_vertHash.begin(); it != m_vertHash.end(); ++it )
-    // {
-    //     float rx = static_cast<float>( rand()  % 1000 ) / 1000.0f;
-    //     rx -= 0.5f;
-    //     rx *= 0.01f;
-    //     float ry = static_cast<float>( rand()  % 1000 ) / 1000.0f;
-    //     ry -= 0.5f;
-    //     ry *= 0.01f;
-    //     float rz = static_cast<float>( rand()  % 1000 ) / 1000.0f;
-    //     rz -= 0.5f;
-    //     rz *= 0.01f;
-
-    //     std::vector<unsigned>::iterator itv;
-    //     for ( itv = it->second.begin(); itv != it->second.end(); ++itv )
-    //     {
-    //         m_worldGeo->vertices[ *itv ].x += rx;
-    //         m_worldGeo->vertices[ *itv ].y += ry;
-    //         m_worldGeo->vertices[ *itv ].z += rz;
-    //     }
-    // }
-
-
-    // central point of the ripple
-    // glm::vec3 focalPoint( 0.0f, 0.5, 1.0f );
-    // focalPoint = glm::normalize( focalPoint );
-
-    // // the power of the function
-    // float power = 0.05f;
-    // // the distance the the ripple can travel
-    // float maxDis = 1.0f;
-
     // iterate over the geometry to apply functions
     std::map<std::string, std::vector<unsigned>>::iterator it;
     for ( it = m_vertHash.begin(); it != m_vertHash.end(); ++it )
@@ -136,42 +101,44 @@ void World::update()
         std::vector<unsigned>::iterator itv;
         for ( itv = it->second.begin(); itv != it->second.end(); ++itv )
         {
-            // // calculate the distance from the focal point
-            // float distance =
-            //         fabs( glm::distance( m_dirVects[ *itv ], focalPoint ) );
-
-            // glm::vec3 effect;
-            // if ( abs( distance ) < maxDis )
-            // {
-            //     float funcResolve = static_cast<float>(
-            //         sin( ( distance - m_time ) * 20.0f ) *
-            //         ( ( maxDis - distance ) / maxDis )
-            //     );
-
-            //     effect.x = (  m_dirVects[ *itv ].x * funcResolve ) * power;
-            //     effect.y = (  m_dirVects[ *itv ].y * funcResolve ) * power;
-            //     effect.z = (  m_dirVects[ *itv ].z * funcResolve ) * power;
-            // }
-
             glm::vec3 effect;
+            glm::vec3 finalEffect;
             std::vector<Function*>::iterator itf;
             for ( itf = m_functions.begin(); itf != m_functions.end(); ++itf )
             {
                 glm::vec3 funcEffect;
                 ( *itf )->apply( m_dirVects[ *itv ], funcEffect );
-                effect += funcEffect;
+
+                if ( ( *itf )->isDone() )
+                {
+                    finalEffect += funcEffect;
+                }
+                else
+                {
+                    effect += funcEffect;
+                }
             }
 
             // apply
-            m_worldGeo->vertices[ *itv ].x =
-                    m_orgVert[ *itv ].x + effect.x;
-            m_worldGeo->vertices[ *itv ].y =
-                    m_orgVert[ *itv ].y + effect.y;
-            m_worldGeo->vertices[ *itv ].z =
-                    m_orgVert[ *itv ].z + effect.z;
+            m_orgVert[ *itv ] = m_orgVert[ *itv ] + finalEffect;
+            m_worldGeo->vertices[ *itv ] = m_orgVert[ *itv ] + effect;
         }
     }
 
+    // remove complete functions
+    std::vector<Function*>::iterator itf;
+    for ( itf = m_functions.begin(); itf != m_functions.end(); )
+    {
+        if ( ( ( *itf )->isDone() ) )
+        {
+            ( *itf )->fuckOff();
+            itf = m_functions.erase( itf );
+        }
+        else
+        {
+            ++itf;
+        }
+    }
 
     // recalculate normals
     for ( unsigned i = 0; i < m_worldGeo->vertices.size(); i += 3 )
@@ -213,6 +180,47 @@ void World::addFunction( Function* func )
     m_functions.push_back( func );
 }
 
+float World::getHeightMapPos( const glm::vec3& dirVect )
+{
+    // find the three closet points
+    int closet1 = -1;
+    float closetDis1 = 1000.0f;
+    int closet2 = -1;
+    float closetDis2 = 1000.0f;
+    int closet3 = -1;
+    float closetDis3 = 1000.0f;
+
+    for ( unsigned i = 0; i < m_dirVects.size(); ++i )
+    {
+        float d = fabs( glm::distance( dirVect, m_dirVects[ i ] ) );
+
+        if ( d < closetDis1 )
+        {
+            closet1 = i;
+            closetDis1 = d;
+        }
+        else if ( d < closetDis2 )
+        {
+            closet2 = i;
+            closetDis2 = d;
+        }
+
+        else if ( d < closetDis3 )
+        {
+            closet3 = i;
+            closetDis3 = d;
+        }
+    }
+
+    // get average
+    float height =
+        fabs( glm::distance( m_worldGeo->vertices[ closet1 ], glm::vec3() ) ) +
+        fabs( glm::distance( m_worldGeo->vertices[ closet2 ], glm::vec3() ) ) +
+        fabs( glm::distance( m_worldGeo->vertices[ closet3 ], glm::vec3() ) );
+
+    return height / 3.0f;
+}
+
 //------------------------------------------------------------------------------
 //                            PRIVATE MEMBER FUNCTIONS
 //------------------------------------------------------------------------------
@@ -241,6 +249,7 @@ void World::initRead()
 
         if ( m_vertHash.find( ss.str() ) == m_vertHash.end() )
         {
+            m_keyVerts.push_back( m_worldGeo->vertices[ i ] );
             m_vertHash[ ss.str() ] = std::vector<unsigned>();
         }
         m_vertHash[ ss.str() ].push_back( i );

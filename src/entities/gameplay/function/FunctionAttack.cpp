@@ -65,11 +65,13 @@ void FunctionAttack::init()
     m_components.add( m_trailMesh );
 
 
+    m_contactDis = m_world->getHeightMapPos( m_rotation );
+
     // explosion
     m_explosionPos = new omi::Transform(
             "",
             centerT,
-            m_rotation,
+            m_rotation * m_contactDis,
             glm::vec3(),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );
@@ -78,7 +80,6 @@ void FunctionAttack::init()
     m_explosionMesh = omi::ResourceManager::getKeyFrameMesh(
             "function_explosion", "", m_explosionPos );
     m_explosionMesh->getMaterial().glow = new omi::Glow( m_colour, 0.2f );
-
 
     // play sound
     omi::SoundPool::play(
@@ -95,7 +96,7 @@ void FunctionAttack::update()
     m_trailPos->translation = m_rotation * m_distance;
 
     // check if we've reached the surface
-    if ( m_distance < 1.0f && !m_exploded )
+    if ( m_distance <= m_contactDis && !m_exploded )
     {
         m_exploded = true;
         m_components.add( m_explosionMesh );

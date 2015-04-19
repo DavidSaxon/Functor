@@ -86,9 +86,12 @@
     <ClInclude Include="src\entities\debug\FPSCounter.hpp" />
     <ClInclude Include="src\entities\gameplay\environment\Environment.hpp" />
     <ClInclude Include="src\entities\gameplay\environment\Sun.hpp" />
+    <ClInclude Include="src\entities\gameplay\environment\Tower.hpp" />
+    <ClInclude Include="src\entities\gameplay\environment\TowerBase.hpp" />
     <ClInclude Include="src\entities\gameplay\environment\World.hpp" />
     <ClInclude Include="src\entities\gameplay\function\Function.hpp" />
     <ClInclude Include="src\entities\gameplay\function\FunctionAttack.hpp" />
+    <ClInclude Include="src\entities\gameplay\function\LowerFunc.hpp" />
     <ClInclude Include="src\entities\gameplay\function\RaiseFunc.hpp" />
     <ClInclude Include="src\entities\gameplay\function\SineFunc.hpp" />
     <ClInclude Include="src\entities\gameplay\Gui.hpp" />
@@ -190,9 +193,12 @@
     <ClCompile Include="src\entities\debug\FPSCounter.cpp" />
     <ClCompile Include="src\entities\gameplay\environment\Environment.cpp" />
     <ClCompile Include="src\entities\gameplay\environment\Sun.cpp" />
+    <ClCompile Include="src\entities\gameplay\environment\Tower.cpp" />
+    <ClCompile Include="src\entities\gameplay\environment\TowerBase.cpp" />
     <ClCompile Include="src\entities\gameplay\environment\World.cpp" />
     <ClCompile Include="src\entities\gameplay\function\Function.cpp" />
     <ClCompile Include="src\entities\gameplay\function\FunctionAttack.cpp" />
+    <ClCompile Include="src\entities\gameplay\function\LowerFunc.cpp" />
     <ClCompile Include="src\entities\gameplay\function\RaiseFunc.cpp" />
     <ClCompile Include="src\entities\gameplay\function\SineFunc.cpp" />
     <ClCompile Include="src\entities\gameplay\Gui.cpp" />

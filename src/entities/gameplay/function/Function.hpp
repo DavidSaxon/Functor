@@ -21,6 +21,10 @@ public:
 
     void update();
 
+    bool isDone();
+
+    void fuckOff();
+
     virtual void apply( const glm::vec3& dirVect, glm::vec3& effect ) = 0;
 
 protected:

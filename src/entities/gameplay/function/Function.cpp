@@ -32,3 +32,13 @@ void Function::update()
         m_currentDistance = m_maxDistance;
     }
 }
+
+bool Function::isDone()
+{
+    return m_currentDistance >= m_maxDistance;
+}
+
+void Function::fuckOff()
+{
+    remove();
+}

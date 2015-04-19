@@ -64,6 +64,34 @@ void buildEnvironmentPack()
         0,
         omi::material::SHADELESS
     );
+
+    // tower
+    omi::ResourceManager::addMaterialGeometryMesh(
+        "tower1",
+        resource_group::ENVIRONMENT,
+        "default_shader",
+        glm::vec4( 0.3f, 0.3f, 1.0f, 1.0f ),
+        "res/gfx/geometry/environment/tower1.obj",
+        0
+    );
+
+    omi::ResourceManager::addMaterialGeometryMesh(
+        "tower2",
+        resource_group::ENVIRONMENT,
+        "default_shader",
+        glm::vec4( 0.3f, 0.3f, 1.0f, 1.0f ),
+        "res/gfx/geometry/environment/tower2.obj",
+        0
+    );
+
+    omi::ResourceManager::addMaterialGeometryMesh(
+        "tower3",
+        resource_group::ENVIRONMENT,
+        "default_shader",
+        glm::vec4( 0.3f, 0.3f, 1.0f, 1.0f ),
+        "res/gfx/geometry/environment/tower3.obj",
+        0
+    );
 }
 
 } // namespace pack

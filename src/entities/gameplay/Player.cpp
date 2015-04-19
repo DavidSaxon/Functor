@@ -4,6 +4,7 @@
 #include "src/entities/gameplay/Gui.hpp"
 #include "src/entities/gameplay/environment/World.hpp"
 #include "src/entities/gameplay/function/FunctionAttack.hpp"
+#include "src/entities/gameplay/function/LowerFunc.hpp"
 #include "src/entities/gameplay/function/RaiseFunc.hpp"
 #include "src/entities/gameplay/function/SineFunc.hpp"
 #include "src/omicron/input/Input.hpp"
@@ -321,7 +322,7 @@ void Player::attack()
     else if ( omi::input::mousePressed( omi::input::mouse_button::RIGHT ) &&
          m_generatingFuncs >= 1.0f )
     {
-        func = new SineFunc( focalPoint, power, distance );
+        func = new LowerFunc( focalPoint, power, distance );
     }
 
     if ( func != NULL )

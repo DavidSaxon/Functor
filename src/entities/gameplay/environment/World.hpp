@@ -5,6 +5,8 @@
 
 #include "src/entities/gameplay/function/Function.hpp"
 
+class TowerBase;
+
 class World : public omi::Entity
 {
 public:
@@ -40,6 +42,8 @@ public:
 
     void addFunction( Function* func );
 
+    float getHeightMapPos( const glm::vec3& dirVect );
+
 private:
 
     //--------------------------------------------------------------------------
@@ -69,15 +73,16 @@ private:
     std::vector<glm::vec3> m_orgVert;
     // the geo's direction vectors
     std::vector<glm::vec3> m_dirVects;
+    // important vertices
+    std::vector<glm::vec3> m_keyVerts;
     // indices of vertices which are technically the same vertex
     std::map<std::string, std::vector<unsigned>> m_vertHash;
 
-    // TODO: REMOVE ME
-    // time variable used for functions
-    float m_time;
-
     // the list of functions affecting the planet
     std::vector<Function*> m_functions;
+
+    // towers
+    std::vector<TowerBase*> m_towers;
 
 
     //--------------------------------------------------------------------------

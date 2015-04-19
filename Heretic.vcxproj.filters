@@ -495,6 +495,15 @@
     <ClInclude Include="src\entities\gameplay\function\FunctionAttack.hpp">
       <Filter>src\entities\gameplay\function</Filter>
     </ClInclude>
+    <ClInclude Include="src\entities\gameplay\function\LowerFunc.hpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\gameplay\environment\Tower.hpp">
+      <Filter>src\entities\gameplay\environment</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\gameplay\environment\TowerBase.hpp">
+      <Filter>src\entities\gameplay\environment</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\data\Globals.cpp">
@@ -793,6 +802,15 @@
     </ClCompile>
     <ClCompile Include="src\entities\gameplay\function\FunctionAttack.cpp">
       <Filter>src\entities\gameplay\function</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\gameplay\function\LowerFunc.cpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\gameplay\environment\Tower.cpp">
+      <Filter>src\entities\gameplay\environment</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\gameplay\environment\TowerBase.cpp">
+      <Filter>src\entities\gameplay\environment</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
