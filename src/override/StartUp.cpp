@@ -19,7 +19,7 @@ omi::Scene* init()
     // display settings
     omi::displaySettings.setPos( glm::vec2( -8.0, -29.0f ) );
     omi::displaySettings.setSize( omi::displaySettings.getScreenSize() );
-    omi::displaySettings.setTitle( "Heretic" );
+    omi::displaySettings.setTitle( "Functor" );
     omi::displaySettings.setFrameRateCap( 60 );
 
     // render settings
@@ -31,7 +31,7 @@ omi::Scene* init()
     omi::renderSettings.setShadowFrustumSize( 20.0f );
 
     //audio settings
-    omi::audioSettings.setSoundDisabled( true );
+    omi::audioSettings.setSoundDisabled( false );
     omi::audioSettings.setMusicDisabled( true );
 
     // apply settings from disk

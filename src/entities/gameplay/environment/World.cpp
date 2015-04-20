@@ -124,6 +124,44 @@ void World::init()
         m_towers.push_back( tv5 );
         addEntity( tv5 );
     }
+
+    else if ( m_difficulty == 2 )
+    {
+        TowerBase* tv1 = new TowerBase(
+                this, glm::vec3( 30.0f, 85.0f, 0.0f ) );
+        m_towers.push_back( tv1 );
+        addEntity( tv1 );
+
+        TowerBase* tv1_5 = new TowerBase(
+                this, glm::vec3( 30.0f, 95.0f, 0.0f ) );
+        m_towers.push_back( tv1_5 );
+        addEntity( tv1_5 );
+
+        TowerBase* tv2 = new TowerBase(
+                this, glm::vec3( -40.0f, 175.0f, 0.0f ) );
+        m_towers.push_back( tv2 );
+        addEntity( tv2 );
+
+        TowerBase* tv2_5 = new TowerBase(
+                this, glm::vec3( -40.0f, 185.0f, 0.0f ) );
+        m_towers.push_back( tv2_5 );
+        addEntity( tv2_5 );
+
+        TowerBase* tv3 = new TowerBase(
+                this, glm::vec3( -55.0f, 5.0f, 0.0f ) );
+        m_towers.push_back( tv3 );
+        addEntity( tv3 );
+
+        TowerBase* tv4 = new TowerBase(
+                this, glm::vec3( 0.0f, -120.0f, 0.0f ) );
+        m_towers.push_back( tv4 );
+        addEntity( tv4 );
+
+        TowerBase* tv5 = new TowerBase(
+                this, glm::vec3( 40.0f, -70.0f, 0.0f ) );
+        m_towers.push_back( tv5 );
+        addEntity( tv5 );
+    }
 }
 
 void World::update()
@@ -154,27 +192,29 @@ void World::update()
     std::map<std::string, std::vector<unsigned>>::iterator it;
     for ( it = m_vertHash.begin(); it != m_vertHash.end(); ++it )
     {
+        // evaluate function on key vertex
+        glm::vec3 effect;
+        glm::vec3 finalEffect;
+        std::vector<Function*>::iterator itf;
+        for ( itf = m_functions.begin(); itf != m_functions.end(); ++itf )
+        {
+            glm::vec3 funcEffect;
+            ( *itf )->apply( m_dirVects[ it->second[ 0 ] ], funcEffect );
+
+            if ( ( *itf )->isDone() )
+            {
+                finalEffect += funcEffect;
+            }
+            else
+            {
+                effect += funcEffect;
+            }
+        }
+
+        // apply function to all vertices
         std::vector<unsigned>::iterator itv;
         for ( itv = it->second.begin(); itv != it->second.end(); ++itv )
         {
-            glm::vec3 effect;
-            glm::vec3 finalEffect;
-            std::vector<Function*>::iterator itf;
-            for ( itf = m_functions.begin(); itf != m_functions.end(); ++itf )
-            {
-                glm::vec3 funcEffect;
-                ( *itf )->apply( m_dirVects[ *itv ], funcEffect );
-
-                if ( ( *itf )->isDone() )
-                {
-                    finalEffect += funcEffect;
-                }
-                else
-                {
-                    effect += funcEffect;
-                }
-            }
-
             // apply
             m_orgVert[ *itv ] = m_orgVert[ *itv ] + finalEffect;
             m_worldGeo->vertices[ *itv ] = m_orgVert[ *itv ] + effect;
@@ -219,6 +259,11 @@ void World::update()
 void World::start( bool state )
 {
     m_started = state;
+
+    if ( m_started )
+    {
+        m_orgVert = std::vector<glm::vec3>( m_dirVects );
+    }
 
     // send to bases
     std::vector<TowerBase*>::iterator it = m_towers.begin();

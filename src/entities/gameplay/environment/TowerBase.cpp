@@ -84,11 +84,11 @@ void TowerBase::init()
     m_components.add( m_stackRot );
 
     // add mesh
-    omi::Mesh* mesh =
+    m_mesh =
             omi::ResourceManager::getMesh( "tower_base", "", m_stackRot );
-    mesh->getMaterial().specular =
+    m_mesh->getMaterial().specular =
             new omi::Specular( 64.0f, glm::vec3( 0.5f, 0.5f, 0.5f ) );
-    m_components.add( mesh );
+    m_components.add( m_mesh );
 
     // register in cache
     m_heightCacheId = m_world->addHeightMapCache( m_dirVect );
@@ -113,6 +113,12 @@ void TowerBase::update()
     {
         ( *it )->setAddHeight(
                 util::math::clamp<float>( m_height, 0.0f, BLOCK_HEIGHT ) );
+    }
+
+    // glow bottom
+    if ( !m_blocks.empty() )
+    {
+        m_blocks[ 0 ]->glowMyShitUp();
     }
 
     if ( !m_started )

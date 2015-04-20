@@ -4,9 +4,14 @@
 #include "src/entities/gameplay/Gui.hpp"
 #include "src/entities/gameplay/environment/World.hpp"
 #include "src/entities/gameplay/function/FunctionAttack.hpp"
+#include "src/entities/gameplay/function/CosineFunc.hpp"
 #include "src/entities/gameplay/function/LowerFunc.hpp"
 #include "src/entities/gameplay/function/RaiseFunc.hpp"
+#include "src/entities/gameplay/function/RandFunc.hpp"
 #include "src/entities/gameplay/function/SineFunc.hpp"
+#include "src/entities/gameplay/function/TanFunc.hpp"
+#include "src/entities/gameplay/function/AddFunc.hpp"
+#include "src/entities/gameplay/function/SubFunc.hpp"
 #include "src/omicron/input/Input.hpp"
 
 //------------------------------------------------------------------------------
@@ -37,7 +42,7 @@ static const float TRANS_MOVE_SPEED = 2.0f;
 static const float TRANS_TILT_SPEED = 2.0f;
 
 // regeneration time
-static const float REGEN_SPEED = 0.01f;
+static const float REGEN_SPEED = 0.02f;
 
 } // namespace anonymous
 
@@ -52,7 +57,12 @@ Player::Player( Gui* gui, const std::vector<World*>& worlds )
     m_gui            ( gui ),
     m_worlds         ( worlds ),
     m_world          ( NULL ),
-    m_generatingFuncs( 2.0f )
+    m_generatingFuncs( 2.0f ),
+    m_genTime        ( true ),
+    m_leftFunc       ( gameplay::X_X ),
+    m_RightFunc      ( gameplay::MX_X ),
+    m_genDistance    ( 0.0f ),
+    m_power          ( 0.0f )
 {
     global::m_inOrbit = false;
 }
@@ -79,6 +89,16 @@ void Player::update()
     {
         // show gui
         m_gui->setVisible( true );
+    }
+    else
+    {
+        m_gui->setVisible( false );
+    }
+
+    if ( m_state == gameplay::PLANET_ORBIT &&
+         omi::input::isKeyPressed( omi::input::key::BACKSPACE ) )
+    {
+        goLevel();
     }
 
     // don't use input if omicron doesn't have focus
@@ -108,6 +128,21 @@ void Player::update()
             break;
         }
     }
+}
+
+void Player::goLevel()
+{
+    m_world->start( false );
+    m_state = gameplay::PLANET_SELECT;
+    m_distT->parent = m_centrePos;
+    m_distT->translation = glm::vec3();
+    m_distT->rotation = glm::vec3();
+    m_camFocus->rotation = glm::vec3( -90.0f, 0.0f, 0.0f );
+    m_camFocus->parent = m_distT;
+    m_camPos->translation.z = 90.0f;
+    m_generatingFuncs = 2.0f;
+    m_genTime = true;
+    global::m_inOrbit = false;
 }
 
 //------------------------------------------------------------------------------
@@ -214,6 +249,7 @@ void Player::planetSelect()
 
         // we're in orbit
         global::m_inOrbit = true;
+        m_world->start( true );
     }
 }
 
@@ -274,7 +310,6 @@ void Player::transToPlanet()
     {
         m_camFocus->parent = m_world->getPosition();
         m_state = gameplay::PLANET_ORBIT;
-        m_world->start( true );
     }
 }
 
@@ -285,6 +320,82 @@ void Player::planetOrbit()
     {
         m_generatingFuncs += REGEN_SPEED * omi::fpsManager.getTimeScale();
         m_gui->setReload( m_generatingFuncs );
+    }
+    if ( m_genTime )
+    {
+        m_genTime = false;
+
+        m_power = static_cast<float>( rand() % 1000 ) / 1000.0f;
+        m_power *= 0.1f;
+        m_gui->setPower( m_genDistance );
+
+        m_genDistance = static_cast<float>( rand() % 1000 ) / 1000.0f;
+        m_genDistance += 0.1f;
+        m_gui->setDistance( m_genDistance );
+
+        int r = rand() % 6;
+        if ( r == 0 )
+        {
+            m_leftFunc = gameplay::X_X;
+            m_gui->setFunc1( "x*x" );
+        }
+        else if ( r == 1 )
+        {
+            m_leftFunc = gameplay::MX_X;
+            m_gui->setFunc1( "-x*x" );
+        }
+        else if ( r == 2 )
+        {
+            m_leftFunc = gameplay::SIN;
+            m_gui->setFunc1( "sin(x)" );
+        }
+        else if ( r == 3 )
+        {
+            m_leftFunc = gameplay::COS;
+            m_gui->setFunc1( "+x" );
+        }
+        else if ( r == 4 )
+        {
+            m_leftFunc = gameplay::TAN;
+            m_gui->setFunc1( "-x" );
+        }
+        else if ( r == 5 )
+        {
+            m_leftFunc = gameplay::RAND;
+            m_gui->setFunc1( "rand()" );
+        }
+
+        r = rand() % 6;
+        if ( r == 0 )
+        {
+            m_RightFunc = gameplay::X_X;
+            m_gui->setFunc2( "x*x" );
+        }
+        else if ( r == 1 )
+        {
+            m_RightFunc = gameplay::MX_X;
+            m_gui->setFunc2( "-x*x" );
+        }
+        else if ( r == 2 )
+        {
+            m_RightFunc = gameplay::SIN;
+            m_gui->setFunc2( "sin(x)" );
+        }
+        else if ( r == 3 )
+        {
+            m_RightFunc = gameplay::COS;
+            m_gui->setFunc2( "+x" );
+        }
+        else if ( r == 4 )
+        {
+            m_RightFunc = gameplay::TAN;
+            m_gui->setFunc2( "-x" );
+        }
+        else if ( r == 5 )
+        {
+            m_RightFunc = gameplay::RAND;
+            m_gui->setFunc2( "rand()" );
+        }
     }
 
     attack();
@@ -317,19 +428,78 @@ void Player::attack()
     if ( omi::input::mousePressed( omi::input::mouse_button::LEFT ) &&
          m_generatingFuncs >= 1.0f )
     {
-        func = new RaiseFunc( focalPoint, power, distance );
+        switch ( m_leftFunc )
+        {
+            case gameplay::X_X:
+            {
+                func = new RaiseFunc( focalPoint, power, distance );
+                break;
+            }
+            case gameplay::MX_X:
+            {
+                func = new LowerFunc( focalPoint, power, distance );
+                break;
+            }
+            case gameplay::SIN:
+            {
+                func = new SineFunc( focalPoint, power, distance );
+                break;
+            }
+            case gameplay::COS:
+            {
+                func = new AddFunc( focalPoint, power, distance );
+                break;
+            }
+            case gameplay::TAN:
+            {
+                func = new SubFunc( focalPoint, power, distance );
+                break;
+            }
+            case gameplay::RAND:
+            {
+                func = new RandFunc( focalPoint, power, distance );
+                break;
+            }
+        }
     }
     // fire right function
     else if ( omi::input::mousePressed( omi::input::mouse_button::RIGHT ) &&
          m_generatingFuncs >= 1.0f )
     {
-        func = new LowerFunc( focalPoint, power, distance );
-    }
-    // TODO: REMOVE ME
-    else if ( omi::input::isKeyPressed( omi::input::key::SPACE ) &&
-         m_generatingFuncs >= 1.0f )
-    {
-        func = new SineFunc( focalPoint, power, distance );
+        switch ( m_RightFunc )
+        {
+            case gameplay::X_X:
+            {
+                func = new RaiseFunc( focalPoint, power, distance );
+                break;
+            }
+            case gameplay::MX_X:
+            {
+                func = new LowerFunc( focalPoint, power, distance );
+                break;
+            }
+            case gameplay::SIN:
+            {
+                func = new SineFunc( focalPoint, power, distance );
+                break;
+            }
+            case gameplay::COS:
+            {
+                func = new AddFunc( focalPoint, power, distance );
+                break;
+            }
+            case gameplay::TAN:
+            {
+                func = new SubFunc( focalPoint, power, distance );
+                break;
+            }
+            case gameplay::RAND:
+            {
+                func = new RandFunc( focalPoint, power, distance );
+                break;
+            }
+        }
+
     }
 
     if ( func != NULL )
@@ -344,6 +514,9 @@ void Player::attack()
 
         m_world->addFunction( func );
         m_generatingFuncs = 0.0f;
+        m_genTime = true;
+        m_gui->setFunc1( "" );
+        m_gui->setFunc2( "" );
     }
 }
 

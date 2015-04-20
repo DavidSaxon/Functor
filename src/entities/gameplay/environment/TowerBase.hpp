@@ -46,6 +46,8 @@ private:
     omi::Transform* m_pos;
     omi::Transform* m_stackRot;
 
+    omi::Mesh* m_mesh;
+
     std::vector<Tower*> m_blocks;
 
     unsigned m_heightCacheId;

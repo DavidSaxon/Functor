@@ -88,7 +88,7 @@ void FunctionAttack::init()
     omi::SoundPool::play(
             omi::ResourceManager::getSound( "fire_1" ),
             false,
-            0.5f
+            1.0f
     );
 }
 
@@ -113,7 +113,7 @@ void FunctionAttack::update()
         omi::SoundPool::play(
                 omi::ResourceManager::getSound( "explode_1" ),
                 false,
-                0.35f
+                1.0f
         );
     }
     if ( m_distance < 0.0f )

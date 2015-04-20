@@ -33,8 +33,6 @@ void Gui::setVisible( bool state )
     m_funcBoxSprite2->visible = state;
     m_funcText1->visible = state;
     m_funcText2->visible = state;
-    m_powerText->visible = state;
-    m_distanceText->visible = state;
     m_reloadBackSprite->visible = state;
     m_reloadFrontSprite->visible = state;
 }
@@ -52,6 +50,8 @@ void Gui::setFunc2( const std::string& func2 )
 void Gui::setPower( float power )
 {
     std::stringstream ss;
+    ss << "power:    ";
+    ss << std::setprecision( 3 ) << std::fixed;
     ss << power;
     m_powerText->setString( ss.str() );
 }
@@ -59,6 +59,8 @@ void Gui::setPower( float power )
 void Gui::setDistance( float distance )
 {
     std::stringstream ss;
+    ss << "distance: ";
+    ss << std::setprecision( 3 ) << std::fixed;
     ss << distance;
     m_distanceText->setString( ss.str() );
 }
@@ -116,17 +118,17 @@ void Gui::initComponents()
     m_funcText1 = omi::ResourceManager::getText(
             "gui_function_text", "", m_funcPos );
     m_funcText1->gui = true;
-    m_funcText1->setString( "x*x" );
+    m_funcText1->setString( "" );
     m_funcText1->setHorCentred( true );
-    m_funcText1->setVertCentred( true );
+    // m_funcText1->setVertCentred( true );
     m_components.add( m_funcText1 );
 
     m_funcText2 = omi::ResourceManager::getText(
             "gui_function_text", "", func2Offset );
     m_funcText2->gui = true;
-    m_funcText2->setString( "sin(x)" );
+    m_funcText2->setString( "" );
     m_funcText2->setHorCentred( true );
-    m_funcText2->setVertCentred( true );
+    // m_funcText2->setVertCentred( true );
     m_components.add( m_funcText2 );
 
     //-------------------------------MULTIPLIERS--------------------------------
@@ -141,9 +143,11 @@ void Gui::initComponents()
     m_powerText = omi::ResourceManager::getText(
             "gui_mul_text", "", m_mulPos );
     m_powerText->gui = true;
-    m_powerText->setString( "   power: 0.25" );
+    m_powerText->setString( "   power: 0.0" );
     m_powerText->setHorCentred( true );
     m_powerText->setVertCentred( true );
+    m_powerText->visible = false;
+    // setDistance( 0.0f );
     m_components.add( m_powerText );
 
     omi::Transform* m_mulOffset = new omi::Transform(
@@ -157,9 +161,11 @@ void Gui::initComponents()
     m_distanceText = omi::ResourceManager::getText(
             "gui_mul_text", "", m_mulOffset );
     m_distanceText->gui = true;
-    m_distanceText->setString( "distance: 0.67" );
+    m_distanceText->setString( "distance: 0.0" );
     m_distanceText->setHorCentred( true );
     m_distanceText->setVertCentred( true );
+    m_distanceText->visible = false;
+    // setPower( 0.0f );
     m_components.add( m_distanceText );
 
 

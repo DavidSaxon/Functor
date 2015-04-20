@@ -11,19 +11,13 @@
     - spec map for tower blocks
 }
 
-- worlds and bases need to be activated
-
-- randomly rotate explosions || just use sphere
-
 - fix top rotation to clamp to remap
 
 ------
 
-- towers positioned
-
-- tower destroying
-
 - music drums down
+
+- fix lowest bug
 
 - randomise
 {

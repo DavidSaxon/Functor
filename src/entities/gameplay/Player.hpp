@@ -17,12 +17,21 @@ class World;
 namespace gameplay
 {
 // the gameplay state
-    enum State
-    {
-        PLANET_SELECT = 0,
-        TRANS_TO_PLANET,
-        PLANET_ORBIT
-    };
+enum State
+{
+    PLANET_SELECT = 0,
+    TRANS_TO_PLANET,
+    PLANET_ORBIT
+};
+enum FuncType
+{
+    X_X = 0,
+    MX_X,
+    SIN,
+    COS, //
+    TAN, //
+    RAND
+};
 } // namespace gameplay
 
 class Player : public omi::Entity
@@ -44,6 +53,8 @@ public:
 
     /** #Override */
     void update();
+
+    void goLevel();
 
 private:
 
@@ -72,6 +83,14 @@ private:
     omi::Transform* m_camPos;
 
     float m_generatingFuncs;
+
+    bool m_genTime;
+
+    gameplay::FuncType m_leftFunc;
+    gameplay::FuncType m_RightFunc;
+
+    float m_genDistance;
+    float m_power;
 
     //--------------------------------------------------------------------------
     //                          PRIVATE MEMBER FUNCTIONS

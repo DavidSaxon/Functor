@@ -22,7 +22,7 @@ void SineFunc::apply( const glm::vec3& dirVect, glm::vec3& effect )
     {
         effect = dirVect *
                  static_cast<float>( sin( d * 30.0f ) ) *
-                 m_power * 0.5f *
+                 m_power *
                  ( ( m_currentDistance - d ) / m_currentDistance );
     }
 }

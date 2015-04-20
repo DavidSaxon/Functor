@@ -62,6 +62,8 @@ public:
 
     void quickRemove();
 
+    void glowMyShitUp();
+
 private:
 
     //--------------------------------------------------------------------------

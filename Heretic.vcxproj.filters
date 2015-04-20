@@ -504,6 +504,21 @@
     <ClInclude Include="src\entities\gameplay\environment\TowerBase.hpp">
       <Filter>src\entities\gameplay\environment</Filter>
     </ClInclude>
+    <ClInclude Include="src\entities\gameplay\function\CosineFunc.hpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\gameplay\function\RandFunc.hpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\gameplay\function\TanFunc.hpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\gameplay\function\AddFunc.hpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\gameplay\function\SubFunc.hpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\data\Globals.cpp">
@@ -811,6 +826,21 @@
     </ClCompile>
     <ClCompile Include="src\entities\gameplay\environment\TowerBase.cpp">
       <Filter>src\entities\gameplay\environment</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\gameplay\function\CosineFunc.cpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\gameplay\function\RandFunc.cpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\gameplay\function\TanFunc.cpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\gameplay\function\AddFunc.cpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\gameplay\function\SubFunc.cpp">
+      <Filter>src\entities\gameplay\function</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

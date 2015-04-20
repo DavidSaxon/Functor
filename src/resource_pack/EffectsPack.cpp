@@ -50,6 +50,13 @@ void buildEffectsPack()
         "res/sound/fx/gameplay/explode_1.ogg",
         1
     );
+
+    omi::ResourceManager::addSound(
+        "explode_2",
+        resource_group::EFFECTS,
+        "res/sound/fx/gameplay/explode_2.ogg",
+        1
+    );
 }
 
 } // namespace pack

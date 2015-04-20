@@ -17,9 +17,9 @@ static const glm::vec4 RED_COLOUR_1 ( 1.0f, 0.3f, 0.3f, 1.0f );
 static const glm::vec4 RED_COLOUR_2 ( 0.5f, 0.1f, 0.1f, 1.0f );
 static const glm::vec4 RED_COLOUR_3 ( 0.7f, 0.3f, 0.3f, 1.0f );
 
-static const float WEAK_DISTANCE = 0.05f;
-static const float MEDIUM_DISTANCE = 0.1f;
-static const float STRONG_DISTANCE = 0.15f;
+static const float WEAK_DISTANCE = 0.035f;
+static const float MEDIUM_DISTANCE = 0.05f;
+static const float STRONG_DISTANCE = 0.075f;
 } // namespace anonymous
 
 //------------------------------------------------------------------------------
@@ -185,9 +185,25 @@ void Tower::destroy()
     m_booming = true;
     m_boomTimer = 0.0f;
     m_boom->visible = true;
+
+    omi::SoundPool::play(
+            omi::ResourceManager::getSound( "explode_2" ),
+            false,
+            0.5f
+    );
 }
 
 void Tower::quickRemove()
 {
     remove();
+}
+
+void Tower::glowMyShitUp()
+{
+    m_mesh1->getMaterial().glow =
+            new omi::Glow( m_mesh1->getMaterial().colour.xyz(), 0.1f );
+    m_mesh2->getMaterial().glow =
+            new omi::Glow( m_mesh2->getMaterial().colour.xyz(), 0.1f );
+    m_mesh3->getMaterial().glow =
+            new omi::Glow( m_mesh3->getMaterial().colour.xyz(), 0.1f );
 }

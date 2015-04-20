@@ -20,7 +20,7 @@ void buildAllPack()
     omi::ResourceManager::addFont(
         "title_font",
         resource_group::ALL,
-        "res/gfx/fonts/semarang.otf"
+        "res/gfx/fonts/courier_new.ttf"
     );
 
     omi::ResourceManager::addFont(
