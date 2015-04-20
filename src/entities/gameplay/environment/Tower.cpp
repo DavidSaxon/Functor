@@ -29,10 +29,16 @@ void Tower::init()
     m_components.add( m_pos );
 
     m_mesh1 = omi::ResourceManager::getMesh( "tower1", "", m_pos );
+    m_mesh1->getMaterial().specular =
+            new omi::Specular( 64.0f, glm::vec3( 0.5f, 0.5f, 0.5f ) );
     m_components.add( m_mesh1 );
     m_mesh2 = omi::ResourceManager::getMesh( "tower2", "", m_pos );
+    m_mesh2->getMaterial().specular =
+            new omi::Specular( 64.0f, glm::vec3( 0.5f, 0.5f, 0.5f ) );
     m_components.add( m_mesh2 );
     m_mesh3 = omi::ResourceManager::getMesh( "tower3", "", m_pos );
+    m_mesh3->getMaterial().specular =
+            new omi::Specular( 64.0f, glm::vec3( 0.5f, 0.5f, 0.5f ) );
     m_components.add( m_mesh3 );
 }
 

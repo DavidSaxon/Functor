@@ -2,12 +2,46 @@
 | TODO |
 \++++++/
 
-- set window title
+- give buildings angle and then rotate then find dir vector
+{
+    - cache height map look ups
 
+    - spec map for tower blocks
+}
+
+- tower's build
+
+- towers positioned
+
+- tower destroying
+
+- randomise
+{
+    cos
+    rand,
+    tan?
+}
+
+- returning to level select
+
+- win
+
+- death
+{
+    - tower destoys world
+
+    - return to level select
+}
+
+- locking level select
+
+- tutorial
+
+- remove audio and shadows from menu
+
+- fix translation to planet, move over planet first and then zoom in
 
 //-------------------------------------POST-------------------------------------
-
-- set window icon
 
 - bake resources
 

@@ -19,7 +19,7 @@ public:
     //                                CONSTRUCTOR
     //--------------------------------------------------------------------------
 
-    TowerBase( World* world, const glm::vec3& dirVect );
+    TowerBase( World* world, const glm::vec3& rotation );
 
     //--------------------------------------------------------------------------
     //                          PUBLIC MEMBER FUNCTIONS
@@ -36,6 +36,7 @@ private:
     //--------------------------------------------------------------------------
 
     World* m_world;
+    glm::vec3 m_rotation;
     glm::vec3 m_dirVect;
 
     omi::Transform* m_pos;

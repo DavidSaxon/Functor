@@ -79,7 +79,7 @@ void buildEnvironmentPack()
         "tower2",
         resource_group::ENVIRONMENT,
         "default_shader",
-        glm::vec4( 0.3f, 0.3f, 1.0f, 1.0f ),
+        glm::vec4( 0.1f, 0.1f, 0.5f, 1.0f ),
         "res/gfx/geometry/environment/tower2.obj",
         0
     );
@@ -88,7 +88,7 @@ void buildEnvironmentPack()
         "tower3",
         resource_group::ENVIRONMENT,
         "default_shader",
-        glm::vec4( 0.3f, 0.3f, 1.0f, 1.0f ),
+        glm::vec4( 0.3f, 0.3f, 0.7f, 1.0f ),
         "res/gfx/geometry/environment/tower3.obj",
         0
     );

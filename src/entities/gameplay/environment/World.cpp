@@ -67,7 +67,7 @@ void World::init()
     initRead();
 
     addEntity( new TowerBase(
-            this, glm::normalize( glm::vec3( 1.0f, 0.5f, 0.5f ) ) ) );
+            this, glm::vec3( 0.0f, 0.0f, 0.0f ) ) );
 }
 
 void World::update()

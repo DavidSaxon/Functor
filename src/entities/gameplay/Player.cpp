@@ -324,6 +324,12 @@ void Player::attack()
     {
         func = new LowerFunc( focalPoint, power, distance );
     }
+    // TODO: REMOVE ME
+    else if ( omi::input::isKeyPressed( omi::input::key::SPACE ) &&
+         m_generatingFuncs >= 1.0f )
+    {
+        func = new SineFunc( focalPoint, power, distance );
+    }
 
     if ( func != NULL )
     {

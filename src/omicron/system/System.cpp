@@ -140,23 +140,6 @@ void execute() {
             static_cast<int>(systemSettings.getCursorLockedPos().y)));
     }
 
-    // enforce lag
-    if ( systemSettings.isEnforcedLagEnabled() )
-    {
-        if ( input::isKeyPressed( omi::input::key::F8 ) )
-        {
-            util::time::sleep( systemSettings.getEnforcedLag1() );
-        }
-        else if ( input::isKeyPressed( omi::input::key::F9 ) )
-        {
-            util::time::sleep( systemSettings.getEnforcedLag2() );
-        }
-        else if ( input::isKeyPressed( omi::input::key::F10 ) )
-        {
-            util::time::sleep( systemSettings.getEnforcedLag3() );
-        }
-    }
-
     // other system settings
     if (systemSettings.check()) {
 
