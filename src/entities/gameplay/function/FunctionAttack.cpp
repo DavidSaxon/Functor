@@ -1,5 +1,6 @@
 #include "FunctionAttack.hpp"
 
+#include "src/data/Globals.hpp"
 #include "src/entities/gameplay/environment/World.hpp"
 
 //------------------------------------------------------------------------------
@@ -77,20 +78,28 @@ void FunctionAttack::init()
     );
     m_components.add( m_explosionPos );
 
-    m_explosionMesh = omi::ResourceManager::getKeyFrameMesh(
-            "function_explosion", "", m_explosionPos );
+    m_explosionMesh = omi::ResourceManager::getMesh(
+            "func_explosion", "", m_explosionPos );
     m_explosionMesh->getMaterial().glow = new omi::Glow( m_colour, 0.2f );
+    m_explosionMesh->visible = false;
+    m_components.add( m_explosionMesh );
 
     // play sound
     omi::SoundPool::play(
             omi::ResourceManager::getSound( "fire_1" ),
             false,
-            0.4f
+            0.5f
     );
 }
 
 void FunctionAttack::update()
 {
+    // skip if omicron is paused
+    if ( global::pause )
+    {
+        return;
+    }
+
     // move the trail in
     m_distance -= 0.2f * omi::fpsManager.getTimeScale();
     m_trailPos->translation = m_rotation * m_distance;
@@ -99,12 +108,12 @@ void FunctionAttack::update()
     if ( m_distance <= m_contactDis && !m_exploded )
     {
         m_exploded = true;
-        m_components.add( m_explosionMesh );
+        m_explosionMesh->visible = true;
         addEntity( m_function );
         omi::SoundPool::play(
                 omi::ResourceManager::getSound( "explode_1" ),
                 false,
-                0.2f
+                0.35f
         );
     }
     if ( m_distance < 0.0f )
@@ -116,7 +125,10 @@ void FunctionAttack::update()
     if ( m_exploded )
     {
         m_timer += 0.028f * omi::fpsManager.getTimeScale();
-        if ( m_timer >= 1.0f)
+        m_explosionPos->scale.x = 1.0f + ( m_timer * 20.0f );
+        m_explosionPos->scale.y = 1.0f + ( m_timer * 20.0f );
+        m_explosionPos->scale.z = 1.0f + ( m_timer * 20.0f );
+        if ( m_timer >= 0.5f)
         {
             remove();
         }

@@ -16,12 +16,15 @@ World::World(
         float rotationSpeed,
         float sunDistance,
         float orbitSpeed,
-        const std::string& orbitMeshId )
+        const std::string& orbitMeshId,
+        unsigned difficulty )
     :
     m_rotationSpeed( rotationSpeed ),
     m_sunDistance  ( sunDistance ),
     m_orbitSpeed   ( orbitSpeed ),
-    m_orbitMeshId  ( orbitMeshId )
+    m_orbitMeshId  ( orbitMeshId ),
+    m_difficulty   ( difficulty ),
+    m_started      ( false )
 {
 }
 
@@ -66,8 +69,61 @@ void World::init()
     // read the geo
     initRead();
 
-    addEntity( new TowerBase(
-            this, glm::vec3( 0.0f, 0.0f, 0.0f ) ) );
+    // add towers
+    if ( m_difficulty == 0 )
+    {
+        TowerBase* tv1 = new TowerBase(
+                this, glm::vec3( 0.0f, 0.0f, 0.0f ) );
+        m_towers.push_back( tv1 );
+        addEntity( tv1 );
+
+        TowerBase* tv2 = new TowerBase(
+                this, glm::vec3( 0.0f, 180.0f, 0.0f ) );
+        m_towers.push_back( tv2 );
+        addEntity( tv2 );
+
+        TowerBase* tv3 = new TowerBase(
+                this, glm::vec3( 40.0f, 90.0f, 0.0f ) );
+        m_towers.push_back( tv3 );
+        addEntity( tv3 );
+
+        TowerBase* tv4 = new TowerBase(
+                this, glm::vec3( -60.0f, -90.0f, 0.0f ) );
+        m_towers.push_back( tv4 );
+        addEntity( tv4 );
+    }
+    else if ( m_difficulty == 1 )
+    {
+        TowerBase* tv1 = new TowerBase(
+                this, glm::vec3( -40.0f, 0.0f, 0.0f ) );
+        m_towers.push_back( tv1 );
+        addEntity( tv1 );
+
+        TowerBase* tv1_5 = new TowerBase(
+                this, glm::vec3( 40.0f, 0.0f, 0.0f ) );
+        m_towers.push_back( tv1_5 );
+        addEntity( tv1_5 );
+
+        TowerBase* tv2 = new TowerBase(
+                this, glm::vec3( 20.0f, 170.0f, 0.0f ) );
+        m_towers.push_back( tv2 );
+        addEntity( tv2 );
+
+        TowerBase* tv3 = new TowerBase(
+                this, glm::vec3( 5.0f, 85.0f, 0.0f ) );
+        m_towers.push_back( tv3 );
+        addEntity( tv3 );
+
+        TowerBase* tv4 = new TowerBase(
+                this, glm::vec3( -5.0f, 95.0f, 0.0f ) );
+        m_towers.push_back( tv4 );
+        addEntity( tv4 );
+
+        TowerBase* tv5 = new TowerBase(
+                this, glm::vec3( 0.0f, -90.0f, 0.0f ) );
+        m_towers.push_back( tv5 );
+        addEntity( tv5 );
+    }
 }
 
 void World::update()
@@ -157,6 +213,25 @@ void World::update()
         m_worldGeo->normals[ i ]     = normal;
         m_worldGeo->normals[ i + 1 ] = normal;
         m_worldGeo->normals[ i + 2 ] = normal;
+    }
+}
+
+void World::start( bool state )
+{
+    m_started = state;
+
+    // send to bases
+    std::vector<TowerBase*>::iterator it = m_towers.begin();
+    for ( ; it != m_towers.end(); ++it )
+    {
+        if ( state )
+        {
+            ( *it )->start();
+        }
+        else
+        {
+            ( *it )->stop();
+        }
     }
 }
 

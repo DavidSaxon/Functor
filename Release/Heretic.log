@@ -1,10 +1,10 @@
-﻿Build started 20/04/2015 1:39:10 p.m..
+﻿Build started 21/04/2015 1:49:25 a.m..
      1>Project "D:\Dropbox\Development\Heretic\Heretic\Heretic.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Release\Heretic.unsuccessfulbuild".
+         Creating "Release\Heretic.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\boost_1_57_0 /I"D:\Dropbox\Development\Heretic\Heretic\lib\SFML-2.2\include" /I"D:\Dropbox\Development\Heretic\Heretic\lib\glew-1.11.0\include" /ID:\Dropbox\Development\Heretic\Heretic\lib\freetype\include /ID:\Dropbox\Development\Heretic\Heretic\lib\DevIL\include /ID:\Dropbox\Development\Heretic\Heretic /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\entities\gameplay\Player.cpp
-         Player.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\boost_1_57_0 /I"D:\Dropbox\Development\Heretic\Heretic\lib\SFML-2.2\include" /I"D:\Dropbox\Development\Heretic\Heretic\lib\glew-1.11.0\include" /ID:\Dropbox\Development\Heretic\Heretic\lib\freetype\include /ID:\Dropbox\Development\Heretic\Heretic\lib\DevIL\include /ID:\Dropbox\Development\Heretic\Heretic /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\entities\gameplay\environment\Tower.cpp
+         Tower.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Dropbox\Development\Heretic\\Heretic\Heretic.exe" /NOLOGO /LIBPATH:D:\Dropbox\Development\Heretic\Heretic\lib\freetype\lib /LIBPATH:"D:\Dropbox\Development\Heretic\Heretic\lib\SFML-2.2\lib" /LIBPATH:"D:\Dropbox\Development\Heretic\Heretic\lib\glew-1.11.0\lib" /LIBPATH:D:\Dropbox\Development\Heretic\Heretic\lib\DevIL\lib /LIBPATH:C:\boost_1_57_0\stage\lib opengl32.lib glu32.lib glew32.lib DevIL.lib "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" "sfml-audio.lib" freetype.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\Heretic.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Dropbox\Development\Heretic\Heretic\Heretic.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Dropbox\Development\Heretic\\Heretic\Heretic.lib" /MACHINE:X86 Release\Globals.obj
          Release\FPSCounter.obj
@@ -120,4 +120,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:39.51
+Time Elapsed 00:00:42.75

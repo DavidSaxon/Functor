@@ -54,9 +54,13 @@ public:
 
     void setHeight( float height );
 
+    void setAddHeight( float add );
+
     float getChangeDis() const;
 
     void destroy();
+
+    void quickRemove();
 
 private:
 
@@ -72,6 +76,7 @@ private:
     tower::Strength m_strength;
     // the height of the tower
     float m_height;
+    float m_addHeight;
 
     // the position of the tower
     omi::Transform* m_pos;
@@ -80,6 +85,10 @@ private:
     omi::Mesh* m_mesh1;
     omi::Mesh* m_mesh2;
     omi::Mesh* m_mesh3;
+    omi::Mesh* m_boom;
+
+    bool m_booming;
+    float m_boomTimer;
 };
 
 #endif

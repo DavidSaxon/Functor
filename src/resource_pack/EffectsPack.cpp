@@ -15,14 +15,24 @@ void buildEffectsPack()
         omi::material::SHADELESS
     );
 
-
-    omi::ResourceManager::addMatrialKeyFrameMesh(
-        "function_explosion",
+    omi::ResourceManager::addMaterialGeometryMesh(
+        "func_explosion",
         resource_group::EFFECTS,
         "default_shader",
-        glm::vec4( 0.2f, 0.6f, 1.0f, 0.0f ),
+        glm::vec4( 1.0f, 0.0f, 1.0f, 0.0f ),
+        "res/gfx/geometry/effects/function_explosion.obj",
         1,
-        "res/gfx/geometry/effects/function_explosion/function_explosion.key"
+        omi::material::SHADELESS
+    );
+
+    omi::ResourceManager::addMaterialGeometryMesh(
+        "tower_explosion",
+        resource_group::EFFECTS,
+        "default_shader",
+        glm::vec4( 1.0f, 0.5f, 0.2f, 0.0f ),
+        "res/gfx/geometry/effects/tower_explosion.obj",
+        1,
+        omi::material::SHADELESS
     );
 
     //----------------------------------SOUNDS----------------------------------

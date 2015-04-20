@@ -41,9 +41,9 @@ void GameplayScene::init()
     addEntity( new Sun() );
 
     std::vector<World*> worlds;
-    worlds.push_back( new World( 0.25f,  20.0f, 0.02f, "orbit_20" ) );
-    worlds.push_back( new World( 0.4f,  30.0f, -0.02f, "orbit_30" ) );
-    worlds.push_back( new World( -0.3f, 40.0f, 0.01f, "orbit_40" ) );
+    worlds.push_back( new World( 0.25f,  20.0f, 0.02f, "orbit_20", 0 ) );
+    worlds.push_back( new World( 0.4f,  30.0f, -0.02f, "orbit_30", 1 ) );
+    worlds.push_back( new World( -0.3f, 40.0f, 0.01f, "orbit_40", 2 ) );
 
     addEntity( worlds[ 0 ] );
     addEntity( worlds[ 1 ] );

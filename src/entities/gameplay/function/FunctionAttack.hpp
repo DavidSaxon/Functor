@@ -55,7 +55,7 @@ private:
     omi::Transform* m_explosionPos;
 
     omi::Mesh* m_trailMesh;
-    omi::KeyFrameMesh* m_explosionMesh;
+    omi::Mesh* m_explosionMesh;
 };
 
 #endif

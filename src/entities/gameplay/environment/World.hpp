@@ -26,7 +26,8 @@ public:
             float rotationSpeed,
             float sunDistance,
             float orbitSpeed,
-            const std::string& orbitMeshId );
+            const std::string& orbitMeshId,
+            unsigned difficulty );
 
     //--------------------------------------------------------------------------
     //                          PUBLIC MEMBER FUNCTIONS
@@ -37,6 +38,8 @@ public:
 
     /** #Override */
     void update();
+
+    void start( bool state );
 
     /** get rotation position */
     omi::Transform* getRotPoint();
@@ -69,6 +72,10 @@ private:
     float m_orbitSpeed;
     // the resource name of the mesh to use for showing orbit
     std::string m_orbitMeshId;
+    // level difficulty
+    unsigned m_difficulty;
+    // if the level has started
+    bool m_started;
 
     // the rotation point of the world ( 0, 0, 0 )
     omi::Transform* m_rotPoint;

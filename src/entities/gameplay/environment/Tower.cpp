@@ -1,5 +1,6 @@
 #include "Tower.hpp"
 
+#include "src/data/Globals.hpp"
 #include "src/entities/gameplay/environment/World.hpp"
 
 //------------------------------------------------------------------------------
@@ -16,9 +17,9 @@ static const glm::vec4 RED_COLOUR_1 ( 1.0f, 0.3f, 0.3f, 1.0f );
 static const glm::vec4 RED_COLOUR_2 ( 0.5f, 0.1f, 0.1f, 1.0f );
 static const glm::vec4 RED_COLOUR_3 ( 0.7f, 0.3f, 0.3f, 1.0f );
 
-static const float WEAK_DISTANCE = 0.025f;
-static const float MEDIUM_DISTANCE = 0.075f;
-static const float STRONG_DISTANCE = 1.5f;
+static const float WEAK_DISTANCE = 0.05f;
+static const float MEDIUM_DISTANCE = 0.1f;
+static const float STRONG_DISTANCE = 0.15f;
 } // namespace anonymous
 
 //------------------------------------------------------------------------------
@@ -34,7 +35,10 @@ Tower::Tower(
     m_parentPos( parentPos ),
     m_colour   ( colour ),
     m_strength ( strength ),
-    m_height   ( height )
+    m_height   ( height ),
+    m_addHeight( 0.0f ),
+    m_booming  ( false ),
+    m_boomTimer( 0.0f )
 {
 }
 
@@ -55,7 +59,7 @@ void Tower::init()
 
     m_mesh1 = omi::ResourceManager::getMesh( "tower1", "", m_pos );
     m_mesh1->getMaterial().specular =
-            new omi::Specular( 64.0f, glm::vec3( 0.5f, 0.5f, 0.5f ) );
+            new omi::Specular( 64.0f, glm::vec3( 1.0f, 1.0f, 1.0f ) );
     if ( m_colour == tower::BLUE )
     {
         m_mesh1->getMaterial().colour = BLUE_COLOUR_1;
@@ -69,7 +73,7 @@ void Tower::init()
 
     m_mesh2 = omi::ResourceManager::getMesh( "tower2", "", m_pos );
     m_mesh2->getMaterial().specular =
-            new omi::Specular( 64.0f, glm::vec3( 0.5f, 0.5f, 0.5f ) );
+            new omi::Specular( 64.0f, glm::vec3( 1.0f, 1.0f, 1.0f ) );
     if ( m_colour == tower::BLUE )
     {
         m_mesh2->getMaterial().colour = BLUE_COLOUR_2;
@@ -88,7 +92,7 @@ void Tower::init()
 
     m_mesh3 = omi::ResourceManager::getMesh( "tower3", "", m_pos );
     m_mesh3->getMaterial().specular =
-            new omi::Specular( 64.0f, glm::vec3( 0.5f, 0.5f, 0.5f ) );
+            new omi::Specular( 64.0f, glm::vec3( 1.0f, 1.0f, 1.0f ) );
     if ( m_colour == tower::BLUE )
     {
         m_mesh3->getMaterial().colour = BLUE_COLOUR_3;
@@ -103,16 +107,49 @@ void Tower::init()
     {
         m_mesh3->visible = true;
     }
+
+    m_boom = omi::ResourceManager::getMesh(
+            "tower_explosion", "", m_pos );
+    m_boom->getMaterial().glow =
+            new omi::Glow( m_boom->getMaterial().colour.xyz(), 1.0f );
+    m_boom->visible = false;
+    m_components.add( m_boom );
 }
 
 void Tower::update()
 {
-    m_pos->translation.z = m_height;
+    // skip if omicron is paused
+    if ( global::pause )
+    {
+        return;
+    }
+
+    m_pos->translation.z = m_height + m_addHeight;
+
+    if ( m_booming )
+    {
+        m_boomTimer += 0.04f * omi::fpsManager.getTimeScale();
+        m_pos->scale.x = 1.0f * ( m_boomTimer * 5.0f );
+        m_pos->scale.y = 1.0f * ( m_boomTimer * 5.0f );
+        m_boom->getMaterial().glow =
+                new omi::Glow( m_boom->getMaterial().colour.xyz(),
+                1.0f - m_boomTimer
+        );
+        if ( m_boomTimer >= 1.0f )
+        {
+            remove();
+        }
+    }
 }
 
 void Tower::setHeight( float height )
 {
     m_height = height;
+}
+
+void Tower::setAddHeight( float add )
+{
+    m_addHeight = add;
 }
 
 tower::Colour Tower::getColour() const
@@ -145,5 +182,12 @@ void Tower::destroy()
     m_mesh2->visible = false;
     m_mesh3->visible = false;
 
-    // TODO:
+    m_booming = true;
+    m_boomTimer = 0.0f;
+    m_boom->visible = true;
+}
+
+void Tower::quickRemove()
+{
+    remove();
 }

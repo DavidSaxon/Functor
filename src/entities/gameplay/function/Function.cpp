@@ -1,5 +1,7 @@
 #include "Function.hpp"
 
+#include "src/data/Globals.hpp"
+
 //------------------------------------------------------------------------------
 //                                  CONSTRUCTOR
 //------------------------------------------------------------------------------
@@ -23,6 +25,13 @@ void Function::init()
 
 void Function::update()
 {
+    // skip if omicron is paused
+    if ( global::pause )
+    {
+        return;
+    }
+
+
     if ( m_currentDistance < m_maxDistance )
     {
         m_currentDistance += 0.02f * omi::fpsManager.getTimeScale();

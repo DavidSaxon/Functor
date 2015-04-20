@@ -1,5 +1,6 @@
 #include "TowerBase.hpp"
 
+#include "src/data/Globals.hpp"
 #include "src/entities/gameplay/environment/Tower.hpp"
 #include "src/entities/gameplay/environment/World.hpp"
 
@@ -9,19 +10,19 @@
 
 namespace
 {
-static const float BLOCK_HEIGHT = 0.05f;
+static const float BLOCK_HEIGHT = 0.06f;
 static const float NEXT_BLOCK_EASY_SPEED = 0.0075f;
 static const float NEXT_BLOCK_MEDIUM_SPEED = 0.01f;
 static const float NEXT_BLOCK_HARD_SPEED = 0.0125f;
 static const unsigned BUILD_EASY_PROB       = 75;
 static const unsigned BUILD_MEDIUM_PROB     = 50;
 static const unsigned BUILD_HARD_PROB       = 25;
-static const unsigned STR_EASY_NORM         = 60;
-static const unsigned STR_EASY_STNG         = 85;
-static const unsigned STR_MEDI_NORM         = 50;
-static const unsigned STR_MEDI_STNG         = 75;
-static const unsigned STR_HARD_NORM         = 70;
-static const unsigned STR_HARD_STNG         = 30;
+static const int STR_EASY_NORM         = 60;
+static const int STR_EASY_STNG         = 85;
+static const int STR_MEDI_NORM         = 50;
+static const int STR_MEDI_STNG         = 75;
+static const int STR_HARD_NORM         = 70;
+static const int STR_HARD_STNG         = 30;
 } // namespace anonymous
 
 //------------------------------------------------------------------------------
@@ -34,7 +35,10 @@ TowerBase::TowerBase( World* world, const glm::vec3& rotation, float timeout )
     m_rotation      ( rotation ),
     m_startTimer    ( 0.0f ),
     m_timeOut       ( timeout ),
-    m_nextBlockTimer( 0.0f )
+    m_nextBlockTimer( 0.0f ),
+    m_baseHeight    ( 0.015f ),
+    m_height        ( 0.0f ),
+    m_started       ( false )
 {
 }
 
@@ -79,12 +83,43 @@ void TowerBase::init()
     );
     m_components.add( m_stackRot );
 
+    // add mesh
+    omi::Mesh* mesh =
+            omi::ResourceManager::getMesh( "tower_base", "", m_stackRot );
+    mesh->getMaterial().specular =
+            new omi::Specular( 64.0f, glm::vec3( 0.5f, 0.5f, 0.5f ) );
+    m_components.add( mesh );
+
     // register in cache
     m_heightCacheId = m_world->addHeightMapCache( m_dirVect );
 }
 
 void TowerBase::update()
 {
+    // skip if omicron is paused
+    if ( global::pause )
+    {
+        return;
+    }
+
+    // make sure is setting on the bottom
+    m_pos->translation =
+            m_dirVect *
+            ( m_world->resolveHeightMapCache( m_heightCacheId ) +
+              m_baseHeight );
+    // set height of blocks
+    std::vector<Tower*>::iterator it = m_blocks.begin();
+    for ( ; it != m_blocks.end(); ++it )
+    {
+        ( *it )->setAddHeight(
+                util::math::clamp<float>( m_height, 0.0f, BLOCK_HEIGHT ) );
+    }
+
+    if ( !m_started )
+    {
+        return;
+    }
+
     if ( m_startTimer > m_timeOut )
     {
         build();
@@ -95,9 +130,33 @@ void TowerBase::update()
         m_startTimer += 0.01f * omi::fpsManager.getTimeScale();
     }
 
-    // make sure is setting on the bottom
-    m_pos->translation =
-            m_dirVect * m_world->resolveHeightMapCache( m_heightCacheId );
+    // shift add height down
+    if ( m_height > 0.0f )
+    {
+        m_height -= 0.005f * omi::fpsManager.getTimeScale();
+    }
+    else
+    {
+        m_height = 0.0f;
+    }
+}
+
+void TowerBase::start()
+{
+    m_started = true;
+    m_nextBlockTimer = 0.0f;
+    m_startTimer     = 0.0f;
+}
+
+void TowerBase::stop()
+{
+    m_started = false;
+    std::vector<Tower*>::iterator it = m_blocks.begin();
+    for ( ; it != m_blocks.end(); ++it )
+    {
+        ( *it )->quickRemove();
+    }
+    m_blocks.clear();
 }
 
 //------------------------------------------------------------------------------
@@ -123,8 +182,8 @@ void TowerBase::build()
             // get strength
             // TODO: difficulty
             r = rand() % 100;
-            unsigned normProb = STR_EASY_NORM;
-            unsigned hardProb = STR_EASY_STNG;
+            int normProb = STR_EASY_NORM;
+            int hardProb = STR_EASY_STNG;
             tower::Strength st = tower::WEAK;
             if ( r >= normProb && r < hardProb )
             {
@@ -156,6 +215,7 @@ void TowerBase::destroy()
     {
         Tower* tw = m_blocks[ 0 ];
         float fuck = m_world->resolveHeightMapCache( m_heightCacheId );
+        bool des = false;
 
         if ( tw->getColour() == tower::BLUE )
         {
@@ -163,9 +223,12 @@ void TowerBase::destroy()
             {
                 m_currentLevel = fuck;
             }
-            else if ( m_currentLevel - fuck >= tw->getChangeDis() )
+            else if ( m_currentLevel - fuck >= tw->getChangeDis() ||
+                      m_currentLevel <= 0.05f )
             {
                 tw->destroy();
+                des = true;
+                m_currentLevel = fuck;
             }
         }
         else
@@ -177,9 +240,23 @@ void TowerBase::destroy()
             else if ( fuck - m_currentLevel >= tw->getChangeDis() )
             {
                 tw->destroy();
+                des = true;
+                m_currentLevel = fuck;
             }
         }
 
-        // move the rest of the tower
+        // move the rest of the tower down
+        if ( des )
+        {
+            // remove from the vector
+            m_blocks.erase( m_blocks.begin() );
+            m_height = BLOCK_HEIGHT * 3.0f;
+
+            // shift other blocks down
+            for ( unsigned i = 0; i < m_blocks.size(); ++i )
+            {
+                m_blocks[ i ]->setHeight( i * BLOCK_HEIGHT );
+            }
+        }
     }
 }

@@ -274,6 +274,7 @@ void Player::transToPlanet()
     {
         m_camFocus->parent = m_world->getPosition();
         m_state = gameplay::PLANET_ORBIT;
+        m_world->start( true );
     }
 }
 

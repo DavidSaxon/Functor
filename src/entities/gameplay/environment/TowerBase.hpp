@@ -29,6 +29,10 @@ public:
 
     void update();
 
+    void start();
+
+    void stop();
+
 private:
 
     //--------------------------------------------------------------------------
@@ -51,6 +55,11 @@ private:
     float m_nextBlockTimer;
 
     float m_currentLevel;
+
+    float m_baseHeight;
+    float m_height;
+
+    bool m_started;
 
     //--------------------------------------------------------------------------
     //                          PRIVATE MEMBER FUNCTIONS

@@ -67,6 +67,15 @@ void buildEnvironmentPack()
 
     // tower
     omi::ResourceManager::addMaterialGeometryMesh(
+        "tower_base",
+        resource_group::ENVIRONMENT,
+        "default_shader",
+        glm::vec4( 0.3f, 0.3f, 0.3f, 1.0f ),
+        "res/gfx/geometry/environment/tower_base.obj",
+        0
+    );
+
+    omi::ResourceManager::addMaterialGeometryMesh(
         "tower1",
         resource_group::ENVIRONMENT,
         "default_shader",
