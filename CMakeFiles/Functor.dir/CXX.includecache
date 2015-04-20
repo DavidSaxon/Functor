@@ -6,15 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/TowerBase.cpp
-TowerBase.hpp
-/home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/TowerBase.hpp
-src/entities/gameplay/environment/Tower.hpp
-/home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/src/entities/gameplay/environment/Tower.hpp
-src/entities/gameplay/environment/World.hpp
-/home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/src/entities/gameplay/environment/World.hpp
+/home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/Sun.cpp
+Sun.hpp
+/home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/Sun.hpp
 
-/home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/TowerBase.hpp
+/home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/Sun.hpp
 src/omicron/entity/Entity.hpp
 /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/src/omicron/entity/Entity.hpp
 
@@ -693,20 +689,6 @@ lib/glm/detail/type_vec4.hpp
 lib/glm/vector_relational.hpp
 detail/func_vector_relational.hpp
 lib/glm/detail/func_vector_relational.hpp
-
-src/entities/gameplay/environment/Tower.hpp
-src/omicron/entity/Entity.hpp
-src/entities/gameplay/environment/src/omicron/entity/Entity.hpp
-
-src/entities/gameplay/environment/World.hpp
-src/omicron/entity/Entity.hpp
-src/entities/gameplay/environment/src/omicron/entity/Entity.hpp
-src/entities/gameplay/function/Function.hpp
-src/entities/gameplay/environment/src/entities/gameplay/function/Function.hpp
-
-src/entities/gameplay/function/Function.hpp
-src/omicron/entity/Entity.hpp
-src/entities/gameplay/function/src/omicron/entity/Entity.hpp
 
 src/omicron/Omicron.hpp
 ft2build.h

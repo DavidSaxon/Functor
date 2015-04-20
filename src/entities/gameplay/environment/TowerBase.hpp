@@ -19,7 +19,7 @@ public:
     //                                CONSTRUCTOR
     //--------------------------------------------------------------------------
 
-    TowerBase( World* world, const glm::vec3& rotation );
+    TowerBase( World* world, const glm::vec3& rotation, float timeout = 0.0f );
 
     //--------------------------------------------------------------------------
     //                          PUBLIC MEMBER FUNCTIONS
@@ -47,7 +47,10 @@ private:
     unsigned m_heightCacheId;
 
     float m_startTimer;
+    float m_timeOut;
     float m_nextBlockTimer;
+
+    float m_currentLevel;
 
     //--------------------------------------------------------------------------
     //                          PRIVATE MEMBER FUNCTIONS

@@ -269,7 +269,7 @@ void Player::transToPlanet()
     }
 
 
-    // check if the transition has eneded
+    // check if the transition has ended
     if ( distDone && zoomDone && tiltDone )
     {
         m_camFocus->parent = m_world->getPosition();

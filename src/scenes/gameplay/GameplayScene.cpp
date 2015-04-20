@@ -26,7 +26,7 @@ void GameplayScene::init()
     omi::renderSettings.setClearColour( glm::vec4( 0.9f, 0.9f, 0.9f, 1.0f ) );
 
     // ambient lighting
-    omi::renderSettings.setAmbientStrength( 0.3f );
+    omi::renderSettings.setAmbientStrength( 0.5f );
     omi::renderSettings.setAmbientColour( glm::vec3( 1.0f, 1.0f, 1.0f ) );
     omi::renderSettings.setFilmGrain( 0.04f );
 

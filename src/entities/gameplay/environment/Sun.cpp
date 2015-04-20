@@ -27,8 +27,8 @@ void Sun::init()
             1.0f,
             glm::vec3( 1.0f, 1.0f, 0.9f ),
             0.2f,
-            0.00006f,
-            0.0003f
+            0.0001f,
+            0.0006f
     );
     m_components.add( light );
 };

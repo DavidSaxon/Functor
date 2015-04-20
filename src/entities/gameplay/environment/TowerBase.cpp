@@ -28,11 +28,12 @@ static const unsigned STR_HARD_STNG         = 30;
 //                                  CONSTRUCTOR
 //------------------------------------------------------------------------------
 
-TowerBase::TowerBase( World* world, const glm::vec3& rotation )
+TowerBase::TowerBase( World* world, const glm::vec3& rotation, float timeout )
     :
     m_world         ( world ),
     m_rotation      ( rotation ),
     m_startTimer    ( 0.0f ),
+    m_timeOut       ( timeout ),
     m_nextBlockTimer( 0.0f )
 {
 }
@@ -84,10 +85,15 @@ void TowerBase::init()
 
 void TowerBase::update()
 {
-    // TODO: timer
-    // if
-    build();
-    destroy();
+    if ( m_startTimer > m_timeOut )
+    {
+        build();
+        destroy();
+    }
+    else
+    {
+        m_startTimer += 0.01f * omi::fpsManager.getTimeScale();
+    }
 
     // make sure is setting on the bottom
     m_pos->translation =
@@ -133,11 +139,47 @@ void TowerBase::build()
                     m_stackRot, colour, st, BLOCK_HEIGHT * m_blocks.size() );
             m_blocks.push_back( t_t );
             addEntity( t_t );
+
+            // update the base level
+            if ( m_blocks.size() == 1 )
+            {
+                m_currentLevel =
+                        m_world->resolveHeightMapCache( m_heightCacheId );
+            }
         }
     }
 }
 
 void TowerBase::destroy()
 {
+    if ( !m_blocks.empty() )
+    {
+        Tower* tw = m_blocks[ 0 ];
+        float fuck = m_world->resolveHeightMapCache( m_heightCacheId );
 
+        if ( tw->getColour() == tower::BLUE )
+        {
+            if ( fuck > m_currentLevel  )
+            {
+                m_currentLevel = fuck;
+            }
+            else if ( m_currentLevel - fuck >= tw->getChangeDis() )
+            {
+                tw->destroy();
+            }
+        }
+        else
+        {
+            if ( fuck < m_currentLevel  )
+            {
+                m_currentLevel = fuck;
+            }
+            else if ( fuck - m_currentLevel >= tw->getChangeDis() )
+            {
+                tw->destroy();
+            }
+        }
+
+        // move the rest of the tower
+    }
 }

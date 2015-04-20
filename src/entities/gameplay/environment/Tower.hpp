@@ -54,6 +54,10 @@ public:
 
     void setHeight( float height );
 
+    float getChangeDis() const;
+
+    void destroy();
+
 private:
 
     //--------------------------------------------------------------------------
