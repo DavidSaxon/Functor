@@ -212,12 +212,68 @@ float World::getHeightMapPos( const glm::vec3& dirVect )
         }
     }
 
-    // get average
+    // get and return average
     float height =
         fabs( glm::distance( m_worldGeo->vertices[ closet1 ], glm::vec3() ) ) +
         fabs( glm::distance( m_worldGeo->vertices[ closet2 ], glm::vec3() ) ) +
         fabs( glm::distance( m_worldGeo->vertices[ closet3 ], glm::vec3() ) );
+    return height / 3.0f;
+}
 
+unsigned World::addHeightMapCache( const glm::vec3& dirVect )
+{
+    // find the three closet points
+    int closet1 = -1;
+    float closetDis1 = 1000.0f;
+    int closet2 = -1;
+    float closetDis2 = 1000.0f;
+    int closet3 = -1;
+    float closetDis3 = 1000.0f;
+
+    for ( unsigned i = 0; i < m_dirVects.size(); ++i )
+    {
+        float d = fabs( glm::distance( dirVect, m_dirVects[ i ] ) );
+
+        if ( d < closetDis1 )
+        {
+            closet1 = i;
+            closetDis1 = d;
+        }
+        else if ( d < closetDis2 )
+        {
+            closet2 = i;
+            closetDis2 = d;
+        }
+
+        else if ( d < closetDis3 )
+        {
+            closet3 = i;
+            closetDis3 = d;
+        }
+    }
+
+    // store in struct
+    HeightMapCache c;
+    c.first  = closet1;
+    c.second = closet2;
+    c.third  = closet3;
+
+    // add to cache
+    m_cache.push_back( c );
+
+    // return id
+    return m_cache.size() - 1;
+}
+
+float World::resolveHeightMapCache( unsigned index )
+{
+    HeightMapCache c = m_cache[ index ];
+
+    // get and return average
+    float height =
+        fabs( glm::distance( m_worldGeo->vertices[ c.first  ], glm::vec3() ) ) +
+        fabs( glm::distance( m_worldGeo->vertices[ c.second ], glm::vec3() ) ) +
+        fabs( glm::distance( m_worldGeo->vertices[ c.third ], glm::vec3() ) );
     return height / 3.0f;
 }
 

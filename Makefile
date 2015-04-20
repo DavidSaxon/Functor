@@ -99,24 +99,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named LD32
+# Target rules for targets named Functor
 
 # Build rule for target.
-LD32: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 LD32
-.PHONY : LD32
+Functor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Functor
+.PHONY : Functor
 
 # fast build rule for target.
-LD32/fast:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/build
-.PHONY : LD32/fast
+Functor/fast:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/build
+.PHONY : Functor/fast
 
 src/data/Globals.o: src/data/Globals.cpp.o
 .PHONY : src/data/Globals.o
 
 # target to build an object file
 src/data/Globals.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/data/Globals.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/data/Globals.cpp.o
 .PHONY : src/data/Globals.cpp.o
 
 src/data/Globals.i: src/data/Globals.cpp.i
@@ -124,7 +124,7 @@ src/data/Globals.i: src/data/Globals.cpp.i
 
 # target to preprocess a source file
 src/data/Globals.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/data/Globals.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/data/Globals.cpp.i
 .PHONY : src/data/Globals.cpp.i
 
 src/data/Globals.s: src/data/Globals.cpp.s
@@ -132,7 +132,7 @@ src/data/Globals.s: src/data/Globals.cpp.s
 
 # target to generate assembly for a file
 src/data/Globals.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/data/Globals.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/data/Globals.cpp.s
 .PHONY : src/data/Globals.cpp.s
 
 src/entities/debug/FPSCounter.o: src/entities/debug/FPSCounter.cpp.o
@@ -140,7 +140,7 @@ src/entities/debug/FPSCounter.o: src/entities/debug/FPSCounter.cpp.o
 
 # target to build an object file
 src/entities/debug/FPSCounter.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/debug/FPSCounter.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/debug/FPSCounter.cpp.o
 .PHONY : src/entities/debug/FPSCounter.cpp.o
 
 src/entities/debug/FPSCounter.i: src/entities/debug/FPSCounter.cpp.i
@@ -148,7 +148,7 @@ src/entities/debug/FPSCounter.i: src/entities/debug/FPSCounter.cpp.i
 
 # target to preprocess a source file
 src/entities/debug/FPSCounter.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/debug/FPSCounter.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/debug/FPSCounter.cpp.i
 .PHONY : src/entities/debug/FPSCounter.cpp.i
 
 src/entities/debug/FPSCounter.s: src/entities/debug/FPSCounter.cpp.s
@@ -156,7 +156,7 @@ src/entities/debug/FPSCounter.s: src/entities/debug/FPSCounter.cpp.s
 
 # target to generate assembly for a file
 src/entities/debug/FPSCounter.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/debug/FPSCounter.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/debug/FPSCounter.cpp.s
 .PHONY : src/entities/debug/FPSCounter.cpp.s
 
 src/entities/gameplay/Gui.o: src/entities/gameplay/Gui.cpp.o
@@ -164,7 +164,7 @@ src/entities/gameplay/Gui.o: src/entities/gameplay/Gui.cpp.o
 
 # target to build an object file
 src/entities/gameplay/Gui.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/Gui.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.o
 .PHONY : src/entities/gameplay/Gui.cpp.o
 
 src/entities/gameplay/Gui.i: src/entities/gameplay/Gui.cpp.i
@@ -172,7 +172,7 @@ src/entities/gameplay/Gui.i: src/entities/gameplay/Gui.cpp.i
 
 # target to preprocess a source file
 src/entities/gameplay/Gui.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/Gui.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.i
 .PHONY : src/entities/gameplay/Gui.cpp.i
 
 src/entities/gameplay/Gui.s: src/entities/gameplay/Gui.cpp.s
@@ -180,7 +180,7 @@ src/entities/gameplay/Gui.s: src/entities/gameplay/Gui.cpp.s
 
 # target to generate assembly for a file
 src/entities/gameplay/Gui.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/Gui.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.s
 .PHONY : src/entities/gameplay/Gui.cpp.s
 
 src/entities/gameplay/Player.o: src/entities/gameplay/Player.cpp.o
@@ -188,7 +188,7 @@ src/entities/gameplay/Player.o: src/entities/gameplay/Player.cpp.o
 
 # target to build an object file
 src/entities/gameplay/Player.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/Player.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/Player.cpp.o
 .PHONY : src/entities/gameplay/Player.cpp.o
 
 src/entities/gameplay/Player.i: src/entities/gameplay/Player.cpp.i
@@ -196,7 +196,7 @@ src/entities/gameplay/Player.i: src/entities/gameplay/Player.cpp.i
 
 # target to preprocess a source file
 src/entities/gameplay/Player.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/Player.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/Player.cpp.i
 .PHONY : src/entities/gameplay/Player.cpp.i
 
 src/entities/gameplay/Player.s: src/entities/gameplay/Player.cpp.s
@@ -204,7 +204,7 @@ src/entities/gameplay/Player.s: src/entities/gameplay/Player.cpp.s
 
 # target to generate assembly for a file
 src/entities/gameplay/Player.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/Player.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/Player.cpp.s
 .PHONY : src/entities/gameplay/Player.cpp.s
 
 src/entities/gameplay/environment/Environment.o: src/entities/gameplay/environment/Environment.cpp.o
@@ -212,7 +212,7 @@ src/entities/gameplay/environment/Environment.o: src/entities/gameplay/environme
 
 # target to build an object file
 src/entities/gameplay/environment/Environment.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/environment/Environment.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/Environment.cpp.o
 .PHONY : src/entities/gameplay/environment/Environment.cpp.o
 
 src/entities/gameplay/environment/Environment.i: src/entities/gameplay/environment/Environment.cpp.i
@@ -220,7 +220,7 @@ src/entities/gameplay/environment/Environment.i: src/entities/gameplay/environme
 
 # target to preprocess a source file
 src/entities/gameplay/environment/Environment.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/environment/Environment.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/Environment.cpp.i
 .PHONY : src/entities/gameplay/environment/Environment.cpp.i
 
 src/entities/gameplay/environment/Environment.s: src/entities/gameplay/environment/Environment.cpp.s
@@ -228,7 +228,7 @@ src/entities/gameplay/environment/Environment.s: src/entities/gameplay/environme
 
 # target to generate assembly for a file
 src/entities/gameplay/environment/Environment.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/environment/Environment.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/Environment.cpp.s
 .PHONY : src/entities/gameplay/environment/Environment.cpp.s
 
 src/entities/gameplay/environment/Sun.o: src/entities/gameplay/environment/Sun.cpp.o
@@ -236,7 +236,7 @@ src/entities/gameplay/environment/Sun.o: src/entities/gameplay/environment/Sun.c
 
 # target to build an object file
 src/entities/gameplay/environment/Sun.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/environment/Sun.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/Sun.cpp.o
 .PHONY : src/entities/gameplay/environment/Sun.cpp.o
 
 src/entities/gameplay/environment/Sun.i: src/entities/gameplay/environment/Sun.cpp.i
@@ -244,7 +244,7 @@ src/entities/gameplay/environment/Sun.i: src/entities/gameplay/environment/Sun.c
 
 # target to preprocess a source file
 src/entities/gameplay/environment/Sun.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/environment/Sun.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/Sun.cpp.i
 .PHONY : src/entities/gameplay/environment/Sun.cpp.i
 
 src/entities/gameplay/environment/Sun.s: src/entities/gameplay/environment/Sun.cpp.s
@@ -252,15 +252,63 @@ src/entities/gameplay/environment/Sun.s: src/entities/gameplay/environment/Sun.c
 
 # target to generate assembly for a file
 src/entities/gameplay/environment/Sun.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/environment/Sun.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/Sun.cpp.s
 .PHONY : src/entities/gameplay/environment/Sun.cpp.s
+
+src/entities/gameplay/environment/Tower.o: src/entities/gameplay/environment/Tower.cpp.o
+.PHONY : src/entities/gameplay/environment/Tower.o
+
+# target to build an object file
+src/entities/gameplay/environment/Tower.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/Tower.cpp.o
+.PHONY : src/entities/gameplay/environment/Tower.cpp.o
+
+src/entities/gameplay/environment/Tower.i: src/entities/gameplay/environment/Tower.cpp.i
+.PHONY : src/entities/gameplay/environment/Tower.i
+
+# target to preprocess a source file
+src/entities/gameplay/environment/Tower.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/Tower.cpp.i
+.PHONY : src/entities/gameplay/environment/Tower.cpp.i
+
+src/entities/gameplay/environment/Tower.s: src/entities/gameplay/environment/Tower.cpp.s
+.PHONY : src/entities/gameplay/environment/Tower.s
+
+# target to generate assembly for a file
+src/entities/gameplay/environment/Tower.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/Tower.cpp.s
+.PHONY : src/entities/gameplay/environment/Tower.cpp.s
+
+src/entities/gameplay/environment/TowerBase.o: src/entities/gameplay/environment/TowerBase.cpp.o
+.PHONY : src/entities/gameplay/environment/TowerBase.o
+
+# target to build an object file
+src/entities/gameplay/environment/TowerBase.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/TowerBase.cpp.o
+.PHONY : src/entities/gameplay/environment/TowerBase.cpp.o
+
+src/entities/gameplay/environment/TowerBase.i: src/entities/gameplay/environment/TowerBase.cpp.i
+.PHONY : src/entities/gameplay/environment/TowerBase.i
+
+# target to preprocess a source file
+src/entities/gameplay/environment/TowerBase.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/TowerBase.cpp.i
+.PHONY : src/entities/gameplay/environment/TowerBase.cpp.i
+
+src/entities/gameplay/environment/TowerBase.s: src/entities/gameplay/environment/TowerBase.cpp.s
+.PHONY : src/entities/gameplay/environment/TowerBase.s
+
+# target to generate assembly for a file
+src/entities/gameplay/environment/TowerBase.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/TowerBase.cpp.s
+.PHONY : src/entities/gameplay/environment/TowerBase.cpp.s
 
 src/entities/gameplay/environment/World.o: src/entities/gameplay/environment/World.cpp.o
 .PHONY : src/entities/gameplay/environment/World.o
 
 # target to build an object file
 src/entities/gameplay/environment/World.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/environment/World.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/World.cpp.o
 .PHONY : src/entities/gameplay/environment/World.cpp.o
 
 src/entities/gameplay/environment/World.i: src/entities/gameplay/environment/World.cpp.i
@@ -268,7 +316,7 @@ src/entities/gameplay/environment/World.i: src/entities/gameplay/environment/Wor
 
 # target to preprocess a source file
 src/entities/gameplay/environment/World.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/environment/World.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/World.cpp.i
 .PHONY : src/entities/gameplay/environment/World.cpp.i
 
 src/entities/gameplay/environment/World.s: src/entities/gameplay/environment/World.cpp.s
@@ -276,7 +324,7 @@ src/entities/gameplay/environment/World.s: src/entities/gameplay/environment/Wor
 
 # target to generate assembly for a file
 src/entities/gameplay/environment/World.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/environment/World.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/World.cpp.s
 .PHONY : src/entities/gameplay/environment/World.cpp.s
 
 src/entities/gameplay/function/Function.o: src/entities/gameplay/function/Function.cpp.o
@@ -284,7 +332,7 @@ src/entities/gameplay/function/Function.o: src/entities/gameplay/function/Functi
 
 # target to build an object file
 src/entities/gameplay/function/Function.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/function/Function.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/Function.cpp.o
 .PHONY : src/entities/gameplay/function/Function.cpp.o
 
 src/entities/gameplay/function/Function.i: src/entities/gameplay/function/Function.cpp.i
@@ -292,7 +340,7 @@ src/entities/gameplay/function/Function.i: src/entities/gameplay/function/Functi
 
 # target to preprocess a source file
 src/entities/gameplay/function/Function.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/function/Function.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/Function.cpp.i
 .PHONY : src/entities/gameplay/function/Function.cpp.i
 
 src/entities/gameplay/function/Function.s: src/entities/gameplay/function/Function.cpp.s
@@ -300,15 +348,63 @@ src/entities/gameplay/function/Function.s: src/entities/gameplay/function/Functi
 
 # target to generate assembly for a file
 src/entities/gameplay/function/Function.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/function/Function.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/Function.cpp.s
 .PHONY : src/entities/gameplay/function/Function.cpp.s
+
+src/entities/gameplay/function/FunctionAttack.o: src/entities/gameplay/function/FunctionAttack.cpp.o
+.PHONY : src/entities/gameplay/function/FunctionAttack.o
+
+# target to build an object file
+src/entities/gameplay/function/FunctionAttack.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/FunctionAttack.cpp.o
+.PHONY : src/entities/gameplay/function/FunctionAttack.cpp.o
+
+src/entities/gameplay/function/FunctionAttack.i: src/entities/gameplay/function/FunctionAttack.cpp.i
+.PHONY : src/entities/gameplay/function/FunctionAttack.i
+
+# target to preprocess a source file
+src/entities/gameplay/function/FunctionAttack.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/FunctionAttack.cpp.i
+.PHONY : src/entities/gameplay/function/FunctionAttack.cpp.i
+
+src/entities/gameplay/function/FunctionAttack.s: src/entities/gameplay/function/FunctionAttack.cpp.s
+.PHONY : src/entities/gameplay/function/FunctionAttack.s
+
+# target to generate assembly for a file
+src/entities/gameplay/function/FunctionAttack.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/FunctionAttack.cpp.s
+.PHONY : src/entities/gameplay/function/FunctionAttack.cpp.s
+
+src/entities/gameplay/function/LowerFunc.o: src/entities/gameplay/function/LowerFunc.cpp.o
+.PHONY : src/entities/gameplay/function/LowerFunc.o
+
+# target to build an object file
+src/entities/gameplay/function/LowerFunc.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/LowerFunc.cpp.o
+.PHONY : src/entities/gameplay/function/LowerFunc.cpp.o
+
+src/entities/gameplay/function/LowerFunc.i: src/entities/gameplay/function/LowerFunc.cpp.i
+.PHONY : src/entities/gameplay/function/LowerFunc.i
+
+# target to preprocess a source file
+src/entities/gameplay/function/LowerFunc.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/LowerFunc.cpp.i
+.PHONY : src/entities/gameplay/function/LowerFunc.cpp.i
+
+src/entities/gameplay/function/LowerFunc.s: src/entities/gameplay/function/LowerFunc.cpp.s
+.PHONY : src/entities/gameplay/function/LowerFunc.s
+
+# target to generate assembly for a file
+src/entities/gameplay/function/LowerFunc.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/LowerFunc.cpp.s
+.PHONY : src/entities/gameplay/function/LowerFunc.cpp.s
 
 src/entities/gameplay/function/RaiseFunc.o: src/entities/gameplay/function/RaiseFunc.cpp.o
 .PHONY : src/entities/gameplay/function/RaiseFunc.o
 
 # target to build an object file
 src/entities/gameplay/function/RaiseFunc.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/function/RaiseFunc.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/RaiseFunc.cpp.o
 .PHONY : src/entities/gameplay/function/RaiseFunc.cpp.o
 
 src/entities/gameplay/function/RaiseFunc.i: src/entities/gameplay/function/RaiseFunc.cpp.i
@@ -316,7 +412,7 @@ src/entities/gameplay/function/RaiseFunc.i: src/entities/gameplay/function/Raise
 
 # target to preprocess a source file
 src/entities/gameplay/function/RaiseFunc.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/function/RaiseFunc.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/RaiseFunc.cpp.i
 .PHONY : src/entities/gameplay/function/RaiseFunc.cpp.i
 
 src/entities/gameplay/function/RaiseFunc.s: src/entities/gameplay/function/RaiseFunc.cpp.s
@@ -324,7 +420,7 @@ src/entities/gameplay/function/RaiseFunc.s: src/entities/gameplay/function/Raise
 
 # target to generate assembly for a file
 src/entities/gameplay/function/RaiseFunc.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/function/RaiseFunc.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/RaiseFunc.cpp.s
 .PHONY : src/entities/gameplay/function/RaiseFunc.cpp.s
 
 src/entities/gameplay/function/SineFunc.o: src/entities/gameplay/function/SineFunc.cpp.o
@@ -332,7 +428,7 @@ src/entities/gameplay/function/SineFunc.o: src/entities/gameplay/function/SineFu
 
 # target to build an object file
 src/entities/gameplay/function/SineFunc.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/function/SineFunc.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.o
 .PHONY : src/entities/gameplay/function/SineFunc.cpp.o
 
 src/entities/gameplay/function/SineFunc.i: src/entities/gameplay/function/SineFunc.cpp.i
@@ -340,7 +436,7 @@ src/entities/gameplay/function/SineFunc.i: src/entities/gameplay/function/SineFu
 
 # target to preprocess a source file
 src/entities/gameplay/function/SineFunc.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/function/SineFunc.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.i
 .PHONY : src/entities/gameplay/function/SineFunc.cpp.i
 
 src/entities/gameplay/function/SineFunc.s: src/entities/gameplay/function/SineFunc.cpp.s
@@ -348,7 +444,7 @@ src/entities/gameplay/function/SineFunc.s: src/entities/gameplay/function/SineFu
 
 # target to generate assembly for a file
 src/entities/gameplay/function/SineFunc.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/function/SineFunc.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.s
 .PHONY : src/entities/gameplay/function/SineFunc.cpp.s
 
 src/entities/loading/LoadingSplash.o: src/entities/loading/LoadingSplash.cpp.o
@@ -356,7 +452,7 @@ src/entities/loading/LoadingSplash.o: src/entities/loading/LoadingSplash.cpp.o
 
 # target to build an object file
 src/entities/loading/LoadingSplash.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/loading/LoadingSplash.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/loading/LoadingSplash.cpp.o
 .PHONY : src/entities/loading/LoadingSplash.cpp.o
 
 src/entities/loading/LoadingSplash.i: src/entities/loading/LoadingSplash.cpp.i
@@ -364,7 +460,7 @@ src/entities/loading/LoadingSplash.i: src/entities/loading/LoadingSplash.cpp.i
 
 # target to preprocess a source file
 src/entities/loading/LoadingSplash.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/loading/LoadingSplash.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/loading/LoadingSplash.cpp.i
 .PHONY : src/entities/loading/LoadingSplash.cpp.i
 
 src/entities/loading/LoadingSplash.s: src/entities/loading/LoadingSplash.cpp.s
@@ -372,7 +468,7 @@ src/entities/loading/LoadingSplash.s: src/entities/loading/LoadingSplash.cpp.s
 
 # target to generate assembly for a file
 src/entities/loading/LoadingSplash.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/loading/LoadingSplash.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/loading/LoadingSplash.cpp.s
 .PHONY : src/entities/loading/LoadingSplash.cpp.s
 
 src/entities/menu/PauseMenu.o: src/entities/menu/PauseMenu.cpp.o
@@ -380,7 +476,7 @@ src/entities/menu/PauseMenu.o: src/entities/menu/PauseMenu.cpp.o
 
 # target to build an object file
 src/entities/menu/PauseMenu.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/menu/PauseMenu.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/menu/PauseMenu.cpp.o
 .PHONY : src/entities/menu/PauseMenu.cpp.o
 
 src/entities/menu/PauseMenu.i: src/entities/menu/PauseMenu.cpp.i
@@ -388,7 +484,7 @@ src/entities/menu/PauseMenu.i: src/entities/menu/PauseMenu.cpp.i
 
 # target to preprocess a source file
 src/entities/menu/PauseMenu.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/menu/PauseMenu.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/menu/PauseMenu.cpp.i
 .PHONY : src/entities/menu/PauseMenu.cpp.i
 
 src/entities/menu/PauseMenu.s: src/entities/menu/PauseMenu.cpp.s
@@ -396,7 +492,7 @@ src/entities/menu/PauseMenu.s: src/entities/menu/PauseMenu.cpp.s
 
 # target to generate assembly for a file
 src/entities/menu/PauseMenu.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/menu/PauseMenu.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/menu/PauseMenu.cpp.s
 .PHONY : src/entities/menu/PauseMenu.cpp.s
 
 src/entities/menu/setting_widget/EnumWidget.o: src/entities/menu/setting_widget/EnumWidget.cpp.o
@@ -404,7 +500,7 @@ src/entities/menu/setting_widget/EnumWidget.o: src/entities/menu/setting_widget/
 
 # target to build an object file
 src/entities/menu/setting_widget/EnumWidget.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o
 .PHONY : src/entities/menu/setting_widget/EnumWidget.cpp.o
 
 src/entities/menu/setting_widget/EnumWidget.i: src/entities/menu/setting_widget/EnumWidget.cpp.i
@@ -412,7 +508,7 @@ src/entities/menu/setting_widget/EnumWidget.i: src/entities/menu/setting_widget/
 
 # target to preprocess a source file
 src/entities/menu/setting_widget/EnumWidget.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/menu/setting_widget/EnumWidget.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/menu/setting_widget/EnumWidget.cpp.i
 .PHONY : src/entities/menu/setting_widget/EnumWidget.cpp.i
 
 src/entities/menu/setting_widget/EnumWidget.s: src/entities/menu/setting_widget/EnumWidget.cpp.s
@@ -420,7 +516,7 @@ src/entities/menu/setting_widget/EnumWidget.s: src/entities/menu/setting_widget/
 
 # target to generate assembly for a file
 src/entities/menu/setting_widget/EnumWidget.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/menu/setting_widget/EnumWidget.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/menu/setting_widget/EnumWidget.cpp.s
 .PHONY : src/entities/menu/setting_widget/EnumWidget.cpp.s
 
 src/entities/menu/setting_widget/SettingWidget.o: src/entities/menu/setting_widget/SettingWidget.cpp.o
@@ -428,7 +524,7 @@ src/entities/menu/setting_widget/SettingWidget.o: src/entities/menu/setting_widg
 
 # target to build an object file
 src/entities/menu/setting_widget/SettingWidget.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o
 .PHONY : src/entities/menu/setting_widget/SettingWidget.cpp.o
 
 src/entities/menu/setting_widget/SettingWidget.i: src/entities/menu/setting_widget/SettingWidget.cpp.i
@@ -436,7 +532,7 @@ src/entities/menu/setting_widget/SettingWidget.i: src/entities/menu/setting_widg
 
 # target to preprocess a source file
 src/entities/menu/setting_widget/SettingWidget.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SettingWidget.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SettingWidget.cpp.i
 .PHONY : src/entities/menu/setting_widget/SettingWidget.cpp.i
 
 src/entities/menu/setting_widget/SettingWidget.s: src/entities/menu/setting_widget/SettingWidget.cpp.s
@@ -444,7 +540,7 @@ src/entities/menu/setting_widget/SettingWidget.s: src/entities/menu/setting_widg
 
 # target to generate assembly for a file
 src/entities/menu/setting_widget/SettingWidget.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SettingWidget.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SettingWidget.cpp.s
 .PHONY : src/entities/menu/setting_widget/SettingWidget.cpp.s
 
 src/entities/menu/setting_widget/SliderWidget.o: src/entities/menu/setting_widget/SliderWidget.cpp.o
@@ -452,7 +548,7 @@ src/entities/menu/setting_widget/SliderWidget.o: src/entities/menu/setting_widge
 
 # target to build an object file
 src/entities/menu/setting_widget/SliderWidget.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SliderWidget.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SliderWidget.cpp.o
 .PHONY : src/entities/menu/setting_widget/SliderWidget.cpp.o
 
 src/entities/menu/setting_widget/SliderWidget.i: src/entities/menu/setting_widget/SliderWidget.cpp.i
@@ -460,7 +556,7 @@ src/entities/menu/setting_widget/SliderWidget.i: src/entities/menu/setting_widge
 
 # target to preprocess a source file
 src/entities/menu/setting_widget/SliderWidget.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SliderWidget.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SliderWidget.cpp.i
 .PHONY : src/entities/menu/setting_widget/SliderWidget.cpp.i
 
 src/entities/menu/setting_widget/SliderWidget.s: src/entities/menu/setting_widget/SliderWidget.cpp.s
@@ -468,7 +564,7 @@ src/entities/menu/setting_widget/SliderWidget.s: src/entities/menu/setting_widge
 
 # target to generate assembly for a file
 src/entities/menu/setting_widget/SliderWidget.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SliderWidget.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SliderWidget.cpp.s
 .PHONY : src/entities/menu/setting_widget/SliderWidget.cpp.s
 
 src/entities/start_up/OmicronLogo.o: src/entities/start_up/OmicronLogo.cpp.o
@@ -476,7 +572,7 @@ src/entities/start_up/OmicronLogo.o: src/entities/start_up/OmicronLogo.cpp.o
 
 # target to build an object file
 src/entities/start_up/OmicronLogo.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/start_up/OmicronLogo.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/start_up/OmicronLogo.cpp.o
 .PHONY : src/entities/start_up/OmicronLogo.cpp.o
 
 src/entities/start_up/OmicronLogo.i: src/entities/start_up/OmicronLogo.cpp.i
@@ -484,7 +580,7 @@ src/entities/start_up/OmicronLogo.i: src/entities/start_up/OmicronLogo.cpp.i
 
 # target to preprocess a source file
 src/entities/start_up/OmicronLogo.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/start_up/OmicronLogo.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/start_up/OmicronLogo.cpp.i
 .PHONY : src/entities/start_up/OmicronLogo.cpp.i
 
 src/entities/start_up/OmicronLogo.s: src/entities/start_up/OmicronLogo.cpp.s
@@ -492,7 +588,7 @@ src/entities/start_up/OmicronLogo.s: src/entities/start_up/OmicronLogo.cpp.s
 
 # target to generate assembly for a file
 src/entities/start_up/OmicronLogo.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/start_up/OmicronLogo.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/start_up/OmicronLogo.cpp.s
 .PHONY : src/entities/start_up/OmicronLogo.cpp.s
 
 src/functions/settings/ApplySettings.o: src/functions/settings/ApplySettings.cpp.o
@@ -500,7 +596,7 @@ src/functions/settings/ApplySettings.o: src/functions/settings/ApplySettings.cpp
 
 # target to build an object file
 src/functions/settings/ApplySettings.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/functions/settings/ApplySettings.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/functions/settings/ApplySettings.cpp.o
 .PHONY : src/functions/settings/ApplySettings.cpp.o
 
 src/functions/settings/ApplySettings.i: src/functions/settings/ApplySettings.cpp.i
@@ -508,7 +604,7 @@ src/functions/settings/ApplySettings.i: src/functions/settings/ApplySettings.cpp
 
 # target to preprocess a source file
 src/functions/settings/ApplySettings.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/functions/settings/ApplySettings.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/functions/settings/ApplySettings.cpp.i
 .PHONY : src/functions/settings/ApplySettings.cpp.i
 
 src/functions/settings/ApplySettings.s: src/functions/settings/ApplySettings.cpp.s
@@ -516,7 +612,7 @@ src/functions/settings/ApplySettings.s: src/functions/settings/ApplySettings.cpp
 
 # target to generate assembly for a file
 src/functions/settings/ApplySettings.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/functions/settings/ApplySettings.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/functions/settings/ApplySettings.cpp.s
 .PHONY : src/functions/settings/ApplySettings.cpp.s
 
 src/functions/settings/Config.o: src/functions/settings/Config.cpp.o
@@ -524,7 +620,7 @@ src/functions/settings/Config.o: src/functions/settings/Config.cpp.o
 
 # target to build an object file
 src/functions/settings/Config.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/functions/settings/Config.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/functions/settings/Config.cpp.o
 .PHONY : src/functions/settings/Config.cpp.o
 
 src/functions/settings/Config.i: src/functions/settings/Config.cpp.i
@@ -532,7 +628,7 @@ src/functions/settings/Config.i: src/functions/settings/Config.cpp.i
 
 # target to preprocess a source file
 src/functions/settings/Config.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/functions/settings/Config.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/functions/settings/Config.cpp.i
 .PHONY : src/functions/settings/Config.cpp.i
 
 src/functions/settings/Config.s: src/functions/settings/Config.cpp.s
@@ -540,7 +636,7 @@ src/functions/settings/Config.s: src/functions/settings/Config.cpp.s
 
 # target to generate assembly for a file
 src/functions/settings/Config.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/functions/settings/Config.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/functions/settings/Config.cpp.s
 .PHONY : src/functions/settings/Config.cpp.s
 
 src/omicron/Omicron.o: src/omicron/Omicron.cpp.o
@@ -548,7 +644,7 @@ src/omicron/Omicron.o: src/omicron/Omicron.cpp.o
 
 # target to build an object file
 src/omicron/Omicron.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/Omicron.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/Omicron.cpp.o
 .PHONY : src/omicron/Omicron.cpp.o
 
 src/omicron/Omicron.i: src/omicron/Omicron.cpp.i
@@ -556,7 +652,7 @@ src/omicron/Omicron.i: src/omicron/Omicron.cpp.i
 
 # target to preprocess a source file
 src/omicron/Omicron.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/Omicron.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/Omicron.cpp.i
 .PHONY : src/omicron/Omicron.cpp.i
 
 src/omicron/Omicron.s: src/omicron/Omicron.cpp.s
@@ -564,7 +660,7 @@ src/omicron/Omicron.s: src/omicron/Omicron.cpp.s
 
 # target to generate assembly for a file
 src/omicron/Omicron.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/Omicron.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/Omicron.cpp.s
 .PHONY : src/omicron/Omicron.cpp.s
 
 src/omicron/audio/SoundPool.o: src/omicron/audio/SoundPool.cpp.o
@@ -572,7 +668,7 @@ src/omicron/audio/SoundPool.o: src/omicron/audio/SoundPool.cpp.o
 
 # target to build an object file
 src/omicron/audio/SoundPool.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/audio/SoundPool.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/audio/SoundPool.cpp.o
 .PHONY : src/omicron/audio/SoundPool.cpp.o
 
 src/omicron/audio/SoundPool.i: src/omicron/audio/SoundPool.cpp.i
@@ -580,7 +676,7 @@ src/omicron/audio/SoundPool.i: src/omicron/audio/SoundPool.cpp.i
 
 # target to preprocess a source file
 src/omicron/audio/SoundPool.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/audio/SoundPool.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/audio/SoundPool.cpp.i
 .PHONY : src/omicron/audio/SoundPool.cpp.i
 
 src/omicron/audio/SoundPool.s: src/omicron/audio/SoundPool.cpp.s
@@ -588,7 +684,7 @@ src/omicron/audio/SoundPool.s: src/omicron/audio/SoundPool.cpp.s
 
 # target to generate assembly for a file
 src/omicron/audio/SoundPool.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/audio/SoundPool.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/audio/SoundPool.cpp.s
 .PHONY : src/omicron/audio/SoundPool.cpp.s
 
 src/omicron/component/Camera.o: src/omicron/component/Camera.cpp.o
@@ -596,7 +692,7 @@ src/omicron/component/Camera.o: src/omicron/component/Camera.cpp.o
 
 # target to build an object file
 src/omicron/component/Camera.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/Camera.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/Camera.cpp.o
 .PHONY : src/omicron/component/Camera.cpp.o
 
 src/omicron/component/Camera.i: src/omicron/component/Camera.cpp.i
@@ -604,7 +700,7 @@ src/omicron/component/Camera.i: src/omicron/component/Camera.cpp.i
 
 # target to preprocess a source file
 src/omicron/component/Camera.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/Camera.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/Camera.cpp.i
 .PHONY : src/omicron/component/Camera.cpp.i
 
 src/omicron/component/Camera.s: src/omicron/component/Camera.cpp.s
@@ -612,7 +708,7 @@ src/omicron/component/Camera.s: src/omicron/component/Camera.cpp.s
 
 # target to generate assembly for a file
 src/omicron/component/Camera.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/Camera.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/Camera.cpp.s
 .PHONY : src/omicron/component/Camera.cpp.s
 
 src/omicron/component/Transform.o: src/omicron/component/Transform.cpp.o
@@ -620,7 +716,7 @@ src/omicron/component/Transform.o: src/omicron/component/Transform.cpp.o
 
 # target to build an object file
 src/omicron/component/Transform.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/Transform.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/Transform.cpp.o
 .PHONY : src/omicron/component/Transform.cpp.o
 
 src/omicron/component/Transform.i: src/omicron/component/Transform.cpp.i
@@ -628,7 +724,7 @@ src/omicron/component/Transform.i: src/omicron/component/Transform.cpp.i
 
 # target to preprocess a source file
 src/omicron/component/Transform.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/Transform.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/Transform.cpp.i
 .PHONY : src/omicron/component/Transform.cpp.i
 
 src/omicron/component/Transform.s: src/omicron/component/Transform.cpp.s
@@ -636,7 +732,7 @@ src/omicron/component/Transform.s: src/omicron/component/Transform.cpp.s
 
 # target to generate assembly for a file
 src/omicron/component/Transform.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/Transform.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/Transform.cpp.s
 .PHONY : src/omicron/component/Transform.cpp.s
 
 src/omicron/component/light/DirectionalLight.o: src/omicron/component/light/DirectionalLight.cpp.o
@@ -644,7 +740,7 @@ src/omicron/component/light/DirectionalLight.o: src/omicron/component/light/Dire
 
 # target to build an object file
 src/omicron/component/light/DirectionalLight.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/light/DirectionalLight.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/light/DirectionalLight.cpp.o
 .PHONY : src/omicron/component/light/DirectionalLight.cpp.o
 
 src/omicron/component/light/DirectionalLight.i: src/omicron/component/light/DirectionalLight.cpp.i
@@ -652,7 +748,7 @@ src/omicron/component/light/DirectionalLight.i: src/omicron/component/light/Dire
 
 # target to preprocess a source file
 src/omicron/component/light/DirectionalLight.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/light/DirectionalLight.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/light/DirectionalLight.cpp.i
 .PHONY : src/omicron/component/light/DirectionalLight.cpp.i
 
 src/omicron/component/light/DirectionalLight.s: src/omicron/component/light/DirectionalLight.cpp.s
@@ -660,7 +756,7 @@ src/omicron/component/light/DirectionalLight.s: src/omicron/component/light/Dire
 
 # target to generate assembly for a file
 src/omicron/component/light/DirectionalLight.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/light/DirectionalLight.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/light/DirectionalLight.cpp.s
 .PHONY : src/omicron/component/light/DirectionalLight.cpp.s
 
 src/omicron/component/light/Light.o: src/omicron/component/light/Light.cpp.o
@@ -668,7 +764,7 @@ src/omicron/component/light/Light.o: src/omicron/component/light/Light.cpp.o
 
 # target to build an object file
 src/omicron/component/light/Light.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/light/Light.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/light/Light.cpp.o
 .PHONY : src/omicron/component/light/Light.cpp.o
 
 src/omicron/component/light/Light.i: src/omicron/component/light/Light.cpp.i
@@ -676,7 +772,7 @@ src/omicron/component/light/Light.i: src/omicron/component/light/Light.cpp.i
 
 # target to preprocess a source file
 src/omicron/component/light/Light.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/light/Light.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/light/Light.cpp.i
 .PHONY : src/omicron/component/light/Light.cpp.i
 
 src/omicron/component/light/Light.s: src/omicron/component/light/Light.cpp.s
@@ -684,7 +780,7 @@ src/omicron/component/light/Light.s: src/omicron/component/light/Light.cpp.s
 
 # target to generate assembly for a file
 src/omicron/component/light/Light.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/light/Light.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/light/Light.cpp.s
 .PHONY : src/omicron/component/light/Light.cpp.s
 
 src/omicron/component/light/PointLight.o: src/omicron/component/light/PointLight.cpp.o
@@ -692,7 +788,7 @@ src/omicron/component/light/PointLight.o: src/omicron/component/light/PointLight
 
 # target to build an object file
 src/omicron/component/light/PointLight.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/light/PointLight.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/light/PointLight.cpp.o
 .PHONY : src/omicron/component/light/PointLight.cpp.o
 
 src/omicron/component/light/PointLight.i: src/omicron/component/light/PointLight.cpp.i
@@ -700,7 +796,7 @@ src/omicron/component/light/PointLight.i: src/omicron/component/light/PointLight
 
 # target to preprocess a source file
 src/omicron/component/light/PointLight.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/light/PointLight.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/light/PointLight.cpp.i
 .PHONY : src/omicron/component/light/PointLight.cpp.i
 
 src/omicron/component/light/PointLight.s: src/omicron/component/light/PointLight.cpp.s
@@ -708,7 +804,7 @@ src/omicron/component/light/PointLight.s: src/omicron/component/light/PointLight
 
 # target to generate assembly for a file
 src/omicron/component/light/PointLight.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/light/PointLight.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/light/PointLight.cpp.s
 .PHONY : src/omicron/component/light/PointLight.cpp.s
 
 src/omicron/component/light/SpotLight.o: src/omicron/component/light/SpotLight.cpp.o
@@ -716,7 +812,7 @@ src/omicron/component/light/SpotLight.o: src/omicron/component/light/SpotLight.c
 
 # target to build an object file
 src/omicron/component/light/SpotLight.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/light/SpotLight.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/light/SpotLight.cpp.o
 .PHONY : src/omicron/component/light/SpotLight.cpp.o
 
 src/omicron/component/light/SpotLight.i: src/omicron/component/light/SpotLight.cpp.i
@@ -724,7 +820,7 @@ src/omicron/component/light/SpotLight.i: src/omicron/component/light/SpotLight.c
 
 # target to preprocess a source file
 src/omicron/component/light/SpotLight.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/light/SpotLight.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/light/SpotLight.cpp.i
 .PHONY : src/omicron/component/light/SpotLight.cpp.i
 
 src/omicron/component/light/SpotLight.s: src/omicron/component/light/SpotLight.cpp.s
@@ -732,7 +828,7 @@ src/omicron/component/light/SpotLight.s: src/omicron/component/light/SpotLight.c
 
 # target to generate assembly for a file
 src/omicron/component/light/SpotLight.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/light/SpotLight.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/light/SpotLight.cpp.s
 .PHONY : src/omicron/component/light/SpotLight.cpp.s
 
 src/omicron/component/physics/CollisionChecker.o: src/omicron/component/physics/CollisionChecker.cpp.o
@@ -740,7 +836,7 @@ src/omicron/component/physics/CollisionChecker.o: src/omicron/component/physics/
 
 # target to build an object file
 src/omicron/component/physics/CollisionChecker.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/physics/CollisionChecker.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/physics/CollisionChecker.cpp.o
 .PHONY : src/omicron/component/physics/CollisionChecker.cpp.o
 
 src/omicron/component/physics/CollisionChecker.i: src/omicron/component/physics/CollisionChecker.cpp.i
@@ -748,7 +844,7 @@ src/omicron/component/physics/CollisionChecker.i: src/omicron/component/physics/
 
 # target to preprocess a source file
 src/omicron/component/physics/CollisionChecker.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/physics/CollisionChecker.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/physics/CollisionChecker.cpp.i
 .PHONY : src/omicron/component/physics/CollisionChecker.cpp.i
 
 src/omicron/component/physics/CollisionChecker.s: src/omicron/component/physics/CollisionChecker.cpp.s
@@ -756,7 +852,7 @@ src/omicron/component/physics/CollisionChecker.s: src/omicron/component/physics/
 
 # target to generate assembly for a file
 src/omicron/component/physics/CollisionChecker.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/physics/CollisionChecker.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/physics/CollisionChecker.cpp.s
 .PHONY : src/omicron/component/physics/CollisionChecker.cpp.s
 
 src/omicron/component/physics/CollisionDetector.o: src/omicron/component/physics/CollisionDetector.cpp.o
@@ -764,7 +860,7 @@ src/omicron/component/physics/CollisionDetector.o: src/omicron/component/physics
 
 # target to build an object file
 src/omicron/component/physics/CollisionDetector.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/physics/CollisionDetector.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/physics/CollisionDetector.cpp.o
 .PHONY : src/omicron/component/physics/CollisionDetector.cpp.o
 
 src/omicron/component/physics/CollisionDetector.i: src/omicron/component/physics/CollisionDetector.cpp.i
@@ -772,7 +868,7 @@ src/omicron/component/physics/CollisionDetector.i: src/omicron/component/physics
 
 # target to preprocess a source file
 src/omicron/component/physics/CollisionDetector.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/physics/CollisionDetector.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/physics/CollisionDetector.cpp.i
 .PHONY : src/omicron/component/physics/CollisionDetector.cpp.i
 
 src/omicron/component/physics/CollisionDetector.s: src/omicron/component/physics/CollisionDetector.cpp.s
@@ -780,7 +876,7 @@ src/omicron/component/physics/CollisionDetector.s: src/omicron/component/physics
 
 # target to generate assembly for a file
 src/omicron/component/physics/CollisionDetector.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/physics/CollisionDetector.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/physics/CollisionDetector.cpp.s
 .PHONY : src/omicron/component/physics/CollisionDetector.cpp.s
 
 src/omicron/component/renderable/KeyFrameMesh.o: src/omicron/component/renderable/KeyFrameMesh.cpp.o
@@ -788,7 +884,7 @@ src/omicron/component/renderable/KeyFrameMesh.o: src/omicron/component/renderabl
 
 # target to build an object file
 src/omicron/component/renderable/KeyFrameMesh.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/KeyFrameMesh.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/KeyFrameMesh.cpp.o
 .PHONY : src/omicron/component/renderable/KeyFrameMesh.cpp.o
 
 src/omicron/component/renderable/KeyFrameMesh.i: src/omicron/component/renderable/KeyFrameMesh.cpp.i
@@ -796,7 +892,7 @@ src/omicron/component/renderable/KeyFrameMesh.i: src/omicron/component/renderabl
 
 # target to preprocess a source file
 src/omicron/component/renderable/KeyFrameMesh.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/KeyFrameMesh.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/KeyFrameMesh.cpp.i
 .PHONY : src/omicron/component/renderable/KeyFrameMesh.cpp.i
 
 src/omicron/component/renderable/KeyFrameMesh.s: src/omicron/component/renderable/KeyFrameMesh.cpp.s
@@ -804,7 +900,7 @@ src/omicron/component/renderable/KeyFrameMesh.s: src/omicron/component/renderabl
 
 # target to generate assembly for a file
 src/omicron/component/renderable/KeyFrameMesh.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/KeyFrameMesh.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/KeyFrameMesh.cpp.s
 .PHONY : src/omicron/component/renderable/KeyFrameMesh.cpp.s
 
 src/omicron/component/renderable/Mesh.o: src/omicron/component/renderable/Mesh.cpp.o
@@ -812,7 +908,7 @@ src/omicron/component/renderable/Mesh.o: src/omicron/component/renderable/Mesh.c
 
 # target to build an object file
 src/omicron/component/renderable/Mesh.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/Mesh.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/Mesh.cpp.o
 .PHONY : src/omicron/component/renderable/Mesh.cpp.o
 
 src/omicron/component/renderable/Mesh.i: src/omicron/component/renderable/Mesh.cpp.i
@@ -820,7 +916,7 @@ src/omicron/component/renderable/Mesh.i: src/omicron/component/renderable/Mesh.c
 
 # target to preprocess a source file
 src/omicron/component/renderable/Mesh.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/Mesh.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/Mesh.cpp.i
 .PHONY : src/omicron/component/renderable/Mesh.cpp.i
 
 src/omicron/component/renderable/Mesh.s: src/omicron/component/renderable/Mesh.cpp.s
@@ -828,7 +924,7 @@ src/omicron/component/renderable/Mesh.s: src/omicron/component/renderable/Mesh.c
 
 # target to generate assembly for a file
 src/omicron/component/renderable/Mesh.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/Mesh.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/Mesh.cpp.s
 .PHONY : src/omicron/component/renderable/Mesh.cpp.s
 
 src/omicron/component/renderable/Renderable.o: src/omicron/component/renderable/Renderable.cpp.o
@@ -836,7 +932,7 @@ src/omicron/component/renderable/Renderable.o: src/omicron/component/renderable/
 
 # target to build an object file
 src/omicron/component/renderable/Renderable.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/Renderable.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/Renderable.cpp.o
 .PHONY : src/omicron/component/renderable/Renderable.cpp.o
 
 src/omicron/component/renderable/Renderable.i: src/omicron/component/renderable/Renderable.cpp.i
@@ -844,7 +940,7 @@ src/omicron/component/renderable/Renderable.i: src/omicron/component/renderable/
 
 # target to preprocess a source file
 src/omicron/component/renderable/Renderable.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/Renderable.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/Renderable.cpp.i
 .PHONY : src/omicron/component/renderable/Renderable.cpp.i
 
 src/omicron/component/renderable/Renderable.s: src/omicron/component/renderable/Renderable.cpp.s
@@ -852,7 +948,7 @@ src/omicron/component/renderable/Renderable.s: src/omicron/component/renderable/
 
 # target to generate assembly for a file
 src/omicron/component/renderable/Renderable.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/Renderable.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/Renderable.cpp.s
 .PHONY : src/omicron/component/renderable/Renderable.cpp.s
 
 src/omicron/component/renderable/Sprite.o: src/omicron/component/renderable/Sprite.cpp.o
@@ -860,7 +956,7 @@ src/omicron/component/renderable/Sprite.o: src/omicron/component/renderable/Spri
 
 # target to build an object file
 src/omicron/component/renderable/Sprite.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/Sprite.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/Sprite.cpp.o
 .PHONY : src/omicron/component/renderable/Sprite.cpp.o
 
 src/omicron/component/renderable/Sprite.i: src/omicron/component/renderable/Sprite.cpp.i
@@ -868,7 +964,7 @@ src/omicron/component/renderable/Sprite.i: src/omicron/component/renderable/Spri
 
 # target to preprocess a source file
 src/omicron/component/renderable/Sprite.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/Sprite.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/Sprite.cpp.i
 .PHONY : src/omicron/component/renderable/Sprite.cpp.i
 
 src/omicron/component/renderable/Sprite.s: src/omicron/component/renderable/Sprite.cpp.s
@@ -876,7 +972,7 @@ src/omicron/component/renderable/Sprite.s: src/omicron/component/renderable/Spri
 
 # target to generate assembly for a file
 src/omicron/component/renderable/Sprite.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/Sprite.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/Sprite.cpp.s
 .PHONY : src/omicron/component/renderable/Sprite.cpp.s
 
 src/omicron/component/renderable/Text.o: src/omicron/component/renderable/Text.cpp.o
@@ -884,7 +980,7 @@ src/omicron/component/renderable/Text.o: src/omicron/component/renderable/Text.c
 
 # target to build an object file
 src/omicron/component/renderable/Text.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/Text.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/Text.cpp.o
 .PHONY : src/omicron/component/renderable/Text.cpp.o
 
 src/omicron/component/renderable/Text.i: src/omicron/component/renderable/Text.cpp.i
@@ -892,7 +988,7 @@ src/omicron/component/renderable/Text.i: src/omicron/component/renderable/Text.c
 
 # target to preprocess a source file
 src/omicron/component/renderable/Text.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/Text.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/Text.cpp.i
 .PHONY : src/omicron/component/renderable/Text.cpp.i
 
 src/omicron/component/renderable/Text.s: src/omicron/component/renderable/Text.cpp.s
@@ -900,7 +996,7 @@ src/omicron/component/renderable/Text.s: src/omicron/component/renderable/Text.c
 
 # target to generate assembly for a file
 src/omicron/component/renderable/Text.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/renderable/Text.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/renderable/Text.cpp.s
 .PHONY : src/omicron/component/renderable/Text.cpp.s
 
 src/omicron/component/updatable/audio/Music.o: src/omicron/component/updatable/audio/Music.cpp.o
@@ -908,7 +1004,7 @@ src/omicron/component/updatable/audio/Music.o: src/omicron/component/updatable/a
 
 # target to build an object file
 src/omicron/component/updatable/audio/Music.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/updatable/audio/Music.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/updatable/audio/Music.cpp.o
 .PHONY : src/omicron/component/updatable/audio/Music.cpp.o
 
 src/omicron/component/updatable/audio/Music.i: src/omicron/component/updatable/audio/Music.cpp.i
@@ -916,7 +1012,7 @@ src/omicron/component/updatable/audio/Music.i: src/omicron/component/updatable/a
 
 # target to preprocess a source file
 src/omicron/component/updatable/audio/Music.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/updatable/audio/Music.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/updatable/audio/Music.cpp.i
 .PHONY : src/omicron/component/updatable/audio/Music.cpp.i
 
 src/omicron/component/updatable/audio/Music.s: src/omicron/component/updatable/audio/Music.cpp.s
@@ -924,7 +1020,7 @@ src/omicron/component/updatable/audio/Music.s: src/omicron/component/updatable/a
 
 # target to generate assembly for a file
 src/omicron/component/updatable/audio/Music.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/component/updatable/audio/Music.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/component/updatable/audio/Music.cpp.s
 .PHONY : src/omicron/component/updatable/audio/Music.cpp.s
 
 src/omicron/display/Window.o: src/omicron/display/Window.cpp.o
@@ -932,7 +1028,7 @@ src/omicron/display/Window.o: src/omicron/display/Window.cpp.o
 
 # target to build an object file
 src/omicron/display/Window.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/display/Window.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/display/Window.cpp.o
 .PHONY : src/omicron/display/Window.cpp.o
 
 src/omicron/display/Window.i: src/omicron/display/Window.cpp.i
@@ -940,7 +1036,7 @@ src/omicron/display/Window.i: src/omicron/display/Window.cpp.i
 
 # target to preprocess a source file
 src/omicron/display/Window.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/display/Window.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/display/Window.cpp.i
 .PHONY : src/omicron/display/Window.cpp.i
 
 src/omicron/display/Window.s: src/omicron/display/Window.cpp.s
@@ -948,7 +1044,7 @@ src/omicron/display/Window.s: src/omicron/display/Window.cpp.s
 
 # target to generate assembly for a file
 src/omicron/display/Window.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/display/Window.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/display/Window.cpp.s
 .PHONY : src/omicron/display/Window.cpp.s
 
 src/omicron/entity/ComponentTable.o: src/omicron/entity/ComponentTable.cpp.o
@@ -956,7 +1052,7 @@ src/omicron/entity/ComponentTable.o: src/omicron/entity/ComponentTable.cpp.o
 
 # target to build an object file
 src/omicron/entity/ComponentTable.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/entity/ComponentTable.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/entity/ComponentTable.cpp.o
 .PHONY : src/omicron/entity/ComponentTable.cpp.o
 
 src/omicron/entity/ComponentTable.i: src/omicron/entity/ComponentTable.cpp.i
@@ -964,7 +1060,7 @@ src/omicron/entity/ComponentTable.i: src/omicron/entity/ComponentTable.cpp.i
 
 # target to preprocess a source file
 src/omicron/entity/ComponentTable.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/entity/ComponentTable.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/entity/ComponentTable.cpp.i
 .PHONY : src/omicron/entity/ComponentTable.cpp.i
 
 src/omicron/entity/ComponentTable.s: src/omicron/entity/ComponentTable.cpp.s
@@ -972,7 +1068,7 @@ src/omicron/entity/ComponentTable.s: src/omicron/entity/ComponentTable.cpp.s
 
 # target to generate assembly for a file
 src/omicron/entity/ComponentTable.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/entity/ComponentTable.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/entity/ComponentTable.cpp.s
 .PHONY : src/omicron/entity/ComponentTable.cpp.s
 
 src/omicron/input/Keyboard.o: src/omicron/input/Keyboard.cpp.o
@@ -980,7 +1076,7 @@ src/omicron/input/Keyboard.o: src/omicron/input/Keyboard.cpp.o
 
 # target to build an object file
 src/omicron/input/Keyboard.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/input/Keyboard.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/input/Keyboard.cpp.o
 .PHONY : src/omicron/input/Keyboard.cpp.o
 
 src/omicron/input/Keyboard.i: src/omicron/input/Keyboard.cpp.i
@@ -988,7 +1084,7 @@ src/omicron/input/Keyboard.i: src/omicron/input/Keyboard.cpp.i
 
 # target to preprocess a source file
 src/omicron/input/Keyboard.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/input/Keyboard.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/input/Keyboard.cpp.i
 .PHONY : src/omicron/input/Keyboard.cpp.i
 
 src/omicron/input/Keyboard.s: src/omicron/input/Keyboard.cpp.s
@@ -996,7 +1092,7 @@ src/omicron/input/Keyboard.s: src/omicron/input/Keyboard.cpp.s
 
 # target to generate assembly for a file
 src/omicron/input/Keyboard.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/input/Keyboard.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/input/Keyboard.cpp.s
 .PHONY : src/omicron/input/Keyboard.cpp.s
 
 src/omicron/input/Mouse.o: src/omicron/input/Mouse.cpp.o
@@ -1004,7 +1100,7 @@ src/omicron/input/Mouse.o: src/omicron/input/Mouse.cpp.o
 
 # target to build an object file
 src/omicron/input/Mouse.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/input/Mouse.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/input/Mouse.cpp.o
 .PHONY : src/omicron/input/Mouse.cpp.o
 
 src/omicron/input/Mouse.i: src/omicron/input/Mouse.cpp.i
@@ -1012,7 +1108,7 @@ src/omicron/input/Mouse.i: src/omicron/input/Mouse.cpp.i
 
 # target to preprocess a source file
 src/omicron/input/Mouse.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/input/Mouse.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/input/Mouse.cpp.i
 .PHONY : src/omicron/input/Mouse.cpp.i
 
 src/omicron/input/Mouse.s: src/omicron/input/Mouse.cpp.s
@@ -1020,7 +1116,7 @@ src/omicron/input/Mouse.s: src/omicron/input/Mouse.cpp.s
 
 # target to generate assembly for a file
 src/omicron/input/Mouse.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/input/Mouse.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/input/Mouse.cpp.s
 .PHONY : src/omicron/input/Mouse.cpp.s
 
 src/omicron/logic/FPSManager.o: src/omicron/logic/FPSManager.cpp.o
@@ -1028,7 +1124,7 @@ src/omicron/logic/FPSManager.o: src/omicron/logic/FPSManager.cpp.o
 
 # target to build an object file
 src/omicron/logic/FPSManager.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/logic/FPSManager.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/logic/FPSManager.cpp.o
 .PHONY : src/omicron/logic/FPSManager.cpp.o
 
 src/omicron/logic/FPSManager.i: src/omicron/logic/FPSManager.cpp.i
@@ -1036,7 +1132,7 @@ src/omicron/logic/FPSManager.i: src/omicron/logic/FPSManager.cpp.i
 
 # target to preprocess a source file
 src/omicron/logic/FPSManager.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/logic/FPSManager.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/logic/FPSManager.cpp.i
 .PHONY : src/omicron/logic/FPSManager.cpp.i
 
 src/omicron/logic/FPSManager.s: src/omicron/logic/FPSManager.cpp.s
@@ -1044,7 +1140,7 @@ src/omicron/logic/FPSManager.s: src/omicron/logic/FPSManager.cpp.s
 
 # target to generate assembly for a file
 src/omicron/logic/FPSManager.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/logic/FPSManager.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/logic/FPSManager.cpp.s
 .PHONY : src/omicron/logic/FPSManager.cpp.s
 
 src/omicron/logic/LogicManager.o: src/omicron/logic/LogicManager.cpp.o
@@ -1052,7 +1148,7 @@ src/omicron/logic/LogicManager.o: src/omicron/logic/LogicManager.cpp.o
 
 # target to build an object file
 src/omicron/logic/LogicManager.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/logic/LogicManager.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/logic/LogicManager.cpp.o
 .PHONY : src/omicron/logic/LogicManager.cpp.o
 
 src/omicron/logic/LogicManager.i: src/omicron/logic/LogicManager.cpp.i
@@ -1060,7 +1156,7 @@ src/omicron/logic/LogicManager.i: src/omicron/logic/LogicManager.cpp.i
 
 # target to preprocess a source file
 src/omicron/logic/LogicManager.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/logic/LogicManager.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/logic/LogicManager.cpp.i
 .PHONY : src/omicron/logic/LogicManager.cpp.i
 
 src/omicron/logic/LogicManager.s: src/omicron/logic/LogicManager.cpp.s
@@ -1068,7 +1164,7 @@ src/omicron/logic/LogicManager.s: src/omicron/logic/LogicManager.cpp.s
 
 # target to generate assembly for a file
 src/omicron/logic/LogicManager.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/logic/LogicManager.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/logic/LogicManager.cpp.s
 .PHONY : src/omicron/logic/LogicManager.cpp.s
 
 src/omicron/physics/collision_detect/CollisionDetect.o: src/omicron/physics/collision_detect/CollisionDetect.cpp.o
@@ -1076,7 +1172,7 @@ src/omicron/physics/collision_detect/CollisionDetect.o: src/omicron/physics/coll
 
 # target to build an object file
 src/omicron/physics/collision_detect/CollisionDetect.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/physics/collision_detect/CollisionDetect.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/physics/collision_detect/CollisionDetect.cpp.o
 .PHONY : src/omicron/physics/collision_detect/CollisionDetect.cpp.o
 
 src/omicron/physics/collision_detect/CollisionDetect.i: src/omicron/physics/collision_detect/CollisionDetect.cpp.i
@@ -1084,7 +1180,7 @@ src/omicron/physics/collision_detect/CollisionDetect.i: src/omicron/physics/coll
 
 # target to preprocess a source file
 src/omicron/physics/collision_detect/CollisionDetect.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/physics/collision_detect/CollisionDetect.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/physics/collision_detect/CollisionDetect.cpp.i
 .PHONY : src/omicron/physics/collision_detect/CollisionDetect.cpp.i
 
 src/omicron/physics/collision_detect/CollisionDetect.s: src/omicron/physics/collision_detect/CollisionDetect.cpp.s
@@ -1092,7 +1188,7 @@ src/omicron/physics/collision_detect/CollisionDetect.s: src/omicron/physics/coll
 
 # target to generate assembly for a file
 src/omicron/physics/collision_detect/CollisionDetect.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/physics/collision_detect/CollisionDetect.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/physics/collision_detect/CollisionDetect.cpp.s
 .PHONY : src/omicron/physics/collision_detect/CollisionDetect.cpp.s
 
 src/omicron/rendering/RenderLists.o: src/omicron/rendering/RenderLists.cpp.o
@@ -1100,7 +1196,7 @@ src/omicron/rendering/RenderLists.o: src/omicron/rendering/RenderLists.cpp.o
 
 # target to build an object file
 src/omicron/rendering/RenderLists.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/RenderLists.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/RenderLists.cpp.o
 .PHONY : src/omicron/rendering/RenderLists.cpp.o
 
 src/omicron/rendering/RenderLists.i: src/omicron/rendering/RenderLists.cpp.i
@@ -1108,7 +1204,7 @@ src/omicron/rendering/RenderLists.i: src/omicron/rendering/RenderLists.cpp.i
 
 # target to preprocess a source file
 src/omicron/rendering/RenderLists.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/RenderLists.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/RenderLists.cpp.i
 .PHONY : src/omicron/rendering/RenderLists.cpp.i
 
 src/omicron/rendering/RenderLists.s: src/omicron/rendering/RenderLists.cpp.s
@@ -1116,7 +1212,7 @@ src/omicron/rendering/RenderLists.s: src/omicron/rendering/RenderLists.cpp.s
 
 # target to generate assembly for a file
 src/omicron/rendering/RenderLists.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/RenderLists.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/RenderLists.cpp.s
 .PHONY : src/omicron/rendering/RenderLists.cpp.s
 
 src/omicron/rendering/Renderer.o: src/omicron/rendering/Renderer.cpp.o
@@ -1124,7 +1220,7 @@ src/omicron/rendering/Renderer.o: src/omicron/rendering/Renderer.cpp.o
 
 # target to build an object file
 src/omicron/rendering/Renderer.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/Renderer.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/Renderer.cpp.o
 .PHONY : src/omicron/rendering/Renderer.cpp.o
 
 src/omicron/rendering/Renderer.i: src/omicron/rendering/Renderer.cpp.i
@@ -1132,7 +1228,7 @@ src/omicron/rendering/Renderer.i: src/omicron/rendering/Renderer.cpp.i
 
 # target to preprocess a source file
 src/omicron/rendering/Renderer.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/Renderer.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/Renderer.cpp.i
 .PHONY : src/omicron/rendering/Renderer.cpp.i
 
 src/omicron/rendering/Renderer.s: src/omicron/rendering/Renderer.cpp.s
@@ -1140,7 +1236,7 @@ src/omicron/rendering/Renderer.s: src/omicron/rendering/Renderer.cpp.s
 
 # target to generate assembly for a file
 src/omicron/rendering/Renderer.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/Renderer.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/Renderer.cpp.s
 .PHONY : src/omicron/rendering/Renderer.cpp.s
 
 src/omicron/rendering/VisibilityCheckThread.o: src/omicron/rendering/VisibilityCheckThread.cpp.o
@@ -1148,7 +1244,7 @@ src/omicron/rendering/VisibilityCheckThread.o: src/omicron/rendering/VisibilityC
 
 # target to build an object file
 src/omicron/rendering/VisibilityCheckThread.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/VisibilityCheckThread.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/VisibilityCheckThread.cpp.o
 .PHONY : src/omicron/rendering/VisibilityCheckThread.cpp.o
 
 src/omicron/rendering/VisibilityCheckThread.i: src/omicron/rendering/VisibilityCheckThread.cpp.i
@@ -1156,7 +1252,7 @@ src/omicron/rendering/VisibilityCheckThread.i: src/omicron/rendering/VisibilityC
 
 # target to preprocess a source file
 src/omicron/rendering/VisibilityCheckThread.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/VisibilityCheckThread.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/VisibilityCheckThread.cpp.i
 .PHONY : src/omicron/rendering/VisibilityCheckThread.cpp.i
 
 src/omicron/rendering/VisibilityCheckThread.s: src/omicron/rendering/VisibilityCheckThread.cpp.s
@@ -1164,7 +1260,7 @@ src/omicron/rendering/VisibilityCheckThread.s: src/omicron/rendering/VisibilityC
 
 # target to generate assembly for a file
 src/omicron/rendering/VisibilityCheckThread.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/VisibilityCheckThread.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/VisibilityCheckThread.cpp.s
 .PHONY : src/omicron/rendering/VisibilityCheckThread.cpp.s
 
 src/omicron/rendering/lighting/ShadowMap.o: src/omicron/rendering/lighting/ShadowMap.cpp.o
@@ -1172,7 +1268,7 @@ src/omicron/rendering/lighting/ShadowMap.o: src/omicron/rendering/lighting/Shado
 
 # target to build an object file
 src/omicron/rendering/lighting/ShadowMap.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/lighting/ShadowMap.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/lighting/ShadowMap.cpp.o
 .PHONY : src/omicron/rendering/lighting/ShadowMap.cpp.o
 
 src/omicron/rendering/lighting/ShadowMap.i: src/omicron/rendering/lighting/ShadowMap.cpp.i
@@ -1180,7 +1276,7 @@ src/omicron/rendering/lighting/ShadowMap.i: src/omicron/rendering/lighting/Shado
 
 # target to preprocess a source file
 src/omicron/rendering/lighting/ShadowMap.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/lighting/ShadowMap.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/lighting/ShadowMap.cpp.i
 .PHONY : src/omicron/rendering/lighting/ShadowMap.cpp.i
 
 src/omicron/rendering/lighting/ShadowMap.s: src/omicron/rendering/lighting/ShadowMap.cpp.s
@@ -1188,7 +1284,7 @@ src/omicron/rendering/lighting/ShadowMap.s: src/omicron/rendering/lighting/Shado
 
 # target to generate assembly for a file
 src/omicron/rendering/lighting/ShadowMap.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/lighting/ShadowMap.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/lighting/ShadowMap.cpp.s
 .PHONY : src/omicron/rendering/lighting/ShadowMap.cpp.s
 
 src/omicron/rendering/render_texture/BlurHorRenderTexture.o: src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.o
@@ -1196,7 +1292,7 @@ src/omicron/rendering/render_texture/BlurHorRenderTexture.o: src/omicron/renderi
 
 # target to build an object file
 src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.o
 .PHONY : src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.o
 
 src/omicron/rendering/render_texture/BlurHorRenderTexture.i: src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.i
@@ -1204,7 +1300,7 @@ src/omicron/rendering/render_texture/BlurHorRenderTexture.i: src/omicron/renderi
 
 # target to preprocess a source file
 src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.i
 .PHONY : src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.i
 
 src/omicron/rendering/render_texture/BlurHorRenderTexture.s: src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.s
@@ -1212,7 +1308,7 @@ src/omicron/rendering/render_texture/BlurHorRenderTexture.s: src/omicron/renderi
 
 # target to generate assembly for a file
 src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.s
 .PHONY : src/omicron/rendering/render_texture/BlurHorRenderTexture.cpp.s
 
 src/omicron/rendering/render_texture/BlurVertRenderTexture.o: src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.o
@@ -1220,7 +1316,7 @@ src/omicron/rendering/render_texture/BlurVertRenderTexture.o: src/omicron/render
 
 # target to build an object file
 src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.o
 .PHONY : src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.o
 
 src/omicron/rendering/render_texture/BlurVertRenderTexture.i: src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.i
@@ -1228,7 +1324,7 @@ src/omicron/rendering/render_texture/BlurVertRenderTexture.i: src/omicron/render
 
 # target to preprocess a source file
 src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.i
 .PHONY : src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.i
 
 src/omicron/rendering/render_texture/BlurVertRenderTexture.s: src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.s
@@ -1236,7 +1332,7 @@ src/omicron/rendering/render_texture/BlurVertRenderTexture.s: src/omicron/render
 
 # target to generate assembly for a file
 src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.s
 .PHONY : src/omicron/rendering/render_texture/BlurVertRenderTexture.cpp.s
 
 src/omicron/rendering/render_texture/FinalRenderTexture.o: src/omicron/rendering/render_texture/FinalRenderTexture.cpp.o
@@ -1244,7 +1340,7 @@ src/omicron/rendering/render_texture/FinalRenderTexture.o: src/omicron/rendering
 
 # target to build an object file
 src/omicron/rendering/render_texture/FinalRenderTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/FinalRenderTexture.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/FinalRenderTexture.cpp.o
 .PHONY : src/omicron/rendering/render_texture/FinalRenderTexture.cpp.o
 
 src/omicron/rendering/render_texture/FinalRenderTexture.i: src/omicron/rendering/render_texture/FinalRenderTexture.cpp.i
@@ -1252,7 +1348,7 @@ src/omicron/rendering/render_texture/FinalRenderTexture.i: src/omicron/rendering
 
 # target to preprocess a source file
 src/omicron/rendering/render_texture/FinalRenderTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/FinalRenderTexture.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/FinalRenderTexture.cpp.i
 .PHONY : src/omicron/rendering/render_texture/FinalRenderTexture.cpp.i
 
 src/omicron/rendering/render_texture/FinalRenderTexture.s: src/omicron/rendering/render_texture/FinalRenderTexture.cpp.s
@@ -1260,7 +1356,7 @@ src/omicron/rendering/render_texture/FinalRenderTexture.s: src/omicron/rendering
 
 # target to generate assembly for a file
 src/omicron/rendering/render_texture/FinalRenderTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/FinalRenderTexture.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/FinalRenderTexture.cpp.s
 .PHONY : src/omicron/rendering/render_texture/FinalRenderTexture.cpp.s
 
 src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.o: src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.o
@@ -1268,7 +1364,7 @@ src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.o: src/omicron/ren
 
 # target to build an object file
 src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.o
 .PHONY : src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.o
 
 src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.i: src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.i
@@ -1276,7 +1372,7 @@ src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.i: src/omicron/ren
 
 # target to preprocess a source file
 src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.i
 .PHONY : src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.i
 
 src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.s: src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.s
@@ -1284,7 +1380,7 @@ src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.s: src/omicron/ren
 
 # target to generate assembly for a file
 src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.s
 .PHONY : src/omicron/rendering/render_texture/GlowBlurHorRenderTexture.cpp.s
 
 src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.o: src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.o
@@ -1292,7 +1388,7 @@ src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.o: src/omicron/re
 
 # target to build an object file
 src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.o
 .PHONY : src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.o
 
 src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.i: src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.i
@@ -1300,7 +1396,7 @@ src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.i: src/omicron/re
 
 # target to preprocess a source file
 src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.i
 .PHONY : src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.i
 
 src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.s: src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.s
@@ -1308,7 +1404,7 @@ src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.s: src/omicron/re
 
 # target to generate assembly for a file
 src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.s
 .PHONY : src/omicron/rendering/render_texture/GlowBlurVertRenderTexture.cpp.s
 
 src/omicron/rendering/render_texture/GlowCollateRenderTexture.o: src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.o
@@ -1316,7 +1412,7 @@ src/omicron/rendering/render_texture/GlowCollateRenderTexture.o: src/omicron/ren
 
 # target to build an object file
 src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.o
 .PHONY : src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.o
 
 src/omicron/rendering/render_texture/GlowCollateRenderTexture.i: src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.i
@@ -1324,7 +1420,7 @@ src/omicron/rendering/render_texture/GlowCollateRenderTexture.i: src/omicron/ren
 
 # target to preprocess a source file
 src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.i
 .PHONY : src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.i
 
 src/omicron/rendering/render_texture/GlowCollateRenderTexture.s: src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.s
@@ -1332,7 +1428,7 @@ src/omicron/rendering/render_texture/GlowCollateRenderTexture.s: src/omicron/ren
 
 # target to generate assembly for a file
 src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.s
 .PHONY : src/omicron/rendering/render_texture/GlowCollateRenderTexture.cpp.s
 
 src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.o: src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.o
@@ -1340,7 +1436,7 @@ src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.o: src/omicron/r
 
 # target to build an object file
 src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.o
 .PHONY : src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.o
 
 src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.i: src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.i
@@ -1348,7 +1444,7 @@ src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.i: src/omicron/r
 
 # target to preprocess a source file
 src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.i
 .PHONY : src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.i
 
 src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.s: src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.s
@@ -1356,7 +1452,7 @@ src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.s: src/omicron/r
 
 # target to generate assembly for a file
 src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.s
 .PHONY : src/omicron/rendering/render_texture/GlowFirstPassRenderTexture.cpp.s
 
 src/omicron/rendering/render_texture/GuiRenderTexture.o: src/omicron/rendering/render_texture/GuiRenderTexture.cpp.o
@@ -1364,7 +1460,7 @@ src/omicron/rendering/render_texture/GuiRenderTexture.o: src/omicron/rendering/r
 
 # target to build an object file
 src/omicron/rendering/render_texture/GuiRenderTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GuiRenderTexture.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GuiRenderTexture.cpp.o
 .PHONY : src/omicron/rendering/render_texture/GuiRenderTexture.cpp.o
 
 src/omicron/rendering/render_texture/GuiRenderTexture.i: src/omicron/rendering/render_texture/GuiRenderTexture.cpp.i
@@ -1372,7 +1468,7 @@ src/omicron/rendering/render_texture/GuiRenderTexture.i: src/omicron/rendering/r
 
 # target to preprocess a source file
 src/omicron/rendering/render_texture/GuiRenderTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GuiRenderTexture.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GuiRenderTexture.cpp.i
 .PHONY : src/omicron/rendering/render_texture/GuiRenderTexture.cpp.i
 
 src/omicron/rendering/render_texture/GuiRenderTexture.s: src/omicron/rendering/render_texture/GuiRenderTexture.cpp.s
@@ -1380,7 +1476,7 @@ src/omicron/rendering/render_texture/GuiRenderTexture.s: src/omicron/rendering/r
 
 # target to generate assembly for a file
 src/omicron/rendering/render_texture/GuiRenderTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/GuiRenderTexture.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/GuiRenderTexture.cpp.s
 .PHONY : src/omicron/rendering/render_texture/GuiRenderTexture.cpp.s
 
 src/omicron/rendering/render_texture/RenderTexture.o: src/omicron/rendering/render_texture/RenderTexture.cpp.o
@@ -1388,7 +1484,7 @@ src/omicron/rendering/render_texture/RenderTexture.o: src/omicron/rendering/rend
 
 # target to build an object file
 src/omicron/rendering/render_texture/RenderTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/RenderTexture.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/RenderTexture.cpp.o
 .PHONY : src/omicron/rendering/render_texture/RenderTexture.cpp.o
 
 src/omicron/rendering/render_texture/RenderTexture.i: src/omicron/rendering/render_texture/RenderTexture.cpp.i
@@ -1396,7 +1492,7 @@ src/omicron/rendering/render_texture/RenderTexture.i: src/omicron/rendering/rend
 
 # target to preprocess a source file
 src/omicron/rendering/render_texture/RenderTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/RenderTexture.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/RenderTexture.cpp.i
 .PHONY : src/omicron/rendering/render_texture/RenderTexture.cpp.i
 
 src/omicron/rendering/render_texture/RenderTexture.s: src/omicron/rendering/render_texture/RenderTexture.cpp.s
@@ -1404,7 +1500,7 @@ src/omicron/rendering/render_texture/RenderTexture.s: src/omicron/rendering/rend
 
 # target to generate assembly for a file
 src/omicron/rendering/render_texture/RenderTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/RenderTexture.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/RenderTexture.cpp.s
 .PHONY : src/omicron/rendering/render_texture/RenderTexture.cpp.s
 
 src/omicron/rendering/render_texture/StdRenderTexture.o: src/omicron/rendering/render_texture/StdRenderTexture.cpp.o
@@ -1412,7 +1508,7 @@ src/omicron/rendering/render_texture/StdRenderTexture.o: src/omicron/rendering/r
 
 # target to build an object file
 src/omicron/rendering/render_texture/StdRenderTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/StdRenderTexture.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/StdRenderTexture.cpp.o
 .PHONY : src/omicron/rendering/render_texture/StdRenderTexture.cpp.o
 
 src/omicron/rendering/render_texture/StdRenderTexture.i: src/omicron/rendering/render_texture/StdRenderTexture.cpp.i
@@ -1420,7 +1516,7 @@ src/omicron/rendering/render_texture/StdRenderTexture.i: src/omicron/rendering/r
 
 # target to preprocess a source file
 src/omicron/rendering/render_texture/StdRenderTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/StdRenderTexture.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/StdRenderTexture.cpp.i
 .PHONY : src/omicron/rendering/render_texture/StdRenderTexture.cpp.i
 
 src/omicron/rendering/render_texture/StdRenderTexture.s: src/omicron/rendering/render_texture/StdRenderTexture.cpp.s
@@ -1428,7 +1524,7 @@ src/omicron/rendering/render_texture/StdRenderTexture.s: src/omicron/rendering/r
 
 # target to generate assembly for a file
 src/omicron/rendering/render_texture/StdRenderTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/StdRenderTexture.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/StdRenderTexture.cpp.s
 .PHONY : src/omicron/rendering/render_texture/StdRenderTexture.cpp.s
 
 src/omicron/rendering/render_texture/VisCheckRenderTexture.o: src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.o
@@ -1436,7 +1532,7 @@ src/omicron/rendering/render_texture/VisCheckRenderTexture.o: src/omicron/render
 
 # target to build an object file
 src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.o
 .PHONY : src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.o
 
 src/omicron/rendering/render_texture/VisCheckRenderTexture.i: src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.i
@@ -1444,7 +1540,7 @@ src/omicron/rendering/render_texture/VisCheckRenderTexture.i: src/omicron/render
 
 # target to preprocess a source file
 src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.i
 .PHONY : src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.i
 
 src/omicron/rendering/render_texture/VisCheckRenderTexture.s: src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.s
@@ -1452,7 +1548,7 @@ src/omicron/rendering/render_texture/VisCheckRenderTexture.s: src/omicron/render
 
 # target to generate assembly for a file
 src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.s
 .PHONY : src/omicron/rendering/render_texture/VisCheckRenderTexture.cpp.s
 
 src/omicron/rendering/shading/Animation.o: src/omicron/rendering/shading/Animation.cpp.o
@@ -1460,7 +1556,7 @@ src/omicron/rendering/shading/Animation.o: src/omicron/rendering/shading/Animati
 
 # target to build an object file
 src/omicron/rendering/shading/Animation.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/Animation.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/Animation.cpp.o
 .PHONY : src/omicron/rendering/shading/Animation.cpp.o
 
 src/omicron/rendering/shading/Animation.i: src/omicron/rendering/shading/Animation.cpp.i
@@ -1468,7 +1564,7 @@ src/omicron/rendering/shading/Animation.i: src/omicron/rendering/shading/Animati
 
 # target to preprocess a source file
 src/omicron/rendering/shading/Animation.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/Animation.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/Animation.cpp.i
 .PHONY : src/omicron/rendering/shading/Animation.cpp.i
 
 src/omicron/rendering/shading/Animation.s: src/omicron/rendering/shading/Animation.cpp.s
@@ -1476,7 +1572,7 @@ src/omicron/rendering/shading/Animation.s: src/omicron/rendering/shading/Animati
 
 # target to generate assembly for a file
 src/omicron/rendering/shading/Animation.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/Animation.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/Animation.cpp.s
 .PHONY : src/omicron/rendering/shading/Animation.cpp.s
 
 src/omicron/rendering/shading/Material.o: src/omicron/rendering/shading/Material.cpp.o
@@ -1484,7 +1580,7 @@ src/omicron/rendering/shading/Material.o: src/omicron/rendering/shading/Material
 
 # target to build an object file
 src/omicron/rendering/shading/Material.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/Material.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/Material.cpp.o
 .PHONY : src/omicron/rendering/shading/Material.cpp.o
 
 src/omicron/rendering/shading/Material.i: src/omicron/rendering/shading/Material.cpp.i
@@ -1492,7 +1588,7 @@ src/omicron/rendering/shading/Material.i: src/omicron/rendering/shading/Material
 
 # target to preprocess a source file
 src/omicron/rendering/shading/Material.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/Material.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/Material.cpp.i
 .PHONY : src/omicron/rendering/shading/Material.cpp.i
 
 src/omicron/rendering/shading/Material.s: src/omicron/rendering/shading/Material.cpp.s
@@ -1500,7 +1596,7 @@ src/omicron/rendering/shading/Material.s: src/omicron/rendering/shading/Material
 
 # target to generate assembly for a file
 src/omicron/rendering/shading/Material.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/Material.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/Material.cpp.s
 .PHONY : src/omicron/rendering/shading/Material.cpp.s
 
 src/omicron/rendering/shading/Shader.o: src/omicron/rendering/shading/Shader.cpp.o
@@ -1508,7 +1604,7 @@ src/omicron/rendering/shading/Shader.o: src/omicron/rendering/shading/Shader.cpp
 
 # target to build an object file
 src/omicron/rendering/shading/Shader.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/Shader.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/Shader.cpp.o
 .PHONY : src/omicron/rendering/shading/Shader.cpp.o
 
 src/omicron/rendering/shading/Shader.i: src/omicron/rendering/shading/Shader.cpp.i
@@ -1516,7 +1612,7 @@ src/omicron/rendering/shading/Shader.i: src/omicron/rendering/shading/Shader.cpp
 
 # target to preprocess a source file
 src/omicron/rendering/shading/Shader.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/Shader.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/Shader.cpp.i
 .PHONY : src/omicron/rendering/shading/Shader.cpp.i
 
 src/omicron/rendering/shading/Shader.s: src/omicron/rendering/shading/Shader.cpp.s
@@ -1524,7 +1620,7 @@ src/omicron/rendering/shading/Shader.s: src/omicron/rendering/shading/Shader.cpp
 
 # target to generate assembly for a file
 src/omicron/rendering/shading/Shader.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/Shader.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/Shader.cpp.s
 .PHONY : src/omicron/rendering/shading/Shader.cpp.s
 
 src/omicron/rendering/shading/Texture.o: src/omicron/rendering/shading/Texture.cpp.o
@@ -1532,7 +1628,7 @@ src/omicron/rendering/shading/Texture.o: src/omicron/rendering/shading/Texture.c
 
 # target to build an object file
 src/omicron/rendering/shading/Texture.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/Texture.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/Texture.cpp.o
 .PHONY : src/omicron/rendering/shading/Texture.cpp.o
 
 src/omicron/rendering/shading/Texture.i: src/omicron/rendering/shading/Texture.cpp.i
@@ -1540,7 +1636,7 @@ src/omicron/rendering/shading/Texture.i: src/omicron/rendering/shading/Texture.c
 
 # target to preprocess a source file
 src/omicron/rendering/shading/Texture.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/Texture.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/Texture.cpp.i
 .PHONY : src/omicron/rendering/shading/Texture.cpp.i
 
 src/omicron/rendering/shading/Texture.s: src/omicron/rendering/shading/Texture.cpp.s
@@ -1548,7 +1644,7 @@ src/omicron/rendering/shading/Texture.s: src/omicron/rendering/shading/Texture.c
 
 # target to generate assembly for a file
 src/omicron/rendering/shading/Texture.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/Texture.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/Texture.cpp.s
 .PHONY : src/omicron/rendering/shading/Texture.cpp.s
 
 src/omicron/rendering/shading/material_property/Glow.o: src/omicron/rendering/shading/material_property/Glow.cpp.o
@@ -1556,7 +1652,7 @@ src/omicron/rendering/shading/material_property/Glow.o: src/omicron/rendering/sh
 
 # target to build an object file
 src/omicron/rendering/shading/material_property/Glow.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/material_property/Glow.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/material_property/Glow.cpp.o
 .PHONY : src/omicron/rendering/shading/material_property/Glow.cpp.o
 
 src/omicron/rendering/shading/material_property/Glow.i: src/omicron/rendering/shading/material_property/Glow.cpp.i
@@ -1564,7 +1660,7 @@ src/omicron/rendering/shading/material_property/Glow.i: src/omicron/rendering/sh
 
 # target to preprocess a source file
 src/omicron/rendering/shading/material_property/Glow.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/material_property/Glow.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/material_property/Glow.cpp.i
 .PHONY : src/omicron/rendering/shading/material_property/Glow.cpp.i
 
 src/omicron/rendering/shading/material_property/Glow.s: src/omicron/rendering/shading/material_property/Glow.cpp.s
@@ -1572,7 +1668,7 @@ src/omicron/rendering/shading/material_property/Glow.s: src/omicron/rendering/sh
 
 # target to generate assembly for a file
 src/omicron/rendering/shading/material_property/Glow.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/material_property/Glow.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/material_property/Glow.cpp.s
 .PHONY : src/omicron/rendering/shading/material_property/Glow.cpp.s
 
 src/omicron/rendering/shading/material_property/Specular.o: src/omicron/rendering/shading/material_property/Specular.cpp.o
@@ -1580,7 +1676,7 @@ src/omicron/rendering/shading/material_property/Specular.o: src/omicron/renderin
 
 # target to build an object file
 src/omicron/rendering/shading/material_property/Specular.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/material_property/Specular.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/material_property/Specular.cpp.o
 .PHONY : src/omicron/rendering/shading/material_property/Specular.cpp.o
 
 src/omicron/rendering/shading/material_property/Specular.i: src/omicron/rendering/shading/material_property/Specular.cpp.i
@@ -1588,7 +1684,7 @@ src/omicron/rendering/shading/material_property/Specular.i: src/omicron/renderin
 
 # target to preprocess a source file
 src/omicron/rendering/shading/material_property/Specular.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/material_property/Specular.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/material_property/Specular.cpp.i
 .PHONY : src/omicron/rendering/shading/material_property/Specular.cpp.i
 
 src/omicron/rendering/shading/material_property/Specular.s: src/omicron/rendering/shading/material_property/Specular.cpp.s
@@ -1596,7 +1692,7 @@ src/omicron/rendering/shading/material_property/Specular.s: src/omicron/renderin
 
 # target to generate assembly for a file
 src/omicron/rendering/shading/material_property/Specular.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/rendering/shading/material_property/Specular.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/rendering/shading/material_property/Specular.cpp.s
 .PHONY : src/omicron/rendering/shading/material_property/Specular.cpp.s
 
 src/omicron/resource/ResourceManager.o: src/omicron/resource/ResourceManager.cpp.o
@@ -1604,7 +1700,7 @@ src/omicron/resource/ResourceManager.o: src/omicron/resource/ResourceManager.cpp
 
 # target to build an object file
 src/omicron/resource/ResourceManager.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/ResourceManager.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/ResourceManager.cpp.o
 .PHONY : src/omicron/resource/ResourceManager.cpp.o
 
 src/omicron/resource/ResourceManager.i: src/omicron/resource/ResourceManager.cpp.i
@@ -1612,7 +1708,7 @@ src/omicron/resource/ResourceManager.i: src/omicron/resource/ResourceManager.cpp
 
 # target to preprocess a source file
 src/omicron/resource/ResourceManager.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/ResourceManager.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/ResourceManager.cpp.i
 .PHONY : src/omicron/resource/ResourceManager.cpp.i
 
 src/omicron/resource/ResourceManager.s: src/omicron/resource/ResourceManager.cpp.s
@@ -1620,7 +1716,7 @@ src/omicron/resource/ResourceManager.s: src/omicron/resource/ResourceManager.cpp
 
 # target to generate assembly for a file
 src/omicron/resource/ResourceManager.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/ResourceManager.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/ResourceManager.cpp.s
 .PHONY : src/omicron/resource/ResourceManager.cpp.s
 
 src/omicron/resource/ResourceServer.o: src/omicron/resource/ResourceServer.cpp.o
@@ -1628,7 +1724,7 @@ src/omicron/resource/ResourceServer.o: src/omicron/resource/ResourceServer.cpp.o
 
 # target to build an object file
 src/omicron/resource/ResourceServer.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/ResourceServer.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/ResourceServer.cpp.o
 .PHONY : src/omicron/resource/ResourceServer.cpp.o
 
 src/omicron/resource/ResourceServer.i: src/omicron/resource/ResourceServer.cpp.i
@@ -1636,7 +1732,7 @@ src/omicron/resource/ResourceServer.i: src/omicron/resource/ResourceServer.cpp.i
 
 # target to preprocess a source file
 src/omicron/resource/ResourceServer.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/ResourceServer.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/ResourceServer.cpp.i
 .PHONY : src/omicron/resource/ResourceServer.cpp.i
 
 src/omicron/resource/ResourceServer.s: src/omicron/resource/ResourceServer.cpp.s
@@ -1644,7 +1740,7 @@ src/omicron/resource/ResourceServer.s: src/omicron/resource/ResourceServer.cpp.s
 
 # target to generate assembly for a file
 src/omicron/resource/ResourceServer.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/ResourceServer.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/ResourceServer.cpp.s
 .PHONY : src/omicron/resource/ResourceServer.cpp.s
 
 src/omicron/resource/VirtualFile.o: src/omicron/resource/VirtualFile.cpp.o
@@ -1652,7 +1748,7 @@ src/omicron/resource/VirtualFile.o: src/omicron/resource/VirtualFile.cpp.o
 
 # target to build an object file
 src/omicron/resource/VirtualFile.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/VirtualFile.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/VirtualFile.cpp.o
 .PHONY : src/omicron/resource/VirtualFile.cpp.o
 
 src/omicron/resource/VirtualFile.i: src/omicron/resource/VirtualFile.cpp.i
@@ -1660,7 +1756,7 @@ src/omicron/resource/VirtualFile.i: src/omicron/resource/VirtualFile.cpp.i
 
 # target to preprocess a source file
 src/omicron/resource/VirtualFile.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/VirtualFile.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/VirtualFile.cpp.i
 .PHONY : src/omicron/resource/VirtualFile.cpp.i
 
 src/omicron/resource/VirtualFile.s: src/omicron/resource/VirtualFile.cpp.s
@@ -1668,7 +1764,7 @@ src/omicron/resource/VirtualFile.s: src/omicron/resource/VirtualFile.cpp.s
 
 # target to generate assembly for a file
 src/omicron/resource/VirtualFile.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/VirtualFile.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/VirtualFile.cpp.s
 .PHONY : src/omicron/resource/VirtualFile.cpp.s
 
 src/omicron/resource/loader/FontLoader.o: src/omicron/resource/loader/FontLoader.cpp.o
@@ -1676,7 +1772,7 @@ src/omicron/resource/loader/FontLoader.o: src/omicron/resource/loader/FontLoader
 
 # target to build an object file
 src/omicron/resource/loader/FontLoader.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/loader/FontLoader.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/loader/FontLoader.cpp.o
 .PHONY : src/omicron/resource/loader/FontLoader.cpp.o
 
 src/omicron/resource/loader/FontLoader.i: src/omicron/resource/loader/FontLoader.cpp.i
@@ -1684,7 +1780,7 @@ src/omicron/resource/loader/FontLoader.i: src/omicron/resource/loader/FontLoader
 
 # target to preprocess a source file
 src/omicron/resource/loader/FontLoader.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/loader/FontLoader.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/loader/FontLoader.cpp.i
 .PHONY : src/omicron/resource/loader/FontLoader.cpp.i
 
 src/omicron/resource/loader/FontLoader.s: src/omicron/resource/loader/FontLoader.cpp.s
@@ -1692,7 +1788,7 @@ src/omicron/resource/loader/FontLoader.s: src/omicron/resource/loader/FontLoader
 
 # target to generate assembly for a file
 src/omicron/resource/loader/FontLoader.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/loader/FontLoader.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/loader/FontLoader.cpp.s
 .PHONY : src/omicron/resource/loader/FontLoader.cpp.s
 
 src/omicron/resource/loader/GeometryLoader.o: src/omicron/resource/loader/GeometryLoader.cpp.o
@@ -1700,7 +1796,7 @@ src/omicron/resource/loader/GeometryLoader.o: src/omicron/resource/loader/Geomet
 
 # target to build an object file
 src/omicron/resource/loader/GeometryLoader.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/loader/GeometryLoader.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/loader/GeometryLoader.cpp.o
 .PHONY : src/omicron/resource/loader/GeometryLoader.cpp.o
 
 src/omicron/resource/loader/GeometryLoader.i: src/omicron/resource/loader/GeometryLoader.cpp.i
@@ -1708,7 +1804,7 @@ src/omicron/resource/loader/GeometryLoader.i: src/omicron/resource/loader/Geomet
 
 # target to preprocess a source file
 src/omicron/resource/loader/GeometryLoader.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/loader/GeometryLoader.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/loader/GeometryLoader.cpp.i
 .PHONY : src/omicron/resource/loader/GeometryLoader.cpp.i
 
 src/omicron/resource/loader/GeometryLoader.s: src/omicron/resource/loader/GeometryLoader.cpp.s
@@ -1716,7 +1812,7 @@ src/omicron/resource/loader/GeometryLoader.s: src/omicron/resource/loader/Geomet
 
 # target to generate assembly for a file
 src/omicron/resource/loader/GeometryLoader.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/loader/GeometryLoader.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/loader/GeometryLoader.cpp.s
 .PHONY : src/omicron/resource/loader/GeometryLoader.cpp.s
 
 src/omicron/resource/loader/ShaderLoader.o: src/omicron/resource/loader/ShaderLoader.cpp.o
@@ -1724,7 +1820,7 @@ src/omicron/resource/loader/ShaderLoader.o: src/omicron/resource/loader/ShaderLo
 
 # target to build an object file
 src/omicron/resource/loader/ShaderLoader.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/loader/ShaderLoader.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/loader/ShaderLoader.cpp.o
 .PHONY : src/omicron/resource/loader/ShaderLoader.cpp.o
 
 src/omicron/resource/loader/ShaderLoader.i: src/omicron/resource/loader/ShaderLoader.cpp.i
@@ -1732,7 +1828,7 @@ src/omicron/resource/loader/ShaderLoader.i: src/omicron/resource/loader/ShaderLo
 
 # target to preprocess a source file
 src/omicron/resource/loader/ShaderLoader.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/loader/ShaderLoader.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/loader/ShaderLoader.cpp.i
 .PHONY : src/omicron/resource/loader/ShaderLoader.cpp.i
 
 src/omicron/resource/loader/ShaderLoader.s: src/omicron/resource/loader/ShaderLoader.cpp.s
@@ -1740,7 +1836,7 @@ src/omicron/resource/loader/ShaderLoader.s: src/omicron/resource/loader/ShaderLo
 
 # target to generate assembly for a file
 src/omicron/resource/loader/ShaderLoader.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/loader/ShaderLoader.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/loader/ShaderLoader.cpp.s
 .PHONY : src/omicron/resource/loader/ShaderLoader.cpp.s
 
 src/omicron/resource/loader/TextureLoader.o: src/omicron/resource/loader/TextureLoader.cpp.o
@@ -1748,7 +1844,7 @@ src/omicron/resource/loader/TextureLoader.o: src/omicron/resource/loader/Texture
 
 # target to build an object file
 src/omicron/resource/loader/TextureLoader.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/loader/TextureLoader.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/loader/TextureLoader.cpp.o
 .PHONY : src/omicron/resource/loader/TextureLoader.cpp.o
 
 src/omicron/resource/loader/TextureLoader.i: src/omicron/resource/loader/TextureLoader.cpp.i
@@ -1756,7 +1852,7 @@ src/omicron/resource/loader/TextureLoader.i: src/omicron/resource/loader/Texture
 
 # target to preprocess a source file
 src/omicron/resource/loader/TextureLoader.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/loader/TextureLoader.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/loader/TextureLoader.cpp.i
 .PHONY : src/omicron/resource/loader/TextureLoader.cpp.i
 
 src/omicron/resource/loader/TextureLoader.s: src/omicron/resource/loader/TextureLoader.cpp.s
@@ -1764,7 +1860,7 @@ src/omicron/resource/loader/TextureLoader.s: src/omicron/resource/loader/Texture
 
 # target to generate assembly for a file
 src/omicron/resource/loader/TextureLoader.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/loader/TextureLoader.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/loader/TextureLoader.cpp.s
 .PHONY : src/omicron/resource/loader/TextureLoader.cpp.s
 
 src/omicron/resource/type/FontResource.o: src/omicron/resource/type/FontResource.cpp.o
@@ -1772,7 +1868,7 @@ src/omicron/resource/type/FontResource.o: src/omicron/resource/type/FontResource
 
 # target to build an object file
 src/omicron/resource/type/FontResource.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/FontResource.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/FontResource.cpp.o
 .PHONY : src/omicron/resource/type/FontResource.cpp.o
 
 src/omicron/resource/type/FontResource.i: src/omicron/resource/type/FontResource.cpp.i
@@ -1780,7 +1876,7 @@ src/omicron/resource/type/FontResource.i: src/omicron/resource/type/FontResource
 
 # target to preprocess a source file
 src/omicron/resource/type/FontResource.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/FontResource.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/FontResource.cpp.i
 .PHONY : src/omicron/resource/type/FontResource.cpp.i
 
 src/omicron/resource/type/FontResource.s: src/omicron/resource/type/FontResource.cpp.s
@@ -1788,7 +1884,7 @@ src/omicron/resource/type/FontResource.s: src/omicron/resource/type/FontResource
 
 # target to generate assembly for a file
 src/omicron/resource/type/FontResource.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/FontResource.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/FontResource.cpp.s
 .PHONY : src/omicron/resource/type/FontResource.cpp.s
 
 src/omicron/resource/type/GeometryResource.o: src/omicron/resource/type/GeometryResource.cpp.o
@@ -1796,7 +1892,7 @@ src/omicron/resource/type/GeometryResource.o: src/omicron/resource/type/Geometry
 
 # target to build an object file
 src/omicron/resource/type/GeometryResource.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/GeometryResource.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/GeometryResource.cpp.o
 .PHONY : src/omicron/resource/type/GeometryResource.cpp.o
 
 src/omicron/resource/type/GeometryResource.i: src/omicron/resource/type/GeometryResource.cpp.i
@@ -1804,7 +1900,7 @@ src/omicron/resource/type/GeometryResource.i: src/omicron/resource/type/Geometry
 
 # target to preprocess a source file
 src/omicron/resource/type/GeometryResource.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/GeometryResource.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/GeometryResource.cpp.i
 .PHONY : src/omicron/resource/type/GeometryResource.cpp.i
 
 src/omicron/resource/type/GeometryResource.s: src/omicron/resource/type/GeometryResource.cpp.s
@@ -1812,7 +1908,7 @@ src/omicron/resource/type/GeometryResource.s: src/omicron/resource/type/Geometry
 
 # target to generate assembly for a file
 src/omicron/resource/type/GeometryResource.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/GeometryResource.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/GeometryResource.cpp.s
 .PHONY : src/omicron/resource/type/GeometryResource.cpp.s
 
 src/omicron/resource/type/KeyFrameMeshResource.o: src/omicron/resource/type/KeyFrameMeshResource.cpp.o
@@ -1820,7 +1916,7 @@ src/omicron/resource/type/KeyFrameMeshResource.o: src/omicron/resource/type/KeyF
 
 # target to build an object file
 src/omicron/resource/type/KeyFrameMeshResource.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/KeyFrameMeshResource.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/KeyFrameMeshResource.cpp.o
 .PHONY : src/omicron/resource/type/KeyFrameMeshResource.cpp.o
 
 src/omicron/resource/type/KeyFrameMeshResource.i: src/omicron/resource/type/KeyFrameMeshResource.cpp.i
@@ -1828,7 +1924,7 @@ src/omicron/resource/type/KeyFrameMeshResource.i: src/omicron/resource/type/KeyF
 
 # target to preprocess a source file
 src/omicron/resource/type/KeyFrameMeshResource.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/KeyFrameMeshResource.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/KeyFrameMeshResource.cpp.i
 .PHONY : src/omicron/resource/type/KeyFrameMeshResource.cpp.i
 
 src/omicron/resource/type/KeyFrameMeshResource.s: src/omicron/resource/type/KeyFrameMeshResource.cpp.s
@@ -1836,7 +1932,7 @@ src/omicron/resource/type/KeyFrameMeshResource.s: src/omicron/resource/type/KeyF
 
 # target to generate assembly for a file
 src/omicron/resource/type/KeyFrameMeshResource.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/KeyFrameMeshResource.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/KeyFrameMeshResource.cpp.s
 .PHONY : src/omicron/resource/type/KeyFrameMeshResource.cpp.s
 
 src/omicron/resource/type/MaterialResource.o: src/omicron/resource/type/MaterialResource.cpp.o
@@ -1844,7 +1940,7 @@ src/omicron/resource/type/MaterialResource.o: src/omicron/resource/type/Material
 
 # target to build an object file
 src/omicron/resource/type/MaterialResource.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/MaterialResource.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/MaterialResource.cpp.o
 .PHONY : src/omicron/resource/type/MaterialResource.cpp.o
 
 src/omicron/resource/type/MaterialResource.i: src/omicron/resource/type/MaterialResource.cpp.i
@@ -1852,7 +1948,7 @@ src/omicron/resource/type/MaterialResource.i: src/omicron/resource/type/Material
 
 # target to preprocess a source file
 src/omicron/resource/type/MaterialResource.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/MaterialResource.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/MaterialResource.cpp.i
 .PHONY : src/omicron/resource/type/MaterialResource.cpp.i
 
 src/omicron/resource/type/MaterialResource.s: src/omicron/resource/type/MaterialResource.cpp.s
@@ -1860,7 +1956,7 @@ src/omicron/resource/type/MaterialResource.s: src/omicron/resource/type/Material
 
 # target to generate assembly for a file
 src/omicron/resource/type/MaterialResource.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/MaterialResource.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/MaterialResource.cpp.s
 .PHONY : src/omicron/resource/type/MaterialResource.cpp.s
 
 src/omicron/resource/type/MeshResource.o: src/omicron/resource/type/MeshResource.cpp.o
@@ -1868,7 +1964,7 @@ src/omicron/resource/type/MeshResource.o: src/omicron/resource/type/MeshResource
 
 # target to build an object file
 src/omicron/resource/type/MeshResource.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/MeshResource.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/MeshResource.cpp.o
 .PHONY : src/omicron/resource/type/MeshResource.cpp.o
 
 src/omicron/resource/type/MeshResource.i: src/omicron/resource/type/MeshResource.cpp.i
@@ -1876,7 +1972,7 @@ src/omicron/resource/type/MeshResource.i: src/omicron/resource/type/MeshResource
 
 # target to preprocess a source file
 src/omicron/resource/type/MeshResource.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/MeshResource.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/MeshResource.cpp.i
 .PHONY : src/omicron/resource/type/MeshResource.cpp.i
 
 src/omicron/resource/type/MeshResource.s: src/omicron/resource/type/MeshResource.cpp.s
@@ -1884,7 +1980,7 @@ src/omicron/resource/type/MeshResource.s: src/omicron/resource/type/MeshResource
 
 # target to generate assembly for a file
 src/omicron/resource/type/MeshResource.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/MeshResource.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/MeshResource.cpp.s
 .PHONY : src/omicron/resource/type/MeshResource.cpp.s
 
 src/omicron/resource/type/ShaderResource.o: src/omicron/resource/type/ShaderResource.cpp.o
@@ -1892,7 +1988,7 @@ src/omicron/resource/type/ShaderResource.o: src/omicron/resource/type/ShaderReso
 
 # target to build an object file
 src/omicron/resource/type/ShaderResource.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/ShaderResource.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/ShaderResource.cpp.o
 .PHONY : src/omicron/resource/type/ShaderResource.cpp.o
 
 src/omicron/resource/type/ShaderResource.i: src/omicron/resource/type/ShaderResource.cpp.i
@@ -1900,7 +1996,7 @@ src/omicron/resource/type/ShaderResource.i: src/omicron/resource/type/ShaderReso
 
 # target to preprocess a source file
 src/omicron/resource/type/ShaderResource.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/ShaderResource.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/ShaderResource.cpp.i
 .PHONY : src/omicron/resource/type/ShaderResource.cpp.i
 
 src/omicron/resource/type/ShaderResource.s: src/omicron/resource/type/ShaderResource.cpp.s
@@ -1908,7 +2004,7 @@ src/omicron/resource/type/ShaderResource.s: src/omicron/resource/type/ShaderReso
 
 # target to generate assembly for a file
 src/omicron/resource/type/ShaderResource.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/ShaderResource.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/ShaderResource.cpp.s
 .PHONY : src/omicron/resource/type/ShaderResource.cpp.s
 
 src/omicron/resource/type/SoundResource.o: src/omicron/resource/type/SoundResource.cpp.o
@@ -1916,7 +2012,7 @@ src/omicron/resource/type/SoundResource.o: src/omicron/resource/type/SoundResour
 
 # target to build an object file
 src/omicron/resource/type/SoundResource.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/SoundResource.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/SoundResource.cpp.o
 .PHONY : src/omicron/resource/type/SoundResource.cpp.o
 
 src/omicron/resource/type/SoundResource.i: src/omicron/resource/type/SoundResource.cpp.i
@@ -1924,7 +2020,7 @@ src/omicron/resource/type/SoundResource.i: src/omicron/resource/type/SoundResour
 
 # target to preprocess a source file
 src/omicron/resource/type/SoundResource.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/SoundResource.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/SoundResource.cpp.i
 .PHONY : src/omicron/resource/type/SoundResource.cpp.i
 
 src/omicron/resource/type/SoundResource.s: src/omicron/resource/type/SoundResource.cpp.s
@@ -1932,7 +2028,7 @@ src/omicron/resource/type/SoundResource.s: src/omicron/resource/type/SoundResour
 
 # target to generate assembly for a file
 src/omicron/resource/type/SoundResource.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/SoundResource.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/SoundResource.cpp.s
 .PHONY : src/omicron/resource/type/SoundResource.cpp.s
 
 src/omicron/resource/type/SpriteResource.o: src/omicron/resource/type/SpriteResource.cpp.o
@@ -1940,7 +2036,7 @@ src/omicron/resource/type/SpriteResource.o: src/omicron/resource/type/SpriteReso
 
 # target to build an object file
 src/omicron/resource/type/SpriteResource.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/SpriteResource.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/SpriteResource.cpp.o
 .PHONY : src/omicron/resource/type/SpriteResource.cpp.o
 
 src/omicron/resource/type/SpriteResource.i: src/omicron/resource/type/SpriteResource.cpp.i
@@ -1948,7 +2044,7 @@ src/omicron/resource/type/SpriteResource.i: src/omicron/resource/type/SpriteReso
 
 # target to preprocess a source file
 src/omicron/resource/type/SpriteResource.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/SpriteResource.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/SpriteResource.cpp.i
 .PHONY : src/omicron/resource/type/SpriteResource.cpp.i
 
 src/omicron/resource/type/SpriteResource.s: src/omicron/resource/type/SpriteResource.cpp.s
@@ -1956,7 +2052,7 @@ src/omicron/resource/type/SpriteResource.s: src/omicron/resource/type/SpriteReso
 
 # target to generate assembly for a file
 src/omicron/resource/type/SpriteResource.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/SpriteResource.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/SpriteResource.cpp.s
 .PHONY : src/omicron/resource/type/SpriteResource.cpp.s
 
 src/omicron/resource/type/TextResource.o: src/omicron/resource/type/TextResource.cpp.o
@@ -1964,7 +2060,7 @@ src/omicron/resource/type/TextResource.o: src/omicron/resource/type/TextResource
 
 # target to build an object file
 src/omicron/resource/type/TextResource.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/TextResource.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/TextResource.cpp.o
 .PHONY : src/omicron/resource/type/TextResource.cpp.o
 
 src/omicron/resource/type/TextResource.i: src/omicron/resource/type/TextResource.cpp.i
@@ -1972,7 +2068,7 @@ src/omicron/resource/type/TextResource.i: src/omicron/resource/type/TextResource
 
 # target to preprocess a source file
 src/omicron/resource/type/TextResource.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/TextResource.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/TextResource.cpp.i
 .PHONY : src/omicron/resource/type/TextResource.cpp.i
 
 src/omicron/resource/type/TextResource.s: src/omicron/resource/type/TextResource.cpp.s
@@ -1980,7 +2076,7 @@ src/omicron/resource/type/TextResource.s: src/omicron/resource/type/TextResource
 
 # target to generate assembly for a file
 src/omicron/resource/type/TextResource.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/TextResource.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/TextResource.cpp.s
 .PHONY : src/omicron/resource/type/TextResource.cpp.s
 
 src/omicron/resource/type/TextureResource.o: src/omicron/resource/type/TextureResource.cpp.o
@@ -1988,7 +2084,7 @@ src/omicron/resource/type/TextureResource.o: src/omicron/resource/type/TextureRe
 
 # target to build an object file
 src/omicron/resource/type/TextureResource.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/TextureResource.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/TextureResource.cpp.o
 .PHONY : src/omicron/resource/type/TextureResource.cpp.o
 
 src/omicron/resource/type/TextureResource.i: src/omicron/resource/type/TextureResource.cpp.i
@@ -1996,7 +2092,7 @@ src/omicron/resource/type/TextureResource.i: src/omicron/resource/type/TextureRe
 
 # target to preprocess a source file
 src/omicron/resource/type/TextureResource.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/TextureResource.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/TextureResource.cpp.i
 .PHONY : src/omicron/resource/type/TextureResource.cpp.i
 
 src/omicron/resource/type/TextureResource.s: src/omicron/resource/type/TextureResource.cpp.s
@@ -2004,7 +2100,7 @@ src/omicron/resource/type/TextureResource.s: src/omicron/resource/type/TextureRe
 
 # target to generate assembly for a file
 src/omicron/resource/type/TextureResource.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/resource/type/TextureResource.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/resource/type/TextureResource.cpp.s
 .PHONY : src/omicron/resource/type/TextureResource.cpp.s
 
 src/omicron/scene/Scene.o: src/omicron/scene/Scene.cpp.o
@@ -2012,7 +2108,7 @@ src/omicron/scene/Scene.o: src/omicron/scene/Scene.cpp.o
 
 # target to build an object file
 src/omicron/scene/Scene.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/scene/Scene.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/scene/Scene.cpp.o
 .PHONY : src/omicron/scene/Scene.cpp.o
 
 src/omicron/scene/Scene.i: src/omicron/scene/Scene.cpp.i
@@ -2020,7 +2116,7 @@ src/omicron/scene/Scene.i: src/omicron/scene/Scene.cpp.i
 
 # target to preprocess a source file
 src/omicron/scene/Scene.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/scene/Scene.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/scene/Scene.cpp.i
 .PHONY : src/omicron/scene/Scene.cpp.i
 
 src/omicron/scene/Scene.s: src/omicron/scene/Scene.cpp.s
@@ -2028,7 +2124,7 @@ src/omicron/scene/Scene.s: src/omicron/scene/Scene.cpp.s
 
 # target to generate assembly for a file
 src/omicron/scene/Scene.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/scene/Scene.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/scene/Scene.cpp.s
 .PHONY : src/omicron/scene/Scene.cpp.s
 
 src/omicron/settings/AudioSettings.o: src/omicron/settings/AudioSettings.cpp.o
@@ -2036,7 +2132,7 @@ src/omicron/settings/AudioSettings.o: src/omicron/settings/AudioSettings.cpp.o
 
 # target to build an object file
 src/omicron/settings/AudioSettings.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/settings/AudioSettings.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/settings/AudioSettings.cpp.o
 .PHONY : src/omicron/settings/AudioSettings.cpp.o
 
 src/omicron/settings/AudioSettings.i: src/omicron/settings/AudioSettings.cpp.i
@@ -2044,7 +2140,7 @@ src/omicron/settings/AudioSettings.i: src/omicron/settings/AudioSettings.cpp.i
 
 # target to preprocess a source file
 src/omicron/settings/AudioSettings.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/settings/AudioSettings.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/settings/AudioSettings.cpp.i
 .PHONY : src/omicron/settings/AudioSettings.cpp.i
 
 src/omicron/settings/AudioSettings.s: src/omicron/settings/AudioSettings.cpp.s
@@ -2052,7 +2148,7 @@ src/omicron/settings/AudioSettings.s: src/omicron/settings/AudioSettings.cpp.s
 
 # target to generate assembly for a file
 src/omicron/settings/AudioSettings.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/settings/AudioSettings.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/settings/AudioSettings.cpp.s
 .PHONY : src/omicron/settings/AudioSettings.cpp.s
 
 src/omicron/settings/DisplaySettings.o: src/omicron/settings/DisplaySettings.cpp.o
@@ -2060,7 +2156,7 @@ src/omicron/settings/DisplaySettings.o: src/omicron/settings/DisplaySettings.cpp
 
 # target to build an object file
 src/omicron/settings/DisplaySettings.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/settings/DisplaySettings.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/settings/DisplaySettings.cpp.o
 .PHONY : src/omicron/settings/DisplaySettings.cpp.o
 
 src/omicron/settings/DisplaySettings.i: src/omicron/settings/DisplaySettings.cpp.i
@@ -2068,7 +2164,7 @@ src/omicron/settings/DisplaySettings.i: src/omicron/settings/DisplaySettings.cpp
 
 # target to preprocess a source file
 src/omicron/settings/DisplaySettings.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/settings/DisplaySettings.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/settings/DisplaySettings.cpp.i
 .PHONY : src/omicron/settings/DisplaySettings.cpp.i
 
 src/omicron/settings/DisplaySettings.s: src/omicron/settings/DisplaySettings.cpp.s
@@ -2076,7 +2172,7 @@ src/omicron/settings/DisplaySettings.s: src/omicron/settings/DisplaySettings.cpp
 
 # target to generate assembly for a file
 src/omicron/settings/DisplaySettings.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/settings/DisplaySettings.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/settings/DisplaySettings.cpp.s
 .PHONY : src/omicron/settings/DisplaySettings.cpp.s
 
 src/omicron/settings/RenderSettings.o: src/omicron/settings/RenderSettings.cpp.o
@@ -2084,7 +2180,7 @@ src/omicron/settings/RenderSettings.o: src/omicron/settings/RenderSettings.cpp.o
 
 # target to build an object file
 src/omicron/settings/RenderSettings.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/settings/RenderSettings.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/settings/RenderSettings.cpp.o
 .PHONY : src/omicron/settings/RenderSettings.cpp.o
 
 src/omicron/settings/RenderSettings.i: src/omicron/settings/RenderSettings.cpp.i
@@ -2092,7 +2188,7 @@ src/omicron/settings/RenderSettings.i: src/omicron/settings/RenderSettings.cpp.i
 
 # target to preprocess a source file
 src/omicron/settings/RenderSettings.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/settings/RenderSettings.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/settings/RenderSettings.cpp.i
 .PHONY : src/omicron/settings/RenderSettings.cpp.i
 
 src/omicron/settings/RenderSettings.s: src/omicron/settings/RenderSettings.cpp.s
@@ -2100,7 +2196,7 @@ src/omicron/settings/RenderSettings.s: src/omicron/settings/RenderSettings.cpp.s
 
 # target to generate assembly for a file
 src/omicron/settings/RenderSettings.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/settings/RenderSettings.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/settings/RenderSettings.cpp.s
 .PHONY : src/omicron/settings/RenderSettings.cpp.s
 
 src/omicron/settings/SystemSettings.o: src/omicron/settings/SystemSettings.cpp.o
@@ -2108,7 +2204,7 @@ src/omicron/settings/SystemSettings.o: src/omicron/settings/SystemSettings.cpp.o
 
 # target to build an object file
 src/omicron/settings/SystemSettings.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/settings/SystemSettings.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/settings/SystemSettings.cpp.o
 .PHONY : src/omicron/settings/SystemSettings.cpp.o
 
 src/omicron/settings/SystemSettings.i: src/omicron/settings/SystemSettings.cpp.i
@@ -2116,7 +2212,7 @@ src/omicron/settings/SystemSettings.i: src/omicron/settings/SystemSettings.cpp.i
 
 # target to preprocess a source file
 src/omicron/settings/SystemSettings.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/settings/SystemSettings.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/settings/SystemSettings.cpp.i
 .PHONY : src/omicron/settings/SystemSettings.cpp.i
 
 src/omicron/settings/SystemSettings.s: src/omicron/settings/SystemSettings.cpp.s
@@ -2124,7 +2220,7 @@ src/omicron/settings/SystemSettings.s: src/omicron/settings/SystemSettings.cpp.s
 
 # target to generate assembly for a file
 src/omicron/settings/SystemSettings.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/settings/SystemSettings.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/settings/SystemSettings.cpp.s
 .PHONY : src/omicron/settings/SystemSettings.cpp.s
 
 src/omicron/system/System.o: src/omicron/system/System.cpp.o
@@ -2132,7 +2228,7 @@ src/omicron/system/System.o: src/omicron/system/System.cpp.o
 
 # target to build an object file
 src/omicron/system/System.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/system/System.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/system/System.cpp.o
 .PHONY : src/omicron/system/System.cpp.o
 
 src/omicron/system/System.i: src/omicron/system/System.cpp.i
@@ -2140,7 +2236,7 @@ src/omicron/system/System.i: src/omicron/system/System.cpp.i
 
 # target to preprocess a source file
 src/omicron/system/System.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/system/System.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/system/System.cpp.i
 .PHONY : src/omicron/system/System.cpp.i
 
 src/omicron/system/System.s: src/omicron/system/System.cpp.s
@@ -2148,7 +2244,7 @@ src/omicron/system/System.s: src/omicron/system/System.cpp.s
 
 # target to generate assembly for a file
 src/omicron/system/System.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/omicron/system/System.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/omicron/system/System.cpp.s
 .PHONY : src/omicron/system/System.cpp.s
 
 src/override/StartUp.o: src/override/StartUp.cpp.o
@@ -2156,7 +2252,7 @@ src/override/StartUp.o: src/override/StartUp.cpp.o
 
 # target to build an object file
 src/override/StartUp.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/override/StartUp.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/override/StartUp.cpp.o
 .PHONY : src/override/StartUp.cpp.o
 
 src/override/StartUp.i: src/override/StartUp.cpp.i
@@ -2164,7 +2260,7 @@ src/override/StartUp.i: src/override/StartUp.cpp.i
 
 # target to preprocess a source file
 src/override/StartUp.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/override/StartUp.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/override/StartUp.cpp.i
 .PHONY : src/override/StartUp.cpp.i
 
 src/override/StartUp.s: src/override/StartUp.cpp.s
@@ -2172,7 +2268,7 @@ src/override/StartUp.s: src/override/StartUp.cpp.s
 
 # target to generate assembly for a file
 src/override/StartUp.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/override/StartUp.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/override/StartUp.cpp.s
 .PHONY : src/override/StartUp.cpp.s
 
 src/resource_pack/AllPack.o: src/resource_pack/AllPack.cpp.o
@@ -2180,7 +2276,7 @@ src/resource_pack/AllPack.o: src/resource_pack/AllPack.cpp.o
 
 # target to build an object file
 src/resource_pack/AllPack.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/AllPack.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/AllPack.cpp.o
 .PHONY : src/resource_pack/AllPack.cpp.o
 
 src/resource_pack/AllPack.i: src/resource_pack/AllPack.cpp.i
@@ -2188,7 +2284,7 @@ src/resource_pack/AllPack.i: src/resource_pack/AllPack.cpp.i
 
 # target to preprocess a source file
 src/resource_pack/AllPack.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/AllPack.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/AllPack.cpp.i
 .PHONY : src/resource_pack/AllPack.cpp.i
 
 src/resource_pack/AllPack.s: src/resource_pack/AllPack.cpp.s
@@ -2196,7 +2292,7 @@ src/resource_pack/AllPack.s: src/resource_pack/AllPack.cpp.s
 
 # target to generate assembly for a file
 src/resource_pack/AllPack.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/AllPack.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/AllPack.cpp.s
 .PHONY : src/resource_pack/AllPack.cpp.s
 
 src/resource_pack/DebugPack.o: src/resource_pack/DebugPack.cpp.o
@@ -2204,7 +2300,7 @@ src/resource_pack/DebugPack.o: src/resource_pack/DebugPack.cpp.o
 
 # target to build an object file
 src/resource_pack/DebugPack.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/DebugPack.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/DebugPack.cpp.o
 .PHONY : src/resource_pack/DebugPack.cpp.o
 
 src/resource_pack/DebugPack.i: src/resource_pack/DebugPack.cpp.i
@@ -2212,7 +2308,7 @@ src/resource_pack/DebugPack.i: src/resource_pack/DebugPack.cpp.i
 
 # target to preprocess a source file
 src/resource_pack/DebugPack.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/DebugPack.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/DebugPack.cpp.i
 .PHONY : src/resource_pack/DebugPack.cpp.i
 
 src/resource_pack/DebugPack.s: src/resource_pack/DebugPack.cpp.s
@@ -2220,15 +2316,39 @@ src/resource_pack/DebugPack.s: src/resource_pack/DebugPack.cpp.s
 
 # target to generate assembly for a file
 src/resource_pack/DebugPack.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/DebugPack.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/DebugPack.cpp.s
 .PHONY : src/resource_pack/DebugPack.cpp.s
+
+src/resource_pack/EffectsPack.o: src/resource_pack/EffectsPack.cpp.o
+.PHONY : src/resource_pack/EffectsPack.o
+
+# target to build an object file
+src/resource_pack/EffectsPack.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/EffectsPack.cpp.o
+.PHONY : src/resource_pack/EffectsPack.cpp.o
+
+src/resource_pack/EffectsPack.i: src/resource_pack/EffectsPack.cpp.i
+.PHONY : src/resource_pack/EffectsPack.i
+
+# target to preprocess a source file
+src/resource_pack/EffectsPack.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/EffectsPack.cpp.i
+.PHONY : src/resource_pack/EffectsPack.cpp.i
+
+src/resource_pack/EffectsPack.s: src/resource_pack/EffectsPack.cpp.s
+.PHONY : src/resource_pack/EffectsPack.s
+
+# target to generate assembly for a file
+src/resource_pack/EffectsPack.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/EffectsPack.cpp.s
+.PHONY : src/resource_pack/EffectsPack.cpp.s
 
 src/resource_pack/EnvironmentPack.o: src/resource_pack/EnvironmentPack.cpp.o
 .PHONY : src/resource_pack/EnvironmentPack.o
 
 # target to build an object file
 src/resource_pack/EnvironmentPack.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/EnvironmentPack.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/EnvironmentPack.cpp.o
 .PHONY : src/resource_pack/EnvironmentPack.cpp.o
 
 src/resource_pack/EnvironmentPack.i: src/resource_pack/EnvironmentPack.cpp.i
@@ -2236,7 +2356,7 @@ src/resource_pack/EnvironmentPack.i: src/resource_pack/EnvironmentPack.cpp.i
 
 # target to preprocess a source file
 src/resource_pack/EnvironmentPack.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/EnvironmentPack.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/EnvironmentPack.cpp.i
 .PHONY : src/resource_pack/EnvironmentPack.cpp.i
 
 src/resource_pack/EnvironmentPack.s: src/resource_pack/EnvironmentPack.cpp.s
@@ -2244,7 +2364,7 @@ src/resource_pack/EnvironmentPack.s: src/resource_pack/EnvironmentPack.cpp.s
 
 # target to generate assembly for a file
 src/resource_pack/EnvironmentPack.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/EnvironmentPack.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/EnvironmentPack.cpp.s
 .PHONY : src/resource_pack/EnvironmentPack.cpp.s
 
 src/resource_pack/GUIPack.o: src/resource_pack/GUIPack.cpp.o
@@ -2252,7 +2372,7 @@ src/resource_pack/GUIPack.o: src/resource_pack/GUIPack.cpp.o
 
 # target to build an object file
 src/resource_pack/GUIPack.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/GUIPack.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/GUIPack.cpp.o
 .PHONY : src/resource_pack/GUIPack.cpp.o
 
 src/resource_pack/GUIPack.i: src/resource_pack/GUIPack.cpp.i
@@ -2260,7 +2380,7 @@ src/resource_pack/GUIPack.i: src/resource_pack/GUIPack.cpp.i
 
 # target to preprocess a source file
 src/resource_pack/GUIPack.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/GUIPack.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/GUIPack.cpp.i
 .PHONY : src/resource_pack/GUIPack.cpp.i
 
 src/resource_pack/GUIPack.s: src/resource_pack/GUIPack.cpp.s
@@ -2268,7 +2388,7 @@ src/resource_pack/GUIPack.s: src/resource_pack/GUIPack.cpp.s
 
 # target to generate assembly for a file
 src/resource_pack/GUIPack.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/GUIPack.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/GUIPack.cpp.s
 .PHONY : src/resource_pack/GUIPack.cpp.s
 
 src/resource_pack/LoadingPack.o: src/resource_pack/LoadingPack.cpp.o
@@ -2276,7 +2396,7 @@ src/resource_pack/LoadingPack.o: src/resource_pack/LoadingPack.cpp.o
 
 # target to build an object file
 src/resource_pack/LoadingPack.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/LoadingPack.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/LoadingPack.cpp.o
 .PHONY : src/resource_pack/LoadingPack.cpp.o
 
 src/resource_pack/LoadingPack.i: src/resource_pack/LoadingPack.cpp.i
@@ -2284,7 +2404,7 @@ src/resource_pack/LoadingPack.i: src/resource_pack/LoadingPack.cpp.i
 
 # target to preprocess a source file
 src/resource_pack/LoadingPack.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/LoadingPack.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/LoadingPack.cpp.i
 .PHONY : src/resource_pack/LoadingPack.cpp.i
 
 src/resource_pack/LoadingPack.s: src/resource_pack/LoadingPack.cpp.s
@@ -2292,7 +2412,7 @@ src/resource_pack/LoadingPack.s: src/resource_pack/LoadingPack.cpp.s
 
 # target to generate assembly for a file
 src/resource_pack/LoadingPack.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/LoadingPack.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/LoadingPack.cpp.s
 .PHONY : src/resource_pack/LoadingPack.cpp.s
 
 src/resource_pack/MenuPack.o: src/resource_pack/MenuPack.cpp.o
@@ -2300,7 +2420,7 @@ src/resource_pack/MenuPack.o: src/resource_pack/MenuPack.cpp.o
 
 # target to build an object file
 src/resource_pack/MenuPack.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/MenuPack.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/MenuPack.cpp.o
 .PHONY : src/resource_pack/MenuPack.cpp.o
 
 src/resource_pack/MenuPack.i: src/resource_pack/MenuPack.cpp.i
@@ -2308,7 +2428,7 @@ src/resource_pack/MenuPack.i: src/resource_pack/MenuPack.cpp.i
 
 # target to preprocess a source file
 src/resource_pack/MenuPack.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/MenuPack.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/MenuPack.cpp.i
 .PHONY : src/resource_pack/MenuPack.cpp.i
 
 src/resource_pack/MenuPack.s: src/resource_pack/MenuPack.cpp.s
@@ -2316,7 +2436,7 @@ src/resource_pack/MenuPack.s: src/resource_pack/MenuPack.cpp.s
 
 # target to generate assembly for a file
 src/resource_pack/MenuPack.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/MenuPack.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/MenuPack.cpp.s
 .PHONY : src/resource_pack/MenuPack.cpp.s
 
 src/resource_pack/PlayerPack.o: src/resource_pack/PlayerPack.cpp.o
@@ -2324,7 +2444,7 @@ src/resource_pack/PlayerPack.o: src/resource_pack/PlayerPack.cpp.o
 
 # target to build an object file
 src/resource_pack/PlayerPack.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/PlayerPack.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/PlayerPack.cpp.o
 .PHONY : src/resource_pack/PlayerPack.cpp.o
 
 src/resource_pack/PlayerPack.i: src/resource_pack/PlayerPack.cpp.i
@@ -2332,7 +2452,7 @@ src/resource_pack/PlayerPack.i: src/resource_pack/PlayerPack.cpp.i
 
 # target to preprocess a source file
 src/resource_pack/PlayerPack.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/PlayerPack.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/PlayerPack.cpp.i
 .PHONY : src/resource_pack/PlayerPack.cpp.i
 
 src/resource_pack/PlayerPack.s: src/resource_pack/PlayerPack.cpp.s
@@ -2340,7 +2460,7 @@ src/resource_pack/PlayerPack.s: src/resource_pack/PlayerPack.cpp.s
 
 # target to generate assembly for a file
 src/resource_pack/PlayerPack.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/PlayerPack.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/PlayerPack.cpp.s
 .PHONY : src/resource_pack/PlayerPack.cpp.s
 
 src/resource_pack/StartUpPack.o: src/resource_pack/StartUpPack.cpp.o
@@ -2348,7 +2468,7 @@ src/resource_pack/StartUpPack.o: src/resource_pack/StartUpPack.cpp.o
 
 # target to build an object file
 src/resource_pack/StartUpPack.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/StartUpPack.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/StartUpPack.cpp.o
 .PHONY : src/resource_pack/StartUpPack.cpp.o
 
 src/resource_pack/StartUpPack.i: src/resource_pack/StartUpPack.cpp.i
@@ -2356,7 +2476,7 @@ src/resource_pack/StartUpPack.i: src/resource_pack/StartUpPack.cpp.i
 
 # target to preprocess a source file
 src/resource_pack/StartUpPack.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/StartUpPack.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/StartUpPack.cpp.i
 .PHONY : src/resource_pack/StartUpPack.cpp.i
 
 src/resource_pack/StartUpPack.s: src/resource_pack/StartUpPack.cpp.s
@@ -2364,7 +2484,7 @@ src/resource_pack/StartUpPack.s: src/resource_pack/StartUpPack.cpp.s
 
 # target to generate assembly for a file
 src/resource_pack/StartUpPack.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/StartUpPack.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/resource_pack/StartUpPack.cpp.s
 .PHONY : src/resource_pack/StartUpPack.cpp.s
 
 src/scenes/gameplay/GameplayScene.o: src/scenes/gameplay/GameplayScene.cpp.o
@@ -2372,7 +2492,7 @@ src/scenes/gameplay/GameplayScene.o: src/scenes/gameplay/GameplayScene.cpp.o
 
 # target to build an object file
 src/scenes/gameplay/GameplayScene.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/scenes/gameplay/GameplayScene.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/gameplay/GameplayScene.cpp.o
 .PHONY : src/scenes/gameplay/GameplayScene.cpp.o
 
 src/scenes/gameplay/GameplayScene.i: src/scenes/gameplay/GameplayScene.cpp.i
@@ -2380,7 +2500,7 @@ src/scenes/gameplay/GameplayScene.i: src/scenes/gameplay/GameplayScene.cpp.i
 
 # target to preprocess a source file
 src/scenes/gameplay/GameplayScene.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/scenes/gameplay/GameplayScene.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/gameplay/GameplayScene.cpp.i
 .PHONY : src/scenes/gameplay/GameplayScene.cpp.i
 
 src/scenes/gameplay/GameplayScene.s: src/scenes/gameplay/GameplayScene.cpp.s
@@ -2388,7 +2508,7 @@ src/scenes/gameplay/GameplayScene.s: src/scenes/gameplay/GameplayScene.cpp.s
 
 # target to generate assembly for a file
 src/scenes/gameplay/GameplayScene.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/scenes/gameplay/GameplayScene.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/gameplay/GameplayScene.cpp.s
 .PHONY : src/scenes/gameplay/GameplayScene.cpp.s
 
 src/scenes/loading/LoadingScene.o: src/scenes/loading/LoadingScene.cpp.o
@@ -2396,7 +2516,7 @@ src/scenes/loading/LoadingScene.o: src/scenes/loading/LoadingScene.cpp.o
 
 # target to build an object file
 src/scenes/loading/LoadingScene.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/scenes/loading/LoadingScene.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/loading/LoadingScene.cpp.o
 .PHONY : src/scenes/loading/LoadingScene.cpp.o
 
 src/scenes/loading/LoadingScene.i: src/scenes/loading/LoadingScene.cpp.i
@@ -2404,7 +2524,7 @@ src/scenes/loading/LoadingScene.i: src/scenes/loading/LoadingScene.cpp.i
 
 # target to preprocess a source file
 src/scenes/loading/LoadingScene.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/scenes/loading/LoadingScene.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/loading/LoadingScene.cpp.i
 .PHONY : src/scenes/loading/LoadingScene.cpp.i
 
 src/scenes/loading/LoadingScene.s: src/scenes/loading/LoadingScene.cpp.s
@@ -2412,7 +2532,7 @@ src/scenes/loading/LoadingScene.s: src/scenes/loading/LoadingScene.cpp.s
 
 # target to generate assembly for a file
 src/scenes/loading/LoadingScene.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/scenes/loading/LoadingScene.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/loading/LoadingScene.cpp.s
 .PHONY : src/scenes/loading/LoadingScene.cpp.s
 
 src/scenes/start_up/StartUpScene.o: src/scenes/start_up/StartUpScene.cpp.o
@@ -2420,7 +2540,7 @@ src/scenes/start_up/StartUpScene.o: src/scenes/start_up/StartUpScene.cpp.o
 
 # target to build an object file
 src/scenes/start_up/StartUpScene.cpp.o:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/scenes/start_up/StartUpScene.cpp.o
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/start_up/StartUpScene.cpp.o
 .PHONY : src/scenes/start_up/StartUpScene.cpp.o
 
 src/scenes/start_up/StartUpScene.i: src/scenes/start_up/StartUpScene.cpp.i
@@ -2428,7 +2548,7 @@ src/scenes/start_up/StartUpScene.i: src/scenes/start_up/StartUpScene.cpp.i
 
 # target to preprocess a source file
 src/scenes/start_up/StartUpScene.cpp.i:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/scenes/start_up/StartUpScene.cpp.i
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/start_up/StartUpScene.cpp.i
 .PHONY : src/scenes/start_up/StartUpScene.cpp.i
 
 src/scenes/start_up/StartUpScene.s: src/scenes/start_up/StartUpScene.cpp.s
@@ -2436,7 +2556,7 @@ src/scenes/start_up/StartUpScene.s: src/scenes/start_up/StartUpScene.cpp.s
 
 # target to generate assembly for a file
 src/scenes/start_up/StartUpScene.cpp.s:
-	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/scenes/start_up/StartUpScene.cpp.s
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/start_up/StartUpScene.cpp.s
 .PHONY : src/scenes/start_up/StartUpScene.cpp.s
 
 # Help Target
@@ -2445,7 +2565,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... LD32"
+	@echo "... Functor"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... src/data/Globals.o"
@@ -2466,12 +2586,24 @@ help:
 	@echo "... src/entities/gameplay/environment/Sun.o"
 	@echo "... src/entities/gameplay/environment/Sun.i"
 	@echo "... src/entities/gameplay/environment/Sun.s"
+	@echo "... src/entities/gameplay/environment/Tower.o"
+	@echo "... src/entities/gameplay/environment/Tower.i"
+	@echo "... src/entities/gameplay/environment/Tower.s"
+	@echo "... src/entities/gameplay/environment/TowerBase.o"
+	@echo "... src/entities/gameplay/environment/TowerBase.i"
+	@echo "... src/entities/gameplay/environment/TowerBase.s"
 	@echo "... src/entities/gameplay/environment/World.o"
 	@echo "... src/entities/gameplay/environment/World.i"
 	@echo "... src/entities/gameplay/environment/World.s"
 	@echo "... src/entities/gameplay/function/Function.o"
 	@echo "... src/entities/gameplay/function/Function.i"
 	@echo "... src/entities/gameplay/function/Function.s"
+	@echo "... src/entities/gameplay/function/FunctionAttack.o"
+	@echo "... src/entities/gameplay/function/FunctionAttack.i"
+	@echo "... src/entities/gameplay/function/FunctionAttack.s"
+	@echo "... src/entities/gameplay/function/LowerFunc.o"
+	@echo "... src/entities/gameplay/function/LowerFunc.i"
+	@echo "... src/entities/gameplay/function/LowerFunc.s"
 	@echo "... src/entities/gameplay/function/RaiseFunc.o"
 	@echo "... src/entities/gameplay/function/RaiseFunc.i"
 	@echo "... src/entities/gameplay/function/RaiseFunc.s"
@@ -2712,6 +2844,9 @@ help:
 	@echo "... src/resource_pack/DebugPack.o"
 	@echo "... src/resource_pack/DebugPack.i"
 	@echo "... src/resource_pack/DebugPack.s"
+	@echo "... src/resource_pack/EffectsPack.o"
+	@echo "... src/resource_pack/EffectsPack.i"
+	@echo "... src/resource_pack/EffectsPack.s"
 	@echo "... src/resource_pack/EnvironmentPack.o"
 	@echo "... src/resource_pack/EnvironmentPack.i"
 	@echo "... src/resource_pack/EnvironmentPack.s"

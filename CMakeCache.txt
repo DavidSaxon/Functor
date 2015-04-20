@@ -122,7 +122,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=LD32
+CMAKE_PROJECT_NAME:STATIC=Functor
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -184,6 +184,12 @@ FREETYPE_INCLUDE_DIR_ft2build:PATH=/usr/include/freetype2
 
 //Path to a library.
 FREETYPE_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libfreetype.so
+
+//Value Computed by CMake
+Functor_BINARY_DIR:STATIC=/home/david/Dropbox/Development/Heretic/Heretic
+
+//Value Computed by CMake
+Functor_SOURCE_DIR:STATIC=/home/david/Dropbox/Development/Heretic/Heretic
 
 //Value Computed by CMake
 LD32_BINARY_DIR:STATIC=/home/david/Dropbox/Development/Heretic/Heretic

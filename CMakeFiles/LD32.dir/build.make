@@ -1866,9 +1866,32 @@ CMakeFiles/LD32.dir/src/resource_pack/GUIPack.cpp.o.provides: CMakeFiles/LD32.di
 
 CMakeFiles/LD32.dir/src/resource_pack/GUIPack.cpp.o.provides.build: CMakeFiles/LD32.dir/src/resource_pack/GUIPack.cpp.o
 
+CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o: CMakeFiles/LD32.dir/flags.make
+CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o: src/resource_pack/EffectsPack.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_80)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/resource_pack/EffectsPack.cpp
+
+CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/resource_pack/EffectsPack.cpp > CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.i
+
+CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/resource_pack/EffectsPack.cpp -o CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.s
+
+CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o.requires:
+.PHONY : CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o.requires
+
+CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o.provides: CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o.requires
+	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o.provides.build
+.PHONY : CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o.provides
+
+CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o.provides.build: CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o
+
 CMakeFiles/LD32.dir/src/scenes/start_up/StartUpScene.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/scenes/start_up/StartUpScene.cpp.o: src/scenes/start_up/StartUpScene.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_80)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_81)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/scenes/start_up/StartUpScene.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/scenes/start_up/StartUpScene.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/scenes/start_up/StartUpScene.cpp
 
@@ -1891,7 +1914,7 @@ CMakeFiles/LD32.dir/src/scenes/start_up/StartUpScene.cpp.o.provides.build: CMake
 
 CMakeFiles/LD32.dir/src/scenes/loading/LoadingScene.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/scenes/loading/LoadingScene.cpp.o: src/scenes/loading/LoadingScene.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_81)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_82)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/scenes/loading/LoadingScene.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/scenes/loading/LoadingScene.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/scenes/loading/LoadingScene.cpp
 
@@ -1914,7 +1937,7 @@ CMakeFiles/LD32.dir/src/scenes/loading/LoadingScene.cpp.o.provides.build: CMakeF
 
 CMakeFiles/LD32.dir/src/scenes/gameplay/GameplayScene.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/scenes/gameplay/GameplayScene.cpp.o: src/scenes/gameplay/GameplayScene.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_82)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_83)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/scenes/gameplay/GameplayScene.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/scenes/gameplay/GameplayScene.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/scenes/gameplay/GameplayScene.cpp
 
@@ -1937,7 +1960,7 @@ CMakeFiles/LD32.dir/src/scenes/gameplay/GameplayScene.cpp.o.provides.build: CMak
 
 CMakeFiles/LD32.dir/src/entities/debug/FPSCounter.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/debug/FPSCounter.cpp.o: src/entities/debug/FPSCounter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_83)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_84)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/debug/FPSCounter.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/debug/FPSCounter.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/debug/FPSCounter.cpp
 
@@ -1960,7 +1983,7 @@ CMakeFiles/LD32.dir/src/entities/debug/FPSCounter.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/LD32.dir/src/entities/start_up/OmicronLogo.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/start_up/OmicronLogo.cpp.o: src/entities/start_up/OmicronLogo.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_84)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_85)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/start_up/OmicronLogo.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/start_up/OmicronLogo.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/start_up/OmicronLogo.cpp
 
@@ -1983,7 +2006,7 @@ CMakeFiles/LD32.dir/src/entities/start_up/OmicronLogo.cpp.o.provides.build: CMak
 
 CMakeFiles/LD32.dir/src/entities/loading/LoadingSplash.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/loading/LoadingSplash.cpp.o: src/entities/loading/LoadingSplash.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_85)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_86)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/loading/LoadingSplash.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/loading/LoadingSplash.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/loading/LoadingSplash.cpp
 
@@ -2006,7 +2029,7 @@ CMakeFiles/LD32.dir/src/entities/loading/LoadingSplash.cpp.o.provides.build: CMa
 
 CMakeFiles/LD32.dir/src/entities/gameplay/Player.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/gameplay/Player.cpp.o: src/entities/gameplay/Player.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_86)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_87)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/gameplay/Player.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/gameplay/Player.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/Player.cpp
 
@@ -2029,7 +2052,7 @@ CMakeFiles/LD32.dir/src/entities/gameplay/Player.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/LD32.dir/src/entities/gameplay/Gui.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/gameplay/Gui.cpp.o: src/entities/gameplay/Gui.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_87)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_88)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/gameplay/Gui.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/gameplay/Gui.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/Gui.cpp
 
@@ -2052,7 +2075,7 @@ CMakeFiles/LD32.dir/src/entities/gameplay/Gui.cpp.o.provides.build: CMakeFiles/L
 
 CMakeFiles/LD32.dir/src/entities/gameplay/environment/Environment.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/gameplay/environment/Environment.cpp.o: src/entities/gameplay/environment/Environment.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_88)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_89)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/gameplay/environment/Environment.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/gameplay/environment/Environment.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/Environment.cpp
 
@@ -2075,7 +2098,7 @@ CMakeFiles/LD32.dir/src/entities/gameplay/environment/Environment.cpp.o.provides
 
 CMakeFiles/LD32.dir/src/entities/gameplay/environment/Sun.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/gameplay/environment/Sun.cpp.o: src/entities/gameplay/environment/Sun.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_89)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_90)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/gameplay/environment/Sun.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/gameplay/environment/Sun.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/Sun.cpp
 
@@ -2096,9 +2119,55 @@ CMakeFiles/LD32.dir/src/entities/gameplay/environment/Sun.cpp.o.provides: CMakeF
 
 CMakeFiles/LD32.dir/src/entities/gameplay/environment/Sun.cpp.o.provides.build: CMakeFiles/LD32.dir/src/entities/gameplay/environment/Sun.cpp.o
 
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o: CMakeFiles/LD32.dir/flags.make
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o: src/entities/gameplay/environment/Tower.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_91)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/Tower.cpp
+
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/Tower.cpp > CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.i
+
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/Tower.cpp -o CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.s
+
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o.requires:
+.PHONY : CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o.requires
+
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o.provides: CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o.requires
+	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o.provides.build
+.PHONY : CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o.provides
+
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o.provides.build: CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o
+
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o: CMakeFiles/LD32.dir/flags.make
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o: src/entities/gameplay/environment/TowerBase.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_92)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/TowerBase.cpp
+
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/TowerBase.cpp > CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.i
+
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/TowerBase.cpp -o CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.s
+
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o.requires:
+.PHONY : CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o.requires
+
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o.provides: CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o.requires
+	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o.provides.build
+.PHONY : CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o.provides
+
+CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o.provides.build: CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o
+
 CMakeFiles/LD32.dir/src/entities/gameplay/environment/World.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/gameplay/environment/World.cpp.o: src/entities/gameplay/environment/World.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_90)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_93)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/gameplay/environment/World.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/gameplay/environment/World.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/World.cpp
 
@@ -2121,7 +2190,7 @@ CMakeFiles/LD32.dir/src/entities/gameplay/environment/World.cpp.o.provides.build
 
 CMakeFiles/LD32.dir/src/entities/gameplay/function/Function.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/gameplay/function/Function.cpp.o: src/entities/gameplay/function/Function.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_91)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_94)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/gameplay/function/Function.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/gameplay/function/Function.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/Function.cpp
 
@@ -2142,9 +2211,55 @@ CMakeFiles/LD32.dir/src/entities/gameplay/function/Function.cpp.o.provides: CMak
 
 CMakeFiles/LD32.dir/src/entities/gameplay/function/Function.cpp.o.provides.build: CMakeFiles/LD32.dir/src/entities/gameplay/function/Function.cpp.o
 
+CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o: CMakeFiles/LD32.dir/flags.make
+CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o: src/entities/gameplay/function/FunctionAttack.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_95)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/FunctionAttack.cpp
+
+CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/FunctionAttack.cpp > CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.i
+
+CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/FunctionAttack.cpp -o CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.s
+
+CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o.requires:
+.PHONY : CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o.requires
+
+CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o.provides: CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o.requires
+	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o.provides.build
+.PHONY : CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o.provides
+
+CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o.provides.build: CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o
+
+CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o: CMakeFiles/LD32.dir/flags.make
+CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o: src/entities/gameplay/function/LowerFunc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_96)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/LowerFunc.cpp
+
+CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/LowerFunc.cpp > CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.i
+
+CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/LowerFunc.cpp -o CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.s
+
+CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o.requires:
+.PHONY : CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o.requires
+
+CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o.provides: CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o.requires
+	$(MAKE) -f CMakeFiles/LD32.dir/build.make CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o.provides.build
+.PHONY : CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o.provides
+
+CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o.provides.build: CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o
+
 CMakeFiles/LD32.dir/src/entities/gameplay/function/RaiseFunc.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/gameplay/function/RaiseFunc.cpp.o: src/entities/gameplay/function/RaiseFunc.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_92)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_97)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/gameplay/function/RaiseFunc.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/gameplay/function/RaiseFunc.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/RaiseFunc.cpp
 
@@ -2167,7 +2282,7 @@ CMakeFiles/LD32.dir/src/entities/gameplay/function/RaiseFunc.cpp.o.provides.buil
 
 CMakeFiles/LD32.dir/src/entities/gameplay/function/SineFunc.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/gameplay/function/SineFunc.cpp.o: src/entities/gameplay/function/SineFunc.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_93)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_98)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/gameplay/function/SineFunc.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/gameplay/function/SineFunc.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/SineFunc.cpp
 
@@ -2190,7 +2305,7 @@ CMakeFiles/LD32.dir/src/entities/gameplay/function/SineFunc.cpp.o.provides.build
 
 CMakeFiles/LD32.dir/src/entities/menu/PauseMenu.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/menu/PauseMenu.cpp.o: src/entities/menu/PauseMenu.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_94)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_99)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/menu/PauseMenu.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/menu/PauseMenu.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/menu/PauseMenu.cpp
 
@@ -2213,7 +2328,7 @@ CMakeFiles/LD32.dir/src/entities/menu/PauseMenu.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/LD32.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o: src/entities/menu/setting_widget/EnumWidget.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_95)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_100)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/menu/setting_widget/EnumWidget.cpp
 
@@ -2236,7 +2351,7 @@ CMakeFiles/LD32.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o.provides.b
 
 CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o: src/entities/menu/setting_widget/SettingWidget.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_96)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_101)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/menu/setting_widget/SettingWidget.cpp
 
@@ -2259,7 +2374,7 @@ CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o.provide
 
 CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SliderWidget.cpp.o: CMakeFiles/LD32.dir/flags.make
 CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SliderWidget.cpp.o: src/entities/menu/setting_widget/SliderWidget.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_97)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_102)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SliderWidget.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/LD32.dir/src/entities/menu/setting_widget/SliderWidget.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/menu/setting_widget/SliderWidget.cpp
 
@@ -2361,6 +2476,7 @@ LD32_OBJECTS = \
 "CMakeFiles/LD32.dir/src/resource_pack/PlayerPack.cpp.o" \
 "CMakeFiles/LD32.dir/src/resource_pack/EnvironmentPack.cpp.o" \
 "CMakeFiles/LD32.dir/src/resource_pack/GUIPack.cpp.o" \
+"CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o" \
 "CMakeFiles/LD32.dir/src/scenes/start_up/StartUpScene.cpp.o" \
 "CMakeFiles/LD32.dir/src/scenes/loading/LoadingScene.cpp.o" \
 "CMakeFiles/LD32.dir/src/scenes/gameplay/GameplayScene.cpp.o" \
@@ -2371,8 +2487,12 @@ LD32_OBJECTS = \
 "CMakeFiles/LD32.dir/src/entities/gameplay/Gui.cpp.o" \
 "CMakeFiles/LD32.dir/src/entities/gameplay/environment/Environment.cpp.o" \
 "CMakeFiles/LD32.dir/src/entities/gameplay/environment/Sun.cpp.o" \
+"CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o" \
+"CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o" \
 "CMakeFiles/LD32.dir/src/entities/gameplay/environment/World.cpp.o" \
 "CMakeFiles/LD32.dir/src/entities/gameplay/function/Function.cpp.o" \
+"CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o" \
+"CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o" \
 "CMakeFiles/LD32.dir/src/entities/gameplay/function/RaiseFunc.cpp.o" \
 "CMakeFiles/LD32.dir/src/entities/gameplay/function/SineFunc.cpp.o" \
 "CMakeFiles/LD32.dir/src/entities/menu/PauseMenu.cpp.o" \
@@ -2462,6 +2582,7 @@ LD32: CMakeFiles/LD32.dir/src/resource_pack/MenuPack.cpp.o
 LD32: CMakeFiles/LD32.dir/src/resource_pack/PlayerPack.cpp.o
 LD32: CMakeFiles/LD32.dir/src/resource_pack/EnvironmentPack.cpp.o
 LD32: CMakeFiles/LD32.dir/src/resource_pack/GUIPack.cpp.o
+LD32: CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o
 LD32: CMakeFiles/LD32.dir/src/scenes/start_up/StartUpScene.cpp.o
 LD32: CMakeFiles/LD32.dir/src/scenes/loading/LoadingScene.cpp.o
 LD32: CMakeFiles/LD32.dir/src/scenes/gameplay/GameplayScene.cpp.o
@@ -2472,8 +2593,12 @@ LD32: CMakeFiles/LD32.dir/src/entities/gameplay/Player.cpp.o
 LD32: CMakeFiles/LD32.dir/src/entities/gameplay/Gui.cpp.o
 LD32: CMakeFiles/LD32.dir/src/entities/gameplay/environment/Environment.cpp.o
 LD32: CMakeFiles/LD32.dir/src/entities/gameplay/environment/Sun.cpp.o
+LD32: CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o
+LD32: CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o
 LD32: CMakeFiles/LD32.dir/src/entities/gameplay/environment/World.cpp.o
 LD32: CMakeFiles/LD32.dir/src/entities/gameplay/function/Function.cpp.o
+LD32: CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o
+LD32: CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o
 LD32: CMakeFiles/LD32.dir/src/entities/gameplay/function/RaiseFunc.cpp.o
 LD32: CMakeFiles/LD32.dir/src/entities/gameplay/function/SineFunc.cpp.o
 LD32: CMakeFiles/LD32.dir/src/entities/menu/PauseMenu.cpp.o
@@ -2569,6 +2694,7 @@ CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/resource_pack/MenuPack.cpp
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/resource_pack/PlayerPack.cpp.o.requires
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/resource_pack/EnvironmentPack.cpp.o.requires
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/resource_pack/GUIPack.cpp.o.requires
+CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/resource_pack/EffectsPack.cpp.o.requires
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/scenes/start_up/StartUpScene.cpp.o.requires
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/scenes/loading/LoadingScene.cpp.o.requires
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/scenes/gameplay/GameplayScene.cpp.o.requires
@@ -2579,8 +2705,12 @@ CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/entities/gameplay/Player.c
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/entities/gameplay/Gui.cpp.o.requires
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/entities/gameplay/environment/Environment.cpp.o.requires
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/entities/gameplay/environment/Sun.cpp.o.requires
+CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/entities/gameplay/environment/Tower.cpp.o.requires
+CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/entities/gameplay/environment/TowerBase.cpp.o.requires
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/entities/gameplay/environment/World.cpp.o.requires
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/entities/gameplay/function/Function.cpp.o.requires
+CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/entities/gameplay/function/FunctionAttack.cpp.o.requires
+CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/entities/gameplay/function/LowerFunc.cpp.o.requires
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/entities/gameplay/function/RaiseFunc.cpp.o.requires
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/entities/gameplay/function/SineFunc.cpp.o.requires
 CMakeFiles/LD32.dir/requires: CMakeFiles/LD32.dir/src/entities/menu/PauseMenu.cpp.o.requires

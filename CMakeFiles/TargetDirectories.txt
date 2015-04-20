@@ -1,1 +1,1 @@
-/home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles/LD32.dir
+/home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles/Functor.dir

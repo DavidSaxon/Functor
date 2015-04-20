@@ -58,6 +58,9 @@ void TowerBase::init()
     Tower* t = new Tower( stackRot, 0.0f );
     m_blocks.push_back( t );
     addEntity( t );
+
+    // register in cache
+    m_heightCacheId = m_world->addHeightMapCache( m_dirVect );
 }
 
 void TowerBase::update()
@@ -69,5 +72,6 @@ void TowerBase::update()
     // TODO: check bottom
 
     // make sure is setting on the bottom
-    m_pos->translation = m_dirVect * m_world->getHeightMapPos( m_dirVect );
+    m_pos->translation =
+            m_dirVect * m_world->resolveHeightMapCache( m_heightCacheId );
 }

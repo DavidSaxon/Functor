@@ -43,6 +43,7 @@ private:
 
     std::vector<Tower*> m_blocks;
 
+    unsigned m_heightCacheId;
 };
 
 #endif

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.6)
-project(LD32)
+project(Functor)
 
 set(SRCS
 
@@ -85,6 +85,7 @@ set(SRCS
     src/resource_pack/PlayerPack.cpp
     src/resource_pack/EnvironmentPack.cpp
     src/resource_pack/GUIPack.cpp
+    src/resource_pack/EffectsPack.cpp
 
     src/scenes/start_up/StartUpScene.cpp
     src/scenes/loading/LoadingScene.cpp
@@ -100,8 +101,12 @@ set(SRCS
     src/entities/gameplay/Gui.cpp
     src/entities/gameplay/environment/Environment.cpp
     src/entities/gameplay/environment/Sun.cpp
+    src/entities/gameplay/environment/Tower.cpp
+    src/entities/gameplay/environment/TowerBase.cpp
     src/entities/gameplay/environment/World.cpp
     src/entities/gameplay/function/Function.cpp
+    src/entities/gameplay/function/FunctionAttack.cpp
+    src/entities/gameplay/function/LowerFunc.cpp
     src/entities/gameplay/function/RaiseFunc.cpp
     src/entities/gameplay/function/SineFunc.cpp
 
@@ -124,9 +129,9 @@ include_directories("${BASEPATH}" ${INCLUDE_DIRECTORIES} ${FREETYPE_INCLUDE_DIRS
 
 link_directories(${LINK_DIRECTORIES} ${Boost_LIBRARY_DIRS})
 
-add_executable(LD32 ${SRCS})
+add_executable(Functor ${SRCS})
 
-target_link_libraries(LD32
+target_link_libraries(Functor
 
     ${Boost_LIBRARIES}
     -lboost_system

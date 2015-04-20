@@ -2,9 +2,9 @@
 | TODO |
 \++++++/
 
-- give buildings angle and then rotate then find dir vector
+- tower general
 {
-    - cache height map look ups
+    - mesh for tower base that lives below ground and sticks out a little, go long
 
     - spec map for tower blocks
 }
@@ -20,6 +20,14 @@
     cos
     rand,
     tan?
+}
+
+- world restore
+{
+    - leave cache
+    - remove towers blocks
+    - remove functions
+    - reset geo
 }
 
 - returning to level select

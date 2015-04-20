@@ -7,6 +7,13 @@
 
 class TowerBase;
 
+struct HeightMapCache
+{
+    unsigned first;
+    unsigned second;
+    unsigned third;
+};
+
 class World : public omi::Entity
 {
 public:
@@ -44,6 +51,10 @@ public:
 
     float getHeightMapPos( const glm::vec3& dirVect );
 
+    unsigned addHeightMapCache( const glm::vec3& dirVect );
+
+    float resolveHeightMapCache( unsigned index );
+
 private:
 
     //--------------------------------------------------------------------------
@@ -77,6 +88,8 @@ private:
     std::vector<glm::vec3> m_keyVerts;
     // indices of vertices which are technically the same vertex
     std::map<std::string, std::vector<unsigned>> m_vertHash;
+    // cached height map look-ups
+    std::vector<HeightMapCache> m_cache;
 
     // the list of functions affecting the planet
     std::vector<Function*> m_functions;
