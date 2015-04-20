@@ -4,16 +4,31 @@
 
 - tower general
 {
+    - remove uneeded vertices and faces for towers
+
     - mesh for tower base that lives below ground and sticks out a little, go long
 
     - spec map for tower blocks
 }
 
+- worlds and bases need to be activated
+
+- randomly rotate explosions || just use sphere
+
+- fix top rotation to clamp to remap
+
 - tower's build
+{
+    - strength
+
+    - timer
+}
 
 - towers positioned
 
 - tower destroying
+
+- music drums down
 
 - randomise
 {
@@ -26,6 +41,7 @@
 {
     - leave cache
     - remove towers blocks
+    - reset base timers
     - remove functions
     - reset geo
 }

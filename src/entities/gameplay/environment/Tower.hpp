@@ -4,6 +4,25 @@
 #include "src/omicron/entity/Entity.hpp"
 
 //------------------------------------------------------------------------------
+//                                  ENUMERATORS
+//------------------------------------------------------------------------------
+
+namespace tower
+{
+enum Colour
+{
+    BLUE = 0,
+    RED
+};
+enum Strength
+{
+    WEAK = 0,
+    NORMAL = 1,
+    STRONG = 2
+};
+} // namespace tower
+
+//------------------------------------------------------------------------------
 //                              FORWARD DECLARATIONS
 //------------------------------------------------------------------------------
 
@@ -17,7 +36,11 @@ public:
     //                                CONSTRUCTOR
     //--------------------------------------------------------------------------
 
-    Tower( omi::Transform* parentPos, float height );
+    Tower(
+            omi::Transform* parentPos,
+            tower::Colour colour,
+            tower::Strength strength,
+            float height );
 
     //--------------------------------------------------------------------------
     //                          PUBLIC MEMBER FUNCTIONS
@@ -27,6 +50,10 @@ public:
 
     void update();
 
+    tower::Colour getColour() const;
+
+    void setHeight( float height );
+
 private:
 
     //--------------------------------------------------------------------------
@@ -35,6 +62,10 @@ private:
 
     // the parent position
     omi::Transform* m_parentPos;
+    // the colour of the tower block
+    tower::Colour m_colour;
+    // the strength of the tower block
+    tower::Strength m_strength;
     // the height of the tower
     float m_height;
 

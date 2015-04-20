@@ -40,10 +40,22 @@ private:
     glm::vec3 m_dirVect;
 
     omi::Transform* m_pos;
+    omi::Transform* m_stackRot;
 
     std::vector<Tower*> m_blocks;
 
     unsigned m_heightCacheId;
+
+    float m_startTimer;
+    float m_nextBlockTimer;
+
+    //--------------------------------------------------------------------------
+    //                          PRIVATE MEMBER FUNCTIONS
+    //--------------------------------------------------------------------------
+
+    void build();
+
+    void destroy();
 };
 
 #endif
