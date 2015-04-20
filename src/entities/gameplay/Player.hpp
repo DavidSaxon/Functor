@@ -82,6 +82,13 @@ private:
     // the position of the camera
     omi::Transform* m_camPos;
 
+    omi::Text* m_timerText;
+    omi::Text* m_highText;
+
+    omi::Text* m_victoryText;
+    omi::Text* m_defeatText;
+    omi::Text* m_continueText;
+
     float m_generatingFuncs;
 
     bool m_genTime;
@@ -91,6 +98,10 @@ private:
 
     float m_genDistance;
     float m_power;
+
+    float m_winTimer;
+
+    bool m_lost;
 
     //--------------------------------------------------------------------------
     //                          PRIVATE MEMBER FUNCTIONS

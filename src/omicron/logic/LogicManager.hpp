@@ -59,6 +59,8 @@ public:
     /** @param updatable an updatable component to remove */
     void removeUpdatable(Updatable* updatable);
 
+    void clearUpdateables();
+
 private:
 
     //--------------------------------------------------------------------------

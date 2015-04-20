@@ -11,12 +11,12 @@
 namespace
 {
 static const float BLOCK_HEIGHT = 0.06f;
-static const float NEXT_BLOCK_EASY_SPEED = 0.0075f;
+static const float NEXT_BLOCK_EASY_SPEED = 0.005f;
 static const float NEXT_BLOCK_MEDIUM_SPEED = 0.01f;
-static const float NEXT_BLOCK_HARD_SPEED = 0.0125f;
-static const unsigned BUILD_EASY_PROB       = 75;
-static const unsigned BUILD_MEDIUM_PROB     = 50;
-static const unsigned BUILD_HARD_PROB       = 25;
+static const float NEXT_BLOCK_HARD_SPEED = 0.015f;
+static const unsigned BUILD_EASY_PROB       = 150;
+static const unsigned BUILD_MEDIUM_PROB     = 100;
+static const unsigned BUILD_HARD_PROB       = 50;
 static const int STR_EASY_NORM         = 60;
 static const int STR_EASY_STNG         = 85;
 static const int STR_MEDI_NORM         = 50;
@@ -160,9 +160,14 @@ void TowerBase::stop()
     std::vector<Tower*>::iterator it = m_blocks.begin();
     for ( ; it != m_blocks.end(); ++it )
     {
-        ( *it )->quickRemove();
+        ( *it )->destroy();
     }
     m_blocks.clear();
+}
+
+unsigned TowerBase::getShit()
+{
+    return m_blocks.size();
 }
 
 //------------------------------------------------------------------------------

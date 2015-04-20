@@ -12,6 +12,7 @@
 #include "src/entities/gameplay/function/TanFunc.hpp"
 #include "src/entities/gameplay/function/AddFunc.hpp"
 #include "src/entities/gameplay/function/SubFunc.hpp"
+#include "src/entities/gameplay/function/DestroyFunc.hpp"
 #include "src/omicron/input/Input.hpp"
 
 //------------------------------------------------------------------------------
@@ -42,7 +43,7 @@ static const float TRANS_MOVE_SPEED = 2.0f;
 static const float TRANS_TILT_SPEED = 2.0f;
 
 // regeneration time
-static const float REGEN_SPEED = 0.02f;
+static const float REGEN_SPEED = 0.01f;
 
 } // namespace anonymous
 
@@ -62,7 +63,9 @@ Player::Player( Gui* gui, const std::vector<World*>& worlds )
     m_leftFunc       ( gameplay::X_X ),
     m_RightFunc      ( gameplay::MX_X ),
     m_genDistance    ( 0.0f ),
-    m_power          ( 0.0f )
+    m_power          ( 0.0f ),
+    m_winTimer       ( 100.0f ),
+    m_lost           ( false )
 {
     global::m_inOrbit = false;
 }
@@ -83,16 +86,22 @@ void Player::update()
     {
         // hide the gui
         m_gui->setVisible( false );
+        m_timerText->visible = false;
+        m_highText->visible = false;
         return;
     }
     else if ( m_state == gameplay::PLANET_ORBIT )
     {
         // show gui
         m_gui->setVisible( true );
+        m_timerText->visible = true;
+        m_highText->visible = true;
     }
     else
     {
         m_gui->setVisible( false );
+        m_timerText->visible = false;
+        m_highText->visible = false;
     }
 
     if ( m_state == gameplay::PLANET_ORBIT &&
@@ -143,6 +152,10 @@ void Player::goLevel()
     m_generatingFuncs = 2.0f;
     m_genTime = true;
     global::m_inOrbit = false;
+    m_victoryText->visible = false;
+    m_defeatText->visible  = false;
+    m_continueText->visible = false;
+    m_lost = false;
 }
 
 //------------------------------------------------------------------------------
@@ -310,11 +323,70 @@ void Player::transToPlanet()
     {
         m_camFocus->parent = m_world->getPosition();
         m_state = gameplay::PLANET_ORBIT;
+        m_winTimer = 120.0f;
     }
 }
 
 void Player::planetOrbit()
 {
+    // decrease win timer
+    if ( !m_lost )
+    {
+        m_winTimer -= 0.016f * omi::fpsManager.getTimeScale();
+    }
+    std::stringstream ss;
+    ss << "time remaining: " << static_cast<int>( m_winTimer );
+    m_timerText->setString( ss.str() );
+
+    std::stringstream ss2;
+    ss2 << "highest tower: " <<  m_world->getHighestTower();
+    m_highText->setString( ss2.str() );
+
+    // win?
+    if ( m_winTimer <= 0.0f )
+    {
+        m_timerText->visible = false;
+        m_highText->visible = false;
+        m_world->start( false );
+        m_victoryText->visible = true;
+        m_continueText->visible = true;
+
+        if ( omi::input::isKeyPressed( omi::input::key::RETURN ) )
+        {
+            goLevel();
+        }
+    }
+    // lose
+    else if ( m_world->getHighestTower() >= 15 )
+    {
+        if ( !m_lost )
+        {
+            m_lost = true;
+            Function* f1 = new DestroyFunc(
+                    glm::vec3 ( 1.0f, 0.0f, 0.0f ), 0.01f, 5.0f );
+            addEntity( f1 );
+            m_world->addFunction( f1 );
+            Function* f2 = new DestroyFunc(
+                    glm::vec3 ( 0.0f, 1.0f, 0.0f ), 0.01f, 5.0f );
+            addEntity( f2 );
+            m_world->addFunction( f2 );
+            m_world->start( false );
+        }
+        m_defeatText->visible = true;
+        m_continueText->visible = true;
+    }
+
+    if ( m_lost )
+    {
+        m_timerText->visible = false;
+        m_highText->visible = false;
+        if ( omi::input::isKeyPressed( omi::input::key::RETURN ) )
+        {
+            goLevel();
+        }
+        return;
+    }
+
     // regen time
     if ( m_generatingFuncs <= 1.0f )
     {
@@ -428,6 +500,8 @@ void Player::attack()
     if ( omi::input::mousePressed( omi::input::mouse_button::LEFT ) &&
          m_generatingFuncs >= 1.0f )
     {
+        m_gui->boostFunc1();
+
         switch ( m_leftFunc )
         {
             case gameplay::X_X:
@@ -466,6 +540,8 @@ void Player::attack()
     else if ( omi::input::mousePressed( omi::input::mouse_button::RIGHT ) &&
          m_generatingFuncs >= 1.0f )
     {
+        m_gui->boostFunc2();
+
         switch ( m_RightFunc )
         {
             case gameplay::X_X:
@@ -567,4 +643,87 @@ void Player::initComponents()
     );
     m_components.add( music );
     music->play();
+
+    omi::Transform* timerPos = new omi::Transform(
+            "",
+            glm::vec3( 0.0f, 0.9f, 0.0f ),
+            glm::vec3(),
+            glm::vec3( 1.0f, 1.0f, 1.0f )
+    );
+    m_components.add( timerPos );
+    m_timerText =
+            omi::ResourceManager::getText( "level_select_help", "", timerPos );
+    m_timerText->gui = true;
+    m_timerText->setHorCentred( true );
+    m_timerText->setString( "Time remaining: 200" );
+    m_timerText->visible = false;
+    m_components.add( m_timerText );
+
+    omi::Transform* highPos = new omi::Transform(
+            "",
+            glm::vec3( 0.0f, -0.8f, 0.0f ),
+            glm::vec3(),
+            glm::vec3( 1.0f, 1.0f, 1.0f )
+    );
+    m_components.add( highPos );
+    m_highText =
+            omi::ResourceManager::getText( "level_select_help", "", highPos );
+    m_highText->gui = true;
+    m_highText->setHorCentred( true );
+    m_highText->setString( "Highest tower: 0" );
+    m_highText->visible = false;
+    m_components.add( m_highText );
+
+
+    omi::Transform* conPos = new omi::Transform(
+            "",
+            glm::vec3( 0.0f, -0.1f, 0.0f ),
+            glm::vec3(),
+            glm::vec3( 1.0f, 1.0f, 1.0f )
+    );
+    m_components.add( conPos );
+    m_continueText =
+            omi::ResourceManager::getText( "intro_sub_title", "", conPos );
+    m_continueText->gui = true;
+    m_continueText->setHorCentred( true );
+    m_continueText->setVertCentred( true );
+    m_continueText->setString( "Press enter to continue..." );
+    m_continueText->visible = false;
+    m_continueText->getMaterial().colour.a = 1.0f;
+    m_components.add( m_continueText );
+
+
+    omi::Transform* vicPos = new omi::Transform(
+            "",
+            glm::vec3( 0.0f, 0.1f, 0.0f ),
+            glm::vec3(),
+            glm::vec3( 1.0f, 1.0f, 1.0f )
+    );
+    m_components.add( vicPos );
+    m_victoryText =
+            omi::ResourceManager::getText( "intro_title", "", vicPos );
+    m_victoryText->gui = true;
+    m_victoryText->setHorCentred( true );
+    m_victoryText->setVertCentred( true );
+    m_victoryText->setString( "Victory!" );
+    m_victoryText->visible = false;
+    m_victoryText->getMaterial().colour.a = 1.0f;
+    m_components.add( m_victoryText );
+
+    omi::Transform* defPos = new omi::Transform(
+            "",
+            glm::vec3( 0.0f, 0.1f, 0.0f ),
+            glm::vec3(),
+            glm::vec3( 1.0f, 1.0f, 1.0f )
+    );
+    m_components.add( defPos );
+    m_defeatText =
+            omi::ResourceManager::getText( "intro_title", "", defPos );
+    m_defeatText->gui = true;
+    m_defeatText->setHorCentred( true );
+    m_defeatText->setVertCentred( true );
+    m_defeatText->setString( "Defeat!" );
+    m_defeatText->visible = false;
+    m_defeatText->getMaterial().colour.a = 1.0f;
+    m_components.add( m_defeatText );
 }

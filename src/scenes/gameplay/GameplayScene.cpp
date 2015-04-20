@@ -4,6 +4,7 @@
 
 #include "src/entities/debug/FPSCounter.hpp"
 
+#include "src/entities/gameplay/Help.hpp"
 #include "src/entities/gameplay/Gui.hpp"
 #include "src/entities/gameplay/Player.hpp"
 #include "src/entities/gameplay/environment/Environment.hpp"
@@ -31,10 +32,11 @@ void GameplayScene::init()
     omi::renderSettings.setFilmGrain( 0.04f );
 
     // TODO: REMOVE ME
-    addEntity( new FPSCounter() );
+    // addEntity( new FPSCounter() );
 
     // add the initial entities
     addEntity( new PauseMenu() );
+    addEntity( new Help() );
     Gui* gui = new Gui();
     addEntity( gui );
     addEntity( new Environment() );
@@ -54,13 +56,6 @@ void GameplayScene::init()
 
 bool GameplayScene::update()
 {
-    // TODO: REMOVE ME
-    if ( omi::input::isKeyPressed( omi::input::key::F7 ) )
-    {
-        // TODO: go to menu
-        return true;
-    }
-
     return false;
 }
 

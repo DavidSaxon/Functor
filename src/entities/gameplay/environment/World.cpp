@@ -63,6 +63,20 @@ void World::init()
             omi::ResourceManager::getMesh( m_orbitMeshId, "", NULL );
     m_components.add( m_orbitMesh );
 
+
+    omi::Transform* indexPos = new omi::Transform(
+            "",
+            m_rotPoint,
+            glm::vec3( 0.0f, 0.0f, m_sunDistance + 1.5f ),
+            glm::vec3( 90.0f, 180.0f, 0.0f ),
+            glm::vec3( 1.5f, 1.5f, 1.5f )
+    );
+    m_components.add( indexPos );
+    m_indexText =
+            omi::ResourceManager::getText( "world_index_text", "", indexPos );
+    m_indexText->setHorCentred( true );
+    m_components.add( m_indexText );
+
     // store the geo list pointer
     m_worldGeo = worldMesh->getGeometry();
 
@@ -72,6 +86,8 @@ void World::init()
     // add towers
     if ( m_difficulty == 0 )
     {
+        m_indexText->setString( "1: EASY" );
+
         TowerBase* tv1 = new TowerBase(
                 this, glm::vec3( 0.0f, 0.0f, 0.0f ) );
         m_towers.push_back( tv1 );
@@ -94,6 +110,8 @@ void World::init()
     }
     else if ( m_difficulty == 1 )
     {
+        m_indexText->setString( "2: MEDIUM" );
+
         TowerBase* tv1 = new TowerBase(
                 this, glm::vec3( -40.0f, 0.0f, 0.0f ) );
         m_towers.push_back( tv1 );
@@ -127,6 +145,8 @@ void World::init()
 
     else if ( m_difficulty == 2 )
     {
+        m_indexText->setString( "3: HARD" );
+
         TowerBase* tv1 = new TowerBase(
                 this, glm::vec3( 30.0f, 85.0f, 0.0f ) );
         m_towers.push_back( tv1 );
@@ -182,10 +202,12 @@ void World::update()
     if ( global::m_inOrbit )
     {
         m_orbitMesh->visible = false;
+        m_indexText->visible = false;
     }
     else
     {
         m_orbitMesh->visible = true;
+        m_indexText->visible = true;
     }
 
     // iterate over the geometry to apply functions
@@ -395,6 +417,23 @@ float World::resolveHeightMapCache( unsigned index )
         fabs( glm::distance( m_worldGeo->vertices[ c.second ], glm::vec3() ) ) +
         fabs( glm::distance( m_worldGeo->vertices[ c.third ], glm::vec3() ) );
     return height / 3.0f;
+}
+
+unsigned World::getHighestTower()
+{
+    unsigned high = 0;
+
+    std::vector<TowerBase*>::iterator it = m_towers.begin();
+    for ( ; it != m_towers.end(); ++it )
+    {
+        unsigned h = ( *it )->getShit();
+        if (  h > high )
+        {
+            high = h;
+        }
+    }
+
+    return high;
 }
 
 //------------------------------------------------------------------------------

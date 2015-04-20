@@ -10,6 +10,9 @@
 
 void Gui::init()
 {
+    m_func1Boost = 0.0f;
+    m_func2Boost = 0.0f;
+
     initComponents();
     setVisible( false );
 }
@@ -24,6 +27,21 @@ void Gui::update()
     m_funcPos->translation.x += 0.01f;
 
     m_mulPos->translation.x = aspect - 0.45f;
+
+    if ( global::pause )
+    {
+        return;
+    }
+
+    m_func1Boost -= 0.02f * omi::fpsManager.getTimeScale();
+    m_func2Boost -= 0.02f * omi::fpsManager.getTimeScale();
+    m_func1Boost = util::math::clamp<float>( m_func1Boost, 0.0f, 1.0f );
+    m_func2Boost = util::math::clamp<float>( m_func2Boost, 0.0f, 1.0f );
+
+    m_funcBoxSprite1->getMaterial().colour =
+            glm::vec4( m_func1Boost, m_func1Boost, m_func1Boost, 0.5f );
+    m_funcBoxSprite2->getMaterial().colour =
+            glm::vec4( m_func2Boost, m_func2Boost, m_func2Boost, 0.5f );
 }
 
 void Gui::setVisible( bool state )
@@ -71,6 +89,16 @@ void Gui::setReload( float reload )
 
     reload = util::math::clamp( reload, 0.0f, 1.0f );
     m_reloadScale->scale.x = reload;
+}
+
+void Gui::boostFunc1()
+{
+    m_func1Boost = 1.0f;
+}
+
+void Gui::boostFunc2()
+{
+    m_func2Boost = 1.0f;
 }
 
 //------------------------------------------------------------------------------

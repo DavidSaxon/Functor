@@ -2,64 +2,22 @@
 | TODO |
 \++++++/
 
-- tower general
-{
-    - remove uneeded vertices and faces for towers
-
-    - mesh for tower base that lives below ground and sticks out a little, go long
-
-    - spec map for tower blocks
-}
-
-- fix top rotation to clamp to remap
-
-------
-
-- music drums down
-
-- fix lowest bug
-
-- randomise
-{
-    cos
-    rand,
-    tan?
-}
-
-- world restore
-{
-    - leave cache
-    - remove towers blocks
-    - reset base timers
-    - remove functions
-    - reset geo
-}
-
-- returning to level select
-
-- win
-
-- death
-{
-    - tower destoys world
-
-    - return to level select
-}
-
-- locking level select
-
-- tutorial
-
-- remove audio and shadows from menu
-
-- fix translation to planet, move over planet first and then zoom in
-
 //-------------------------------------POST-------------------------------------
 
 - bake resources
+
+- remove fps show
+
+- remove audio and shadows from menu
+
+- fix lowest bug
+
+- fix translation to planet, move over planet first and then zoom in
 
 - turn off console
 
 - delete dlls
 
 - move window back to zero - zero
+
+- remove f7

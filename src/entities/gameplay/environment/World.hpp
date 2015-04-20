@@ -58,6 +58,8 @@ public:
 
     float resolveHeightMapCache( unsigned index );
 
+    unsigned getHighestTower();
+
 private:
 
     //--------------------------------------------------------------------------
@@ -84,6 +86,8 @@ private:
 
     // the mesh of the planet's orbit
     omi::Mesh* m_orbitMesh;
+    // the mesh o
+    omi::Text* m_indexText;
 
     // the geometry of the world
     omi::Geometry* m_worldGeo;

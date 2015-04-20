@@ -4,7 +4,7 @@
 #include "src/omicron/scene/Scene.hpp"
 
 /****************************************************\
-| The main scene of reverie which controls game-play. |
+| The main scene of functor which controls game-play. |
 \****************************************************/
 class GameplayScene : public omi::Scene {
 public:

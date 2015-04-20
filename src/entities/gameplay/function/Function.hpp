@@ -19,9 +19,9 @@ public:
 
     void init();
 
-    void update();
+    virtual void update();
 
-    bool isDone();
+    virtual bool isDone();
 
     void fuckOff();
 

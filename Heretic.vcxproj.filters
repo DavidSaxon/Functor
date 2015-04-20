@@ -154,6 +154,12 @@
     <Filter Include="src\entities\gameplay\function">
       <UniqueIdentifier>{ce02b6a1-994e-4897-b464-85cbedc62d32}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\scenes\intro">
+      <UniqueIdentifier>{67da8cc8-08bb-47cc-b82e-79e71f4ac335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\entities\intro_e">
+      <UniqueIdentifier>{676f37ba-657c-4d8d-a923-5dfa3d35f015}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\Utilitron\FileUtil.hpp">
@@ -519,6 +525,18 @@
     <ClInclude Include="src\entities\gameplay\function\SubFunc.hpp">
       <Filter>src\entities\gameplay\function</Filter>
     </ClInclude>
+    <ClInclude Include="src\scenes\intro\IntroScene.hpp">
+      <Filter>src\scenes\intro</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\intro_e\IntroControl.hpp">
+      <Filter>src\entities\intro_e</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\gameplay\Help.hpp">
+      <Filter>src\entities\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\gameplay\function\DestroyFunc.hpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\data\Globals.cpp">
@@ -840,6 +858,18 @@
       <Filter>src\entities\gameplay\function</Filter>
     </ClCompile>
     <ClCompile Include="src\entities\gameplay\function\SubFunc.cpp">
+      <Filter>src\entities\gameplay\function</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scenes\intro\IntroScene.cpp">
+      <Filter>src\scenes\intro</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\intro_e\IntroControl.cpp">
+      <Filter>src\entities\intro_e</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\gameplay\Help.cpp">
+      <Filter>src\entities\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\gameplay\function\DestroyFunc.cpp">
       <Filter>src\entities\gameplay\function</Filter>
     </ClCompile>
   </ItemGroup>

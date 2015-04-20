@@ -1,4 +1,4 @@
-// #pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
+#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
 
 #define GLM_FORCE_RADIANS
 #define GLM_SWIZZLE
@@ -40,6 +40,8 @@ std::unique_ptr<LogicManager> logicManager;
 //                                   FUNCTIONS
 //------------------------------------------------------------------------------
 
+
+
 /** Sorts components that have been created this execution cycle and reference
 them to their appropriate managers */
 void sortComponents() {
@@ -53,6 +55,7 @@ void sortComponents() {
         if ((*it)->getType() & component::UPDATABLE) {
 
             // pass to logic manager
+            std::cout << "remove" << std::endl;
             logicManager->removeUpdatable(dynamic_cast<Updatable*>(*it));
         }
         else if ((*it)->getType() & component::RENDERABLE) {
@@ -128,6 +131,7 @@ void execute() {
 
         // clear components
         renderer->clear();
+        logicManager->clearUpdateables();
         CollisionDetect::clear();
         return;
     }

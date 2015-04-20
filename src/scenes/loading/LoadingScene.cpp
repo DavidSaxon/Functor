@@ -2,6 +2,7 @@
 
 
 #include "src/entities/loading/LoadingSplash.hpp"
+#include "src/scenes/intro/IntroScene.hpp"
 #include "src/scenes/gameplay/GameplayScene.hpp"
 
 //------------------------------------------------------------------------------
@@ -48,5 +49,6 @@ omi::Scene* LoadingScene::nextScene()
     // TODO: release resources
     omi::ResourceManager::release( resource_group::LOADING );
 
-    return new GameplayScene();
+    // return new GameplayScene();
+    return new IntroScene();
 }

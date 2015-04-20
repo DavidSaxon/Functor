@@ -30,6 +30,10 @@ public:
 
     void setReload( float reload );
 
+    void boostFunc1();
+
+    void boostFunc2();
+
 private:
 
     //--------------------------------------------------------------------------
@@ -58,6 +62,9 @@ private:
     omi::Transform* m_reloadScale;
     omi::Sprite* m_reloadBackSprite;
     omi::Sprite* m_reloadFrontSprite;
+
+    float m_func1Boost;
+    float m_func2Boost;
 
     //--------------------------------------------------------------------------
     //                          PRIVATE MEMBER FUNCTIONS

@@ -97,4 +97,9 @@ void LogicManager::removeUpdatable(Updatable* updatable) {
     }
 }
 
+void LogicManager::clearUpdateables()
+{
+        m_components.clear();
+}
+
 } // namespace omi

@@ -55,7 +55,14 @@ void buildEffectsPack()
         "explode_2",
         resource_group::EFFECTS,
         "res/sound/fx/gameplay/explode_2.ogg",
-        1
+        5
+    );
+
+    omi::ResourceManager::addSound(
+        "build_1",
+        resource_group::EFFECTS,
+        "res/sound/fx/gameplay/build_1.ogg",
+        5
     );
 }
 

@@ -91,6 +91,7 @@
     <ClInclude Include="src\entities\gameplay\environment\World.hpp" />
     <ClInclude Include="src\entities\gameplay\function\AddFunc.hpp" />
     <ClInclude Include="src\entities\gameplay\function\CosineFunc.hpp" />
+    <ClInclude Include="src\entities\gameplay\function\DestroyFunc.hpp" />
     <ClInclude Include="src\entities\gameplay\function\Function.hpp" />
     <ClInclude Include="src\entities\gameplay\function\FunctionAttack.hpp" />
     <ClInclude Include="src\entities\gameplay\function\LowerFunc.hpp" />
@@ -100,7 +101,9 @@
     <ClInclude Include="src\entities\gameplay\function\SubFunc.hpp" />
     <ClInclude Include="src\entities\gameplay\function\TanFunc.hpp" />
     <ClInclude Include="src\entities\gameplay\Gui.hpp" />
+    <ClInclude Include="src\entities\gameplay\Help.hpp" />
     <ClInclude Include="src\entities\gameplay\Player.hpp" />
+    <ClInclude Include="src\entities\intro_e\IntroControl.hpp" />
     <ClInclude Include="src\entities\loading\LoadingSplash.hpp" />
     <ClInclude Include="src\entities\menu\PauseMenu.hpp" />
     <ClInclude Include="src\entities\menu\setting_widget\EnumWidget.hpp" />
@@ -190,6 +193,7 @@
     <ClInclude Include="src\override\StartUp.hpp" />
     <ClInclude Include="src\resource_pack\Packs.hpp" />
     <ClInclude Include="src\scenes\gameplay\GameplayScene.hpp" />
+    <ClInclude Include="src\scenes\intro\IntroScene.hpp" />
     <ClInclude Include="src\scenes\loading\LoadingScene.hpp" />
     <ClInclude Include="src\scenes\start_up\StartUpScene.hpp" />
   </ItemGroup>
@@ -203,6 +207,7 @@
     <ClCompile Include="src\entities\gameplay\environment\World.cpp" />
     <ClCompile Include="src\entities\gameplay\function\AddFunc.cpp" />
     <ClCompile Include="src\entities\gameplay\function\CosineFunc.cpp" />
+    <ClCompile Include="src\entities\gameplay\function\DestroyFunc.cpp" />
     <ClCompile Include="src\entities\gameplay\function\Function.cpp" />
     <ClCompile Include="src\entities\gameplay\function\FunctionAttack.cpp" />
     <ClCompile Include="src\entities\gameplay\function\LowerFunc.cpp" />
@@ -212,7 +217,9 @@
     <ClCompile Include="src\entities\gameplay\function\SubFunc.cpp" />
     <ClCompile Include="src\entities\gameplay\function\TanFunc.cpp" />
     <ClCompile Include="src\entities\gameplay\Gui.cpp" />
+    <ClCompile Include="src\entities\gameplay\Help.cpp" />
     <ClCompile Include="src\entities\gameplay\Player.cpp" />
+    <ClCompile Include="src\entities\intro_e\IntroControl.cpp" />
     <ClCompile Include="src\entities\loading\LoadingSplash.cpp" />
     <ClCompile Include="src\entities\menu\PauseMenu.cpp" />
     <ClCompile Include="src\entities\menu\setting_widget\EnumWidget.cpp" />
@@ -299,6 +306,7 @@
     <ClCompile Include="src\resource_pack\PlayerPack.cpp" />
     <ClCompile Include="src\resource_pack\StartUpPack.cpp" />
     <ClCompile Include="src\scenes\gameplay\GameplayScene.cpp" />
+    <ClCompile Include="src\scenes\intro\IntroScene.cpp" />
     <ClCompile Include="src\scenes\loading\LoadingScene.cpp" />
     <ClCompile Include="src\scenes\start_up\StartUpScene.cpp" />
   </ItemGroup>

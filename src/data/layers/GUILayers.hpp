@@ -9,10 +9,12 @@ enum Layer
 {
     FUNCTION_BACK = 0,
     FUNCTION_TEXT,
+    HELP,
     PAUSE_OVERLAY,
     WIDGET_PRIMARY,
     WIDGET_SECONDARY,
-    MAIN_MENU_ITEM
+    MAIN_MENU_ITEM,
+    FUCK_YOU
 };
 
 } // namespace menu

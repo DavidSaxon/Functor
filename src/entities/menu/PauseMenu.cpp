@@ -228,14 +228,6 @@ void PauseMenu::updateMenuState()
                 setTextListVisibility( m_settingsText, true );
                 break;
             }
-            case TYPE_INPUT_SETTINGS:
-            {
-                m_currentItems = m_inputText;
-                m_currentWidgets = m_inputWidgets;
-                setTextListVisibility( m_inputText, true );
-                setWidgetVisibility( m_inputWidgets, true );
-                break;
-            }
             case TYPE_AUDIO_SETTINGS:
             {
                 m_currentItems = m_audioText;
@@ -275,11 +267,6 @@ void PauseMenu::accept()
         case TYPE_SETTINGS:
         {
             acceptSettingsMenu();
-            break;
-        }
-        case TYPE_INPUT_SETTINGS:
-        {
-            acceptInputMenu();
             break;
         }
         case TYPE_AUDIO_SETTINGS:
@@ -347,13 +334,6 @@ void PauseMenu::acceptSettingsMenu()
 {
     switch ( static_cast<SettingsMenuItem>( m_currentIndex ) )
     {
-        case SETTINGS_INPUT:
-        {
-            // go to the input settings menu
-            m_currentMenu = TYPE_INPUT_SETTINGS;
-            updateMenuState();
-            break;
-        }
         case SETTINGS_AUDIO:
         {
             // go to the audio setings menu
@@ -372,59 +352,6 @@ void PauseMenu::acceptSettingsMenu()
         {
             // return to the settings menu
             m_currentMenu = TYPE_MAIN;
-            updateMenuState();
-            break;
-        }
-    }
-}
-
-void PauseMenu::acceptInputMenu()
-{
-    switch ( static_cast<InputMenuItem>( m_currentIndex ) )
-    {
-        case INPUT_RESET_DEFAULTS:
-        {
-            for ( std::vector<SettingWidget*>::iterator it =
-                        m_inputWidgets.begin();
-                  it != m_inputWidgets.end();
-                  ++it )
-            {
-                ( *it )->resetDefault();
-            }
-            break;
-        }
-        case INPUT_APPLY:
-        {
-            // apply master volume
-            SliderWidget* lookW =
-                    static_cast<SliderWidget*>( m_inputWidgets[ 0 ] );
-            global::lookSensitivity = lookW->getValue();
-
-            // apply move keys
-            EnumWidget* moveW =
-                    static_cast<EnumWidget*>( m_inputWidgets[ 1 ] );
-            settings::apply::move( moveW->getValue() );
-
-            // write config file again
-            settings::config::writeConfig();
-
-            // return to the settings menu
-            m_currentMenu = TYPE_SETTINGS;
-            updateMenuState();
-            break;
-        }
-        case INPUT_BACK:
-        {
-            // revert to previous values
-            for ( std::vector<SettingWidget*>::iterator it =
-                        m_inputWidgets.begin();
-                  it != m_inputWidgets.end();
-                  ++it )
-            {
-                ( *it )->revert();
-            }
-            // return to the settings menu
-            m_currentMenu = TYPE_SETTINGS;
             updateMenuState();
             break;
         }
@@ -528,11 +455,6 @@ void PauseMenu::acceptGraphicsMenu()
                     static_cast<SliderWidget*>( m_graphicsWidgets[ 3 ] );
             omi::renderSettings.setGammaCorrection( gammaW->getValue() );
 
-            // apply shadows
-            EnumWidget* shadowsW =
-                    static_cast<EnumWidget*>( m_graphicsWidgets[ 4 ] );
-            settings::apply::shadows( shadowsW->getValue() );
-
             // write config file again
             settings::config::writeConfig();
 
@@ -590,8 +512,6 @@ void PauseMenu::hideAll()
     m_exitCheckText->visible = false;
     setTextListVisibility( m_exitText, false );
     setTextListVisibility( m_settingsText, false );
-    setTextListVisibility( m_inputText, false );
-    setWidgetVisibility( m_inputWidgets, false );
     setTextListVisibility( m_audioText, false );
     setWidgetVisibility( m_audioWidgets, false );
     setTextListVisibility( m_graphicsText, false );
@@ -614,7 +534,6 @@ void PauseMenu::initComponents()
     initMainMenuComponents();
     initExitMenuComponents();
     initSettingsMenuComponents();
-    initInputMenuComponents();
     initAudioMenuComponents();
     initGraphicsMenuComponents();
 }
@@ -764,34 +683,12 @@ void PauseMenu::initExitMenuComponents()
 
 void PauseMenu::initSettingsMenuComponents()
 {
-    // input text
-    {
-
-    omi::Transform* t = new omi::Transform(
-            "",
-            glm::vec3( 0.0f, 0.375f, 0.0f ),
-            glm::vec3(),
-            glm::vec3( 1.0f, 1.0f, 1.0f )
-    );
-    m_components.add( t );
-    omi::Text* text =
-            omi::ResourceManager::getText( "pause_main_item_text", "", t );
-    text->gui = true;
-    text->setString( "Input" );
-    text->setHorCentred( true );
-    text->setVertCentred( true );
-    text->visible = false;
-    m_components.add( text );
-
-    m_settingsText.push_back( text );
-
-    }
     // audio text
     {
 
     omi::Transform* t = new omi::Transform(
             "",
-            glm::vec3( 0.0f, 0.125f, 0.0f ),
+            glm::vec3( 0.0f, 0.25f, 0.0f ),
             glm::vec3(),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );
@@ -813,7 +710,7 @@ void PauseMenu::initSettingsMenuComponents()
 
     omi::Transform* t = new omi::Transform(
             "",
-            glm::vec3( 0.0f, -0.125f, 0.0f ),
+            glm::vec3( 0.0f, 0.0f, 0.0f ),
             glm::vec3(),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );
@@ -835,7 +732,7 @@ void PauseMenu::initSettingsMenuComponents()
 
     omi::Transform* t = new omi::Transform(
             "",
-            glm::vec3( 0.0f, -0.375f, 0.0f ),
+            glm::vec3( 0.0f, -0.25f, 0.0f ),
             glm::vec3(),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );
@@ -850,156 +747,6 @@ void PauseMenu::initSettingsMenuComponents()
     m_components.add( text );
 
     m_settingsText.push_back( text );
-
-    }
-}
-
-void PauseMenu::initInputMenuComponents()
-{
-    // look sensitivity
-    {
-
-    omi::Transform* t = new omi::Transform(
-            "",
-            glm::vec3( -1.0f, 0.25f, 0.0f ),
-            glm::vec3(),
-            glm::vec3( 1.0f, 1.0f, 1.0f )
-    );
-    m_components.add( t );
-    omi::Text* text =
-            omi::ResourceManager::getText( "pause_secondary_item_text", "", t );
-    text->gui = true;
-    text->setString( "Mouse sensitivity" );
-    text->setVertCentred( true );
-    text->visible = false;
-    m_components.add( text );
-
-    m_inputText.push_back( text );
-
-    // add widget
-    SettingWidget* widget = new SliderWidget(
-            glm::vec3( 0.5f, 0.25f, 0.0f ),
-            0.0f, 2.0f, 1.0f,
-            global::lookSensitivity
-    );
-    m_inputWidgets.push_back( widget );
-    addEntity( widget );
-
-    }
-
-    // move keys
-    {
-
-    omi::Transform* t = new omi::Transform(
-            "",
-            glm::vec3( -1.0f, 0.125f, 0.0f ),
-            glm::vec3(),
-            glm::vec3( 1.0f, 1.0f, 1.0f )
-    );
-    m_components.add( t );
-    omi::Text* text =
-            omi::ResourceManager::getText( "pause_secondary_item_text", "", t );
-    text->gui = true;
-    text->setString( "Movement Keys" );
-    text->setVertCentred( true );
-    text->visible = false;
-    m_components.add( text );
-
-    m_inputText.push_back( text );
-
-    // add widget
-    std::vector<std::string> values;
-    values.push_back( "wasd" );
-    values.push_back( "esdf" );
-    values.push_back( "arrows" );
-    unsigned currentIndex = 0;
-    if ( global::keyForwards == omi::input::key::W )
-    {
-        currentIndex = 0;
-    }
-    else if ( global::keyForwards == omi::input::key::E )
-    {
-        currentIndex = 1;
-    }
-    else
-    {
-        currentIndex = 2;
-    }
-
-    SettingWidget* widget = new EnumWidget(
-            glm::vec3( 0.5f, 0.125f, 0.0f ),
-            values,
-            0,
-            currentIndex
-    );
-    m_inputWidgets.push_back( widget );
-    addEntity( widget );
-
-    }
-
-    // reset defaults text
-    {
-
-    omi::Transform* t = new omi::Transform(
-            "",
-            glm::vec3( -1.0f, 0.0f, 0.0f ),
-            glm::vec3(),
-            glm::vec3( 1.0f, 1.0f, 1.0f )
-    );
-    m_components.add( t );
-    omi::Text* text =
-            omi::ResourceManager::getText( "pause_secondary_item_text", "", t );
-    text->gui = true;
-    text->setString( "Reset Defaults" );
-    text->setVertCentred( true );
-    text->visible = false;
-    m_components.add( text );
-
-    m_inputText.push_back( text );
-
-    }
-
-    // apply text
-    {
-
-    omi::Transform* t = new omi::Transform(
-            "",
-            glm::vec3( -1.0f, -0.125f, 0.0f ),
-            glm::vec3(),
-            glm::vec3( 1.0f, 1.0f, 1.0f )
-    );
-    m_components.add( t );
-    omi::Text* text =
-            omi::ResourceManager::getText( "pause_secondary_item_text", "", t );
-    text->gui = true;
-    text->setString( "Apply" );
-    text->setVertCentred( true );
-    text->visible = false;
-    m_components.add( text );
-
-    m_inputText.push_back( text );
-
-    }
-
-    // back text
-    {
-
-    omi::Transform* t = new omi::Transform(
-            "",
-            glm::vec3( -1.0f, -0.25f, 0.0f ),
-            glm::vec3(),
-            glm::vec3( 1.0f, 1.0f, 1.0f )
-    );
-    m_components.add( t );
-    omi::Text* text =
-            omi::ResourceManager::getText( "pause_secondary_item_text", "", t );
-    text->gui = true;
-    text->setString( "Back" );
-    text->setVertCentred( true );
-    text->visible = false;
-    m_components.add( text );
-
-    m_inputText.push_back( text );
 
     }
 }
@@ -1173,7 +920,7 @@ void PauseMenu::initGraphicsMenuComponents()
 
     omi::Transform* t = new omi::Transform(
             "",
-            glm::vec3( -1.0f, 0.4375f, 0.0f ),
+            glm::vec3( -1.0f, 0.375, 0.0f ),
             glm::vec3(),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );
@@ -1238,7 +985,7 @@ void PauseMenu::initGraphicsMenuComponents()
     }
 
     SettingWidget* widget = new EnumWidget(
-            glm::vec3( 0.5f, 0.4375f, 0.0f ),
+            glm::vec3( 0.5f, 0.375, 0.0f ),
             revValues,
             defaultIndex,
             currentIndex
@@ -1253,7 +1000,7 @@ void PauseMenu::initGraphicsMenuComponents()
 
     omi::Transform* t = new omi::Transform(
             "",
-            glm::vec3( -1.0f, 0.3125f, 0.0f ),
+            glm::vec3( -1.0f, 0.25, 0.0f ),
             glm::vec3(),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );
@@ -1278,7 +1025,7 @@ void PauseMenu::initGraphicsMenuComponents()
         currentIndex = 1;
     }
     SettingWidget* widget = new EnumWidget(
-            glm::vec3( 0.5f, 0.3125f, 0.0f ),
+            glm::vec3( 0.5f, 0.25, 0.0f ),
             values,
             1,
             currentIndex
@@ -1293,7 +1040,7 @@ void PauseMenu::initGraphicsMenuComponents()
 
     omi::Transform* t = new omi::Transform(
             "",
-            glm::vec3( -1.0f, 0.1875f, 0.0f ),
+            glm::vec3( -1.0f, 0.125f, 0.0f ),
             glm::vec3(),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );
@@ -1318,7 +1065,7 @@ void PauseMenu::initGraphicsMenuComponents()
         currentIndex = 1;
     }
     SettingWidget* widget = new EnumWidget(
-            glm::vec3( 0.5f, 0.1875f, 0.0f ),
+            glm::vec3( 0.5f, 0.125f, 0.0f ),
             values,
             1,
             currentIndex
@@ -1333,7 +1080,7 @@ void PauseMenu::initGraphicsMenuComponents()
 
     omi::Transform* t = new omi::Transform(
             "",
-            glm::vec3( -1.0f, 0.0625f, 0.0f ),
+            glm::vec3( -1.0f, 0.0f, 0.0f ),
             glm::vec3(),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );
@@ -1350,63 +1097,9 @@ void PauseMenu::initGraphicsMenuComponents()
 
     // add widget
     SettingWidget* widget = new SliderWidget(
-            glm::vec3( 0.5f, 0.0625f, 0.0f ),
+            glm::vec3( 0.5f, 0.0f, 0.0f ),
             0.0f, 1.0f, 0.6f,
             omi::renderSettings.getGammaCorrection()
-    );
-    m_graphicsWidgets.push_back( widget );
-    addEntity( widget );
-
-    }
-
-    // shadows text
-    {
-
-    omi::Transform* t = new omi::Transform(
-            "",
-            glm::vec3( -1.0f, -0.0625f, 0.0f ),
-            glm::vec3(),
-            glm::vec3( 1.0f, 1.0f, 1.0f )
-    );
-    m_components.add( t );
-    omi::Text* text =
-            omi::ResourceManager::getText( "pause_secondary_item_text", "", t );
-    text->gui = true;
-    text->setString( "Shadows" );
-    text->setVertCentred( true );
-    text->visible = false;
-    m_components.add( text );
-
-    m_graphicsText.push_back( text );
-
-    // add widget
-    std::vector<std::string> values;
-    values.push_back( "off" );
-    values.push_back( "low" );
-    values.push_back( "medium" );
-    values.push_back( "high" );
-    unsigned currentIndex = 0;
-    if ( !omi::renderSettings.getShadows() )
-    {
-        currentIndex = 0;
-    }
-    else if ( omi::renderSettings.getShadowMapResolutionScale() < 2.0f )
-    {
-        currentIndex = 1;
-    }
-    else if ( omi::renderSettings.getShadowMapResolutionScale() < 3.5f )
-    {
-        currentIndex = 2;
-    }
-    else
-    {
-        currentIndex = 3;
-    }
-    SettingWidget* widget = new EnumWidget(
-            glm::vec3( 0.5f, -0.0625f, 0.0f ),
-            values,
-            2,
-            currentIndex
     );
     m_graphicsWidgets.push_back( widget );
     addEntity( widget );
@@ -1418,7 +1111,7 @@ void PauseMenu::initGraphicsMenuComponents()
 
     omi::Transform* t = new omi::Transform(
             "",
-            glm::vec3( -1.0f, -0.1875f, 0.0f ),
+            glm::vec3( -1.0f, -0.125f, 0.0f ),
             glm::vec3(),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );
@@ -1440,7 +1133,7 @@ void PauseMenu::initGraphicsMenuComponents()
 
     omi::Transform* t = new omi::Transform(
             "",
-            glm::vec3( -1.0f, -0.3125f, 0.0f ),
+            glm::vec3( -1.0f, -0.25, 0.0f ),
             glm::vec3(),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );
@@ -1462,7 +1155,7 @@ void PauseMenu::initGraphicsMenuComponents()
 
     omi::Transform* t = new omi::Transform(
             "",
-            glm::vec3( -1.0f, -0.4375f, 0.0f ),
+            glm::vec3( -1.0f, -0.375, 0.0f ),
             glm::vec3(),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );

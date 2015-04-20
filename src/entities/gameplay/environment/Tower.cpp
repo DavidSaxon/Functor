@@ -114,6 +114,13 @@ void Tower::init()
             new omi::Glow( m_boom->getMaterial().colour.xyz(), 1.0f );
     m_boom->visible = false;
     m_components.add( m_boom );
+
+    // play sound
+    omi::SoundPool::play(
+            omi::ResourceManager::getSound( "build_1" ),
+            false,
+            0.7f
+    );
 }
 
 void Tower::update()

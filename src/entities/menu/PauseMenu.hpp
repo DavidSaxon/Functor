@@ -47,20 +47,9 @@ public:
     // the items on the settings menu
     enum SettingsMenuItem
     {
-        SETTINGS_INPUT = 0,
-        SETTINGS_AUDIO,
+        SETTINGS_AUDIO = 0,
         SETTINGS_GRAPHICS,
         SETTINGS_BACK
-    };
-
-    // the items on the input settings menu
-    enum InputMenuItem
-    {
-        INPUT_LOOK = 0,
-        INPUT_MOVE,
-        INPUT_RESET_DEFAULTS,
-        INPUT_APPLY,
-        INPUT_BACK
     };
 
     // the items on the audio settings menu
@@ -81,7 +70,6 @@ public:
         GRAPHICS_FULLSCREEN,
         GRAPHICS_VSYNC,
         GRAPHICS_GAMMA,
-        GRAPHICS_SHADOWS,
         GRAPHICS_RESET_DEFAULTS,
         GRAPHICS_APPLY,
         GRAPHICS_BACK
@@ -129,10 +117,6 @@ private:
     std::vector<omi::Text*> m_exitText;
     // the list of renderable text on the settings menu
     std::vector<omi::Text*> m_settingsText;
-    // the list of renderable text on the input settings menu
-    std::vector<omi::Text*> m_inputText;
-    // the list of widget for the input settings menu
-    std::vector<SettingWidget*> m_inputWidgets;
     // the list of renderable text on the audio settings menu
     std::vector<omi::Text*> m_audioText;
     // the list of widgets for the audio settings menu
@@ -182,9 +166,6 @@ private:
     /** Performs the accept action on the settings menu */
     void acceptSettingsMenu();
 
-    /** Performs the accept action on the input menu */
-    void acceptInputMenu();
-
     /** Performs the accept action on the audio menu */
     void acceptAudioMenu();
 
@@ -217,9 +198,6 @@ private:
 
     /** Initialises the settings menu components */
     void initSettingsMenuComponents();
-
-    /** Initialises the input settings menu components */
-    void initInputMenuComponents();
 
     /** Initialises the audio settings menu components */
     void initAudioMenuComponents();
