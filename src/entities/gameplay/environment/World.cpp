@@ -285,6 +285,12 @@ void World::start( bool state )
     if ( m_started )
     {
         m_orgVert = std::vector<glm::vec3>( m_dirVects );
+        std::vector<Function*>::iterator itf;
+        for ( itf = m_functions.begin(); itf != m_functions.end(); ++itf )
+        {
+            ( *itf )->fuckOff();
+        }
+        m_functions.clear();
     }
 
     // send to bases

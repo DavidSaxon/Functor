@@ -88,6 +88,9 @@ void Player::update()
         m_gui->setVisible( false );
         m_timerText->visible = false;
         m_highText->visible = false;
+        m_victoryText->visible = false;
+        m_defeatText->visible = false;
+        m_continueText->visible = false;
         return;
     }
     else if ( m_state == gameplay::PLANET_ORBIT )
@@ -380,6 +383,8 @@ void Player::planetOrbit()
     {
         m_timerText->visible = false;
         m_highText->visible = false;
+        m_defeatText->visible = true;
+        m_continueText->visible = true;
         if ( omi::input::isKeyPressed( omi::input::key::RETURN ) )
         {
             goLevel();
