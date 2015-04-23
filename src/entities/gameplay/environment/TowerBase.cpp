@@ -14,9 +14,9 @@ static const float BLOCK_HEIGHT = 0.06f;
 static const float NEXT_BLOCK_EASY_SPEED = 0.005f;
 static const float NEXT_BLOCK_MEDIUM_SPEED = 0.01f;
 static const float NEXT_BLOCK_HARD_SPEED = 0.015f;
-static const unsigned BUILD_EASY_PROB       = 150;
-static const unsigned BUILD_MEDIUM_PROB     = 100;
-static const unsigned BUILD_HARD_PROB       = 50;
+static const float BUILD_EASY_PROB       = 1.65f;
+static const float BUILD_MEDIUM_PROB     = 2.0f;
+static const float BUILD_HARD_PROB       = 1.0f;
 static const int STR_EASY_NORM         = 60;
 static const int STR_EASY_STNG         = 85;
 static const int STR_MEDI_NORM         = 50;
@@ -31,14 +31,15 @@ static const int STR_HARD_STNG         = 30;
 
 TowerBase::TowerBase( World* world, const glm::vec3& rotation, float timeout )
     :
-    m_world         ( world ),
-    m_rotation      ( rotation ),
-    m_startTimer    ( 0.0f ),
-    m_timeOut       ( timeout ),
-    m_nextBlockTimer( 0.0f ),
-    m_baseHeight    ( 0.015f ),
-    m_height        ( 0.0f ),
-    m_started       ( false )
+    m_world             ( world ),
+    m_rotation          ( rotation ),
+    m_startTimer        ( 0.0f ),
+    m_timeOut           ( timeout ),
+    m_nextBlockTimer    ( 0.0f ),
+    m_baseHeight        ( 0.015f ),
+    m_height            ( 0.0f ),
+    m_started           ( false ),
+    m_nextBlockRandTimer( 0.0f )
 {
 }
 
@@ -152,6 +153,8 @@ void TowerBase::start()
     m_started = true;
     m_nextBlockTimer = 0.0f;
     m_startTimer     = 0.0f;
+    m_nextBlockRandTimer = static_cast<float>( rand() % 1000 ) / 1000.0f;
+    m_nextBlockRandTimer *= BUILD_EASY_PROB;
 }
 
 void TowerBase::stop()
@@ -177,12 +180,15 @@ unsigned TowerBase::getShit()
 void TowerBase::build()
 {
     m_nextBlockTimer += NEXT_BLOCK_EASY_SPEED * omi::fpsManager.getTimeScale();
-    if ( m_nextBlockTimer >= 1.0f )
+    if ( m_nextBlockTimer >= 1.0f + m_nextBlockRandTimer )
     {
-        int r = rand() % BUILD_EASY_PROB;
+
+        int r = 0;
         if ( r == 0 )
         {
             m_nextBlockTimer = 0.0f;
+            m_nextBlockRandTimer = static_cast<float>( rand() % 1000 ) / 1000.0f;
+            m_nextBlockRandTimer *= BUILD_EASY_PROB;
             // get colour
             r = rand() % 2;
             tower::Colour colour = tower::RED;
