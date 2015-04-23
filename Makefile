@@ -183,6 +183,30 @@ src/entities/gameplay/Gui.cpp.s:
 	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.s
 .PHONY : src/entities/gameplay/Gui.cpp.s
 
+src/entities/gameplay/Help.o: src/entities/gameplay/Help.cpp.o
+.PHONY : src/entities/gameplay/Help.o
+
+# target to build an object file
+src/entities/gameplay/Help.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o
+.PHONY : src/entities/gameplay/Help.cpp.o
+
+src/entities/gameplay/Help.i: src/entities/gameplay/Help.cpp.i
+.PHONY : src/entities/gameplay/Help.i
+
+# target to preprocess a source file
+src/entities/gameplay/Help.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.i
+.PHONY : src/entities/gameplay/Help.cpp.i
+
+src/entities/gameplay/Help.s: src/entities/gameplay/Help.cpp.s
+.PHONY : src/entities/gameplay/Help.s
+
+# target to generate assembly for a file
+src/entities/gameplay/Help.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.s
+.PHONY : src/entities/gameplay/Help.cpp.s
+
 src/entities/gameplay/Player.o: src/entities/gameplay/Player.cpp.o
 .PHONY : src/entities/gameplay/Player.o
 
@@ -327,6 +351,78 @@ src/entities/gameplay/environment/World.cpp.s:
 	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/environment/World.cpp.s
 .PHONY : src/entities/gameplay/environment/World.cpp.s
 
+src/entities/gameplay/function/AddFunc.o: src/entities/gameplay/function/AddFunc.cpp.o
+.PHONY : src/entities/gameplay/function/AddFunc.o
+
+# target to build an object file
+src/entities/gameplay/function/AddFunc.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o
+.PHONY : src/entities/gameplay/function/AddFunc.cpp.o
+
+src/entities/gameplay/function/AddFunc.i: src/entities/gameplay/function/AddFunc.cpp.i
+.PHONY : src/entities/gameplay/function/AddFunc.i
+
+# target to preprocess a source file
+src/entities/gameplay/function/AddFunc.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.i
+.PHONY : src/entities/gameplay/function/AddFunc.cpp.i
+
+src/entities/gameplay/function/AddFunc.s: src/entities/gameplay/function/AddFunc.cpp.s
+.PHONY : src/entities/gameplay/function/AddFunc.s
+
+# target to generate assembly for a file
+src/entities/gameplay/function/AddFunc.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.s
+.PHONY : src/entities/gameplay/function/AddFunc.cpp.s
+
+src/entities/gameplay/function/CosineFunc.o: src/entities/gameplay/function/CosineFunc.cpp.o
+.PHONY : src/entities/gameplay/function/CosineFunc.o
+
+# target to build an object file
+src/entities/gameplay/function/CosineFunc.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o
+.PHONY : src/entities/gameplay/function/CosineFunc.cpp.o
+
+src/entities/gameplay/function/CosineFunc.i: src/entities/gameplay/function/CosineFunc.cpp.i
+.PHONY : src/entities/gameplay/function/CosineFunc.i
+
+# target to preprocess a source file
+src/entities/gameplay/function/CosineFunc.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.i
+.PHONY : src/entities/gameplay/function/CosineFunc.cpp.i
+
+src/entities/gameplay/function/CosineFunc.s: src/entities/gameplay/function/CosineFunc.cpp.s
+.PHONY : src/entities/gameplay/function/CosineFunc.s
+
+# target to generate assembly for a file
+src/entities/gameplay/function/CosineFunc.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.s
+.PHONY : src/entities/gameplay/function/CosineFunc.cpp.s
+
+src/entities/gameplay/function/DestroyFunc.o: src/entities/gameplay/function/DestroyFunc.cpp.o
+.PHONY : src/entities/gameplay/function/DestroyFunc.o
+
+# target to build an object file
+src/entities/gameplay/function/DestroyFunc.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o
+.PHONY : src/entities/gameplay/function/DestroyFunc.cpp.o
+
+src/entities/gameplay/function/DestroyFunc.i: src/entities/gameplay/function/DestroyFunc.cpp.i
+.PHONY : src/entities/gameplay/function/DestroyFunc.i
+
+# target to preprocess a source file
+src/entities/gameplay/function/DestroyFunc.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.i
+.PHONY : src/entities/gameplay/function/DestroyFunc.cpp.i
+
+src/entities/gameplay/function/DestroyFunc.s: src/entities/gameplay/function/DestroyFunc.cpp.s
+.PHONY : src/entities/gameplay/function/DestroyFunc.s
+
+# target to generate assembly for a file
+src/entities/gameplay/function/DestroyFunc.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.s
+.PHONY : src/entities/gameplay/function/DestroyFunc.cpp.s
+
 src/entities/gameplay/function/Function.o: src/entities/gameplay/function/Function.cpp.o
 .PHONY : src/entities/gameplay/function/Function.o
 
@@ -423,6 +519,30 @@ src/entities/gameplay/function/RaiseFunc.cpp.s:
 	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/RaiseFunc.cpp.s
 .PHONY : src/entities/gameplay/function/RaiseFunc.cpp.s
 
+src/entities/gameplay/function/RandFunc.o: src/entities/gameplay/function/RandFunc.cpp.o
+.PHONY : src/entities/gameplay/function/RandFunc.o
+
+# target to build an object file
+src/entities/gameplay/function/RandFunc.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o
+.PHONY : src/entities/gameplay/function/RandFunc.cpp.o
+
+src/entities/gameplay/function/RandFunc.i: src/entities/gameplay/function/RandFunc.cpp.i
+.PHONY : src/entities/gameplay/function/RandFunc.i
+
+# target to preprocess a source file
+src/entities/gameplay/function/RandFunc.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.i
+.PHONY : src/entities/gameplay/function/RandFunc.cpp.i
+
+src/entities/gameplay/function/RandFunc.s: src/entities/gameplay/function/RandFunc.cpp.s
+.PHONY : src/entities/gameplay/function/RandFunc.s
+
+# target to generate assembly for a file
+src/entities/gameplay/function/RandFunc.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.s
+.PHONY : src/entities/gameplay/function/RandFunc.cpp.s
+
 src/entities/gameplay/function/SineFunc.o: src/entities/gameplay/function/SineFunc.cpp.o
 .PHONY : src/entities/gameplay/function/SineFunc.o
 
@@ -446,6 +566,78 @@ src/entities/gameplay/function/SineFunc.s: src/entities/gameplay/function/SineFu
 src/entities/gameplay/function/SineFunc.cpp.s:
 	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.s
 .PHONY : src/entities/gameplay/function/SineFunc.cpp.s
+
+src/entities/gameplay/function/SubFunc.o: src/entities/gameplay/function/SubFunc.cpp.o
+.PHONY : src/entities/gameplay/function/SubFunc.o
+
+# target to build an object file
+src/entities/gameplay/function/SubFunc.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o
+.PHONY : src/entities/gameplay/function/SubFunc.cpp.o
+
+src/entities/gameplay/function/SubFunc.i: src/entities/gameplay/function/SubFunc.cpp.i
+.PHONY : src/entities/gameplay/function/SubFunc.i
+
+# target to preprocess a source file
+src/entities/gameplay/function/SubFunc.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.i
+.PHONY : src/entities/gameplay/function/SubFunc.cpp.i
+
+src/entities/gameplay/function/SubFunc.s: src/entities/gameplay/function/SubFunc.cpp.s
+.PHONY : src/entities/gameplay/function/SubFunc.s
+
+# target to generate assembly for a file
+src/entities/gameplay/function/SubFunc.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.s
+.PHONY : src/entities/gameplay/function/SubFunc.cpp.s
+
+src/entities/gameplay/function/TanFunc.o: src/entities/gameplay/function/TanFunc.cpp.o
+.PHONY : src/entities/gameplay/function/TanFunc.o
+
+# target to build an object file
+src/entities/gameplay/function/TanFunc.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o
+.PHONY : src/entities/gameplay/function/TanFunc.cpp.o
+
+src/entities/gameplay/function/TanFunc.i: src/entities/gameplay/function/TanFunc.cpp.i
+.PHONY : src/entities/gameplay/function/TanFunc.i
+
+# target to preprocess a source file
+src/entities/gameplay/function/TanFunc.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.i
+.PHONY : src/entities/gameplay/function/TanFunc.cpp.i
+
+src/entities/gameplay/function/TanFunc.s: src/entities/gameplay/function/TanFunc.cpp.s
+.PHONY : src/entities/gameplay/function/TanFunc.s
+
+# target to generate assembly for a file
+src/entities/gameplay/function/TanFunc.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.s
+.PHONY : src/entities/gameplay/function/TanFunc.cpp.s
+
+src/entities/intro_e/IntroControl.o: src/entities/intro_e/IntroControl.cpp.o
+.PHONY : src/entities/intro_e/IntroControl.o
+
+# target to build an object file
+src/entities/intro_e/IntroControl.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o
+.PHONY : src/entities/intro_e/IntroControl.cpp.o
+
+src/entities/intro_e/IntroControl.i: src/entities/intro_e/IntroControl.cpp.i
+.PHONY : src/entities/intro_e/IntroControl.i
+
+# target to preprocess a source file
+src/entities/intro_e/IntroControl.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.i
+.PHONY : src/entities/intro_e/IntroControl.cpp.i
+
+src/entities/intro_e/IntroControl.s: src/entities/intro_e/IntroControl.cpp.s
+.PHONY : src/entities/intro_e/IntroControl.s
+
+# target to generate assembly for a file
+src/entities/intro_e/IntroControl.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.s
+.PHONY : src/entities/intro_e/IntroControl.cpp.s
 
 src/entities/loading/LoadingSplash.o: src/entities/loading/LoadingSplash.cpp.o
 .PHONY : src/entities/loading/LoadingSplash.o
@@ -2511,6 +2703,30 @@ src/scenes/gameplay/GameplayScene.cpp.s:
 	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/gameplay/GameplayScene.cpp.s
 .PHONY : src/scenes/gameplay/GameplayScene.cpp.s
 
+src/scenes/intro/IntroScene.o: src/scenes/intro/IntroScene.cpp.o
+.PHONY : src/scenes/intro/IntroScene.o
+
+# target to build an object file
+src/scenes/intro/IntroScene.cpp.o:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o
+.PHONY : src/scenes/intro/IntroScene.cpp.o
+
+src/scenes/intro/IntroScene.i: src/scenes/intro/IntroScene.cpp.i
+.PHONY : src/scenes/intro/IntroScene.i
+
+# target to preprocess a source file
+src/scenes/intro/IntroScene.cpp.i:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.i
+.PHONY : src/scenes/intro/IntroScene.cpp.i
+
+src/scenes/intro/IntroScene.s: src/scenes/intro/IntroScene.cpp.s
+.PHONY : src/scenes/intro/IntroScene.s
+
+# target to generate assembly for a file
+src/scenes/intro/IntroScene.cpp.s:
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.s
+.PHONY : src/scenes/intro/IntroScene.cpp.s
+
 src/scenes/loading/LoadingScene.o: src/scenes/loading/LoadingScene.cpp.o
 .PHONY : src/scenes/loading/LoadingScene.o
 
@@ -2577,6 +2793,9 @@ help:
 	@echo "... src/entities/gameplay/Gui.o"
 	@echo "... src/entities/gameplay/Gui.i"
 	@echo "... src/entities/gameplay/Gui.s"
+	@echo "... src/entities/gameplay/Help.o"
+	@echo "... src/entities/gameplay/Help.i"
+	@echo "... src/entities/gameplay/Help.s"
 	@echo "... src/entities/gameplay/Player.o"
 	@echo "... src/entities/gameplay/Player.i"
 	@echo "... src/entities/gameplay/Player.s"
@@ -2595,6 +2814,15 @@ help:
 	@echo "... src/entities/gameplay/environment/World.o"
 	@echo "... src/entities/gameplay/environment/World.i"
 	@echo "... src/entities/gameplay/environment/World.s"
+	@echo "... src/entities/gameplay/function/AddFunc.o"
+	@echo "... src/entities/gameplay/function/AddFunc.i"
+	@echo "... src/entities/gameplay/function/AddFunc.s"
+	@echo "... src/entities/gameplay/function/CosineFunc.o"
+	@echo "... src/entities/gameplay/function/CosineFunc.i"
+	@echo "... src/entities/gameplay/function/CosineFunc.s"
+	@echo "... src/entities/gameplay/function/DestroyFunc.o"
+	@echo "... src/entities/gameplay/function/DestroyFunc.i"
+	@echo "... src/entities/gameplay/function/DestroyFunc.s"
 	@echo "... src/entities/gameplay/function/Function.o"
 	@echo "... src/entities/gameplay/function/Function.i"
 	@echo "... src/entities/gameplay/function/Function.s"
@@ -2607,9 +2835,21 @@ help:
 	@echo "... src/entities/gameplay/function/RaiseFunc.o"
 	@echo "... src/entities/gameplay/function/RaiseFunc.i"
 	@echo "... src/entities/gameplay/function/RaiseFunc.s"
+	@echo "... src/entities/gameplay/function/RandFunc.o"
+	@echo "... src/entities/gameplay/function/RandFunc.i"
+	@echo "... src/entities/gameplay/function/RandFunc.s"
 	@echo "... src/entities/gameplay/function/SineFunc.o"
 	@echo "... src/entities/gameplay/function/SineFunc.i"
 	@echo "... src/entities/gameplay/function/SineFunc.s"
+	@echo "... src/entities/gameplay/function/SubFunc.o"
+	@echo "... src/entities/gameplay/function/SubFunc.i"
+	@echo "... src/entities/gameplay/function/SubFunc.s"
+	@echo "... src/entities/gameplay/function/TanFunc.o"
+	@echo "... src/entities/gameplay/function/TanFunc.i"
+	@echo "... src/entities/gameplay/function/TanFunc.s"
+	@echo "... src/entities/intro_e/IntroControl.o"
+	@echo "... src/entities/intro_e/IntroControl.i"
+	@echo "... src/entities/intro_e/IntroControl.s"
 	@echo "... src/entities/loading/LoadingSplash.o"
 	@echo "... src/entities/loading/LoadingSplash.i"
 	@echo "... src/entities/loading/LoadingSplash.s"
@@ -2868,6 +3108,9 @@ help:
 	@echo "... src/scenes/gameplay/GameplayScene.o"
 	@echo "... src/scenes/gameplay/GameplayScene.i"
 	@echo "... src/scenes/gameplay/GameplayScene.s"
+	@echo "... src/scenes/intro/IntroScene.o"
+	@echo "... src/scenes/intro/IntroScene.i"
+	@echo "... src/scenes/intro/IntroScene.s"
 	@echo "... src/scenes/loading/LoadingScene.o"
 	@echo "... src/scenes/loading/LoadingScene.i"
 	@echo "... src/scenes/loading/LoadingScene.s"

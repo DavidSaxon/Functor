@@ -1935,9 +1935,32 @@ CMakeFiles/Functor.dir/src/scenes/loading/LoadingScene.cpp.o.provides: CMakeFile
 
 CMakeFiles/Functor.dir/src/scenes/loading/LoadingScene.cpp.o.provides.build: CMakeFiles/Functor.dir/src/scenes/loading/LoadingScene.cpp.o
 
+CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o: CMakeFiles/Functor.dir/flags.make
+CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o: src/scenes/intro/IntroScene.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_83)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/scenes/intro/IntroScene.cpp
+
+CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/scenes/intro/IntroScene.cpp > CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.i
+
+CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/scenes/intro/IntroScene.cpp -o CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.s
+
+CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o.requires:
+.PHONY : CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o.requires
+
+CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o.provides: CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o.provides.build
+.PHONY : CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o.provides
+
+CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o.provides.build: CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o
+
 CMakeFiles/Functor.dir/src/scenes/gameplay/GameplayScene.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/scenes/gameplay/GameplayScene.cpp.o: src/scenes/gameplay/GameplayScene.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_83)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_84)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/scenes/gameplay/GameplayScene.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/scenes/gameplay/GameplayScene.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/scenes/gameplay/GameplayScene.cpp
 
@@ -1960,7 +1983,7 @@ CMakeFiles/Functor.dir/src/scenes/gameplay/GameplayScene.cpp.o.provides.build: C
 
 CMakeFiles/Functor.dir/src/entities/debug/FPSCounter.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/debug/FPSCounter.cpp.o: src/entities/debug/FPSCounter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_84)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_85)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/debug/FPSCounter.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/debug/FPSCounter.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/debug/FPSCounter.cpp
 
@@ -1983,7 +2006,7 @@ CMakeFiles/Functor.dir/src/entities/debug/FPSCounter.cpp.o.provides.build: CMake
 
 CMakeFiles/Functor.dir/src/entities/start_up/OmicronLogo.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/start_up/OmicronLogo.cpp.o: src/entities/start_up/OmicronLogo.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_85)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_86)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/start_up/OmicronLogo.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/start_up/OmicronLogo.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/start_up/OmicronLogo.cpp
 
@@ -2006,7 +2029,7 @@ CMakeFiles/Functor.dir/src/entities/start_up/OmicronLogo.cpp.o.provides.build: C
 
 CMakeFiles/Functor.dir/src/entities/loading/LoadingSplash.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/loading/LoadingSplash.cpp.o: src/entities/loading/LoadingSplash.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_86)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_87)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/loading/LoadingSplash.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/loading/LoadingSplash.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/loading/LoadingSplash.cpp
 
@@ -2027,9 +2050,32 @@ CMakeFiles/Functor.dir/src/entities/loading/LoadingSplash.cpp.o.provides: CMakeF
 
 CMakeFiles/Functor.dir/src/entities/loading/LoadingSplash.cpp.o.provides.build: CMakeFiles/Functor.dir/src/entities/loading/LoadingSplash.cpp.o
 
+CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o: CMakeFiles/Functor.dir/flags.make
+CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o: src/entities/intro_e/IntroControl.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_88)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/intro_e/IntroControl.cpp
+
+CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/entities/intro_e/IntroControl.cpp > CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.i
+
+CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/entities/intro_e/IntroControl.cpp -o CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.s
+
+CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o.requires:
+.PHONY : CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o.requires
+
+CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o.provides: CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o.provides.build
+.PHONY : CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o.provides
+
+CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o.provides.build: CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o
+
 CMakeFiles/Functor.dir/src/entities/gameplay/Player.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/gameplay/Player.cpp.o: src/entities/gameplay/Player.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_87)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_89)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/Player.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/Player.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/Player.cpp
 
@@ -2052,7 +2098,7 @@ CMakeFiles/Functor.dir/src/entities/gameplay/Player.cpp.o.provides.build: CMakeF
 
 CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.o: src/entities/gameplay/Gui.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_88)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_90)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/Gui.cpp
 
@@ -2073,9 +2119,32 @@ CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.o.provides: CMakeFiles/Func
 
 CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.o.provides.build: CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.o
 
+CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o: CMakeFiles/Functor.dir/flags.make
+CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o: src/entities/gameplay/Help.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_91)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/Help.cpp
+
+CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/Help.cpp > CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.i
+
+CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/Help.cpp -o CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.s
+
+CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o.requires:
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o.requires
+
+CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o.provides: CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o.provides.build
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o.provides
+
+CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o.provides.build: CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o
+
 CMakeFiles/Functor.dir/src/entities/gameplay/environment/Environment.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/gameplay/environment/Environment.cpp.o: src/entities/gameplay/environment/Environment.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_89)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_92)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/environment/Environment.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/environment/Environment.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/Environment.cpp
 
@@ -2098,7 +2167,7 @@ CMakeFiles/Functor.dir/src/entities/gameplay/environment/Environment.cpp.o.provi
 
 CMakeFiles/Functor.dir/src/entities/gameplay/environment/Sun.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/gameplay/environment/Sun.cpp.o: src/entities/gameplay/environment/Sun.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_90)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_93)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/environment/Sun.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/environment/Sun.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/Sun.cpp
 
@@ -2121,7 +2190,7 @@ CMakeFiles/Functor.dir/src/entities/gameplay/environment/Sun.cpp.o.provides.buil
 
 CMakeFiles/Functor.dir/src/entities/gameplay/environment/Tower.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/gameplay/environment/Tower.cpp.o: src/entities/gameplay/environment/Tower.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_91)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_94)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/environment/Tower.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/environment/Tower.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/Tower.cpp
 
@@ -2144,7 +2213,7 @@ CMakeFiles/Functor.dir/src/entities/gameplay/environment/Tower.cpp.o.provides.bu
 
 CMakeFiles/Functor.dir/src/entities/gameplay/environment/TowerBase.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/gameplay/environment/TowerBase.cpp.o: src/entities/gameplay/environment/TowerBase.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_92)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_95)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/environment/TowerBase.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/environment/TowerBase.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/TowerBase.cpp
 
@@ -2167,7 +2236,7 @@ CMakeFiles/Functor.dir/src/entities/gameplay/environment/TowerBase.cpp.o.provide
 
 CMakeFiles/Functor.dir/src/entities/gameplay/environment/World.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/gameplay/environment/World.cpp.o: src/entities/gameplay/environment/World.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_93)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_96)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/environment/World.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/environment/World.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/environment/World.cpp
 
@@ -2190,7 +2259,7 @@ CMakeFiles/Functor.dir/src/entities/gameplay/environment/World.cpp.o.provides.bu
 
 CMakeFiles/Functor.dir/src/entities/gameplay/function/Function.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/gameplay/function/Function.cpp.o: src/entities/gameplay/function/Function.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_94)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_97)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/function/Function.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/function/Function.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/Function.cpp
 
@@ -2213,7 +2282,7 @@ CMakeFiles/Functor.dir/src/entities/gameplay/function/Function.cpp.o.provides.bu
 
 CMakeFiles/Functor.dir/src/entities/gameplay/function/FunctionAttack.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/gameplay/function/FunctionAttack.cpp.o: src/entities/gameplay/function/FunctionAttack.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_95)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_98)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/function/FunctionAttack.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/function/FunctionAttack.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/FunctionAttack.cpp
 
@@ -2236,7 +2305,7 @@ CMakeFiles/Functor.dir/src/entities/gameplay/function/FunctionAttack.cpp.o.provi
 
 CMakeFiles/Functor.dir/src/entities/gameplay/function/LowerFunc.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/gameplay/function/LowerFunc.cpp.o: src/entities/gameplay/function/LowerFunc.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_96)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_99)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/function/LowerFunc.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/function/LowerFunc.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/LowerFunc.cpp
 
@@ -2259,7 +2328,7 @@ CMakeFiles/Functor.dir/src/entities/gameplay/function/LowerFunc.cpp.o.provides.b
 
 CMakeFiles/Functor.dir/src/entities/gameplay/function/RaiseFunc.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/gameplay/function/RaiseFunc.cpp.o: src/entities/gameplay/function/RaiseFunc.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_97)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_100)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/function/RaiseFunc.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/function/RaiseFunc.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/RaiseFunc.cpp
 
@@ -2282,7 +2351,7 @@ CMakeFiles/Functor.dir/src/entities/gameplay/function/RaiseFunc.cpp.o.provides.b
 
 CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.o: src/entities/gameplay/function/SineFunc.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_98)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_101)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/SineFunc.cpp
 
@@ -2303,9 +2372,147 @@ CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.o.provides: C
 
 CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.o.provides.build: CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.o
 
+CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o: CMakeFiles/Functor.dir/flags.make
+CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o: src/entities/gameplay/function/AddFunc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_102)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/AddFunc.cpp
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/AddFunc.cpp > CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.i
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/AddFunc.cpp -o CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.s
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o.requires:
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o.requires
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o.provides: CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o.provides.build
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o.provides
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o.provides.build: CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o: CMakeFiles/Functor.dir/flags.make
+CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o: src/entities/gameplay/function/CosineFunc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_103)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/CosineFunc.cpp
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/CosineFunc.cpp > CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.i
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/CosineFunc.cpp -o CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.s
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o.requires:
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o.requires
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o.provides: CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o.provides.build
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o.provides
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o.provides.build: CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o: CMakeFiles/Functor.dir/flags.make
+CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o: src/entities/gameplay/function/DestroyFunc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_104)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/DestroyFunc.cpp
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/DestroyFunc.cpp > CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.i
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/DestroyFunc.cpp -o CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.s
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o.requires:
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o.requires
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o.provides: CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o.provides.build
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o.provides
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o.provides.build: CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o: CMakeFiles/Functor.dir/flags.make
+CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o: src/entities/gameplay/function/SubFunc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_105)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/SubFunc.cpp
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/SubFunc.cpp > CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.i
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/SubFunc.cpp -o CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.s
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o.requires:
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o.requires
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o.provides: CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o.provides.build
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o.provides
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o.provides.build: CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o: CMakeFiles/Functor.dir/flags.make
+CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o: src/entities/gameplay/function/TanFunc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_106)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/TanFunc.cpp
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/TanFunc.cpp > CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.i
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/TanFunc.cpp -o CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.s
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o.requires:
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o.requires
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o.provides: CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o.provides.build
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o.provides
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o.provides.build: CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o: CMakeFiles/Functor.dir/flags.make
+CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o: src/entities/gameplay/function/RandFunc.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_107)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/RandFunc.cpp
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/RandFunc.cpp > CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.i
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/Dropbox/Development/Heretic/Heretic/src/entities/gameplay/function/RandFunc.cpp -o CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.s
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o.requires:
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o.requires
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o.provides: CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Functor.dir/build.make CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o.provides.build
+.PHONY : CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o.provides
+
+CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o.provides.build: CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o
+
 CMakeFiles/Functor.dir/src/entities/menu/PauseMenu.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/menu/PauseMenu.cpp.o: src/entities/menu/PauseMenu.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_99)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_108)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/menu/PauseMenu.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/menu/PauseMenu.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/menu/PauseMenu.cpp
 
@@ -2328,7 +2535,7 @@ CMakeFiles/Functor.dir/src/entities/menu/PauseMenu.cpp.o.provides.build: CMakeFi
 
 CMakeFiles/Functor.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o: src/entities/menu/setting_widget/EnumWidget.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_100)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_109)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/menu/setting_widget/EnumWidget.cpp
 
@@ -2351,7 +2558,7 @@ CMakeFiles/Functor.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o.provide
 
 CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o: src/entities/menu/setting_widget/SettingWidget.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_101)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_110)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/menu/setting_widget/SettingWidget.cpp
 
@@ -2374,7 +2581,7 @@ CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o.prov
 
 CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SliderWidget.cpp.o: CMakeFiles/Functor.dir/flags.make
 CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SliderWidget.cpp.o: src/entities/menu/setting_widget/SliderWidget.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_102)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles $(CMAKE_PROGRESS_111)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SliderWidget.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SliderWidget.cpp.o -c /home/david/Dropbox/Development/Heretic/Heretic/src/entities/menu/setting_widget/SliderWidget.cpp
 
@@ -2479,12 +2686,15 @@ Functor_OBJECTS = \
 "CMakeFiles/Functor.dir/src/resource_pack/EffectsPack.cpp.o" \
 "CMakeFiles/Functor.dir/src/scenes/start_up/StartUpScene.cpp.o" \
 "CMakeFiles/Functor.dir/src/scenes/loading/LoadingScene.cpp.o" \
+"CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o" \
 "CMakeFiles/Functor.dir/src/scenes/gameplay/GameplayScene.cpp.o" \
 "CMakeFiles/Functor.dir/src/entities/debug/FPSCounter.cpp.o" \
 "CMakeFiles/Functor.dir/src/entities/start_up/OmicronLogo.cpp.o" \
 "CMakeFiles/Functor.dir/src/entities/loading/LoadingSplash.cpp.o" \
+"CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o" \
 "CMakeFiles/Functor.dir/src/entities/gameplay/Player.cpp.o" \
 "CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.o" \
+"CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o" \
 "CMakeFiles/Functor.dir/src/entities/gameplay/environment/Environment.cpp.o" \
 "CMakeFiles/Functor.dir/src/entities/gameplay/environment/Sun.cpp.o" \
 "CMakeFiles/Functor.dir/src/entities/gameplay/environment/Tower.cpp.o" \
@@ -2495,6 +2705,12 @@ Functor_OBJECTS = \
 "CMakeFiles/Functor.dir/src/entities/gameplay/function/LowerFunc.cpp.o" \
 "CMakeFiles/Functor.dir/src/entities/gameplay/function/RaiseFunc.cpp.o" \
 "CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.o" \
+"CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o" \
+"CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o" \
+"CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o" \
+"CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o" \
+"CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o" \
+"CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o" \
 "CMakeFiles/Functor.dir/src/entities/menu/PauseMenu.cpp.o" \
 "CMakeFiles/Functor.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o" \
 "CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o" \
@@ -2585,12 +2801,15 @@ Functor: CMakeFiles/Functor.dir/src/resource_pack/GUIPack.cpp.o
 Functor: CMakeFiles/Functor.dir/src/resource_pack/EffectsPack.cpp.o
 Functor: CMakeFiles/Functor.dir/src/scenes/start_up/StartUpScene.cpp.o
 Functor: CMakeFiles/Functor.dir/src/scenes/loading/LoadingScene.cpp.o
+Functor: CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o
 Functor: CMakeFiles/Functor.dir/src/scenes/gameplay/GameplayScene.cpp.o
 Functor: CMakeFiles/Functor.dir/src/entities/debug/FPSCounter.cpp.o
 Functor: CMakeFiles/Functor.dir/src/entities/start_up/OmicronLogo.cpp.o
 Functor: CMakeFiles/Functor.dir/src/entities/loading/LoadingSplash.cpp.o
+Functor: CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o
 Functor: CMakeFiles/Functor.dir/src/entities/gameplay/Player.cpp.o
 Functor: CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.o
+Functor: CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o
 Functor: CMakeFiles/Functor.dir/src/entities/gameplay/environment/Environment.cpp.o
 Functor: CMakeFiles/Functor.dir/src/entities/gameplay/environment/Sun.cpp.o
 Functor: CMakeFiles/Functor.dir/src/entities/gameplay/environment/Tower.cpp.o
@@ -2601,6 +2820,12 @@ Functor: CMakeFiles/Functor.dir/src/entities/gameplay/function/FunctionAttack.cp
 Functor: CMakeFiles/Functor.dir/src/entities/gameplay/function/LowerFunc.cpp.o
 Functor: CMakeFiles/Functor.dir/src/entities/gameplay/function/RaiseFunc.cpp.o
 Functor: CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.o
+Functor: CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o
+Functor: CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o
+Functor: CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o
+Functor: CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o
+Functor: CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o
+Functor: CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o
 Functor: CMakeFiles/Functor.dir/src/entities/menu/PauseMenu.cpp.o
 Functor: CMakeFiles/Functor.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o
 Functor: CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o
@@ -2697,12 +2922,15 @@ CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/resource_pack/GUIPac
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/resource_pack/EffectsPack.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/scenes/start_up/StartUpScene.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/scenes/loading/LoadingScene.cpp.o.requires
+CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/scenes/intro/IntroScene.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/scenes/gameplay/GameplayScene.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/debug/FPSCounter.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/start_up/OmicronLogo.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/loading/LoadingSplash.cpp.o.requires
+CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/intro_e/IntroControl.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/Player.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/Gui.cpp.o.requires
+CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/Help.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/environment/Environment.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/environment/Sun.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/environment/Tower.cpp.o.requires
@@ -2713,6 +2941,12 @@ CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/fu
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/function/LowerFunc.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/function/RaiseFunc.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/function/SineFunc.cpp.o.requires
+CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/function/AddFunc.cpp.o.requires
+CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/function/CosineFunc.cpp.o.requires
+CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/function/DestroyFunc.cpp.o.requires
+CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/function/SubFunc.cpp.o.requires
+CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/function/TanFunc.cpp.o.requires
+CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/gameplay/function/RandFunc.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/menu/PauseMenu.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/menu/setting_widget/EnumWidget.cpp.o.requires
 CMakeFiles/Functor.dir/requires: CMakeFiles/Functor.dir/src/entities/menu/setting_widget/SettingWidget.cpp.o.requires

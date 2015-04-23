@@ -89,6 +89,7 @@ set(SRCS
 
     src/scenes/start_up/StartUpScene.cpp
     src/scenes/loading/LoadingScene.cpp
+    src/scenes/intro/IntroScene.cpp
     src/scenes/gameplay/GameplayScene.cpp
 
     src/entities/debug/FPSCounter.cpp
@@ -97,8 +98,11 @@ set(SRCS
 
     src/entities/loading/LoadingSplash.cpp
 
+    src/entities/intro_e/IntroControl.cpp
+
     src/entities/gameplay/Player.cpp
     src/entities/gameplay/Gui.cpp
+    src/entities/gameplay/Help.cpp
     src/entities/gameplay/environment/Environment.cpp
     src/entities/gameplay/environment/Sun.cpp
     src/entities/gameplay/environment/Tower.cpp
@@ -109,6 +113,12 @@ set(SRCS
     src/entities/gameplay/function/LowerFunc.cpp
     src/entities/gameplay/function/RaiseFunc.cpp
     src/entities/gameplay/function/SineFunc.cpp
+    src/entities/gameplay/function/AddFunc.cpp
+    src/entities/gameplay/function/CosineFunc.cpp
+    src/entities/gameplay/function/DestroyFunc.cpp
+    src/entities/gameplay/function/SubFunc.cpp
+    src/entities/gameplay/function/TanFunc.cpp
+    src/entities/gameplay/function/RandFunc.cpp
 
     src/entities/menu/PauseMenu.cpp
     src/entities/menu/setting_widget/EnumWidget.cpp
