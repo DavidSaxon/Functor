@@ -1,1 +1,0 @@
-/home/david/Dropbox/Development/Heretic/Heretic/CMakeFiles/Functor.dir
